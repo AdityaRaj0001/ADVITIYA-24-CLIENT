@@ -1,9 +1,54 @@
 "use client";
 import Link from "next/link";
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useLayoutEffect,useState, useEffect } from "react";
 import gsap from "gsap";
+import { motion } from "framer-motion";
+
+const TARGET_TEXT = "Advitiya 2024";
+const CYCLES_PER_LETTER = 2;
+const SHUFFLE_TIME = 50;
+const CHARS = "!@#$%^&*():{};|,.<>/?";
+
 export default function Home() {
-  const comp = useRef(null);
+  const firstref = useRef(null);
+  const intervalRef = useRef(null);
+  const [text, setText] = useState(TARGET_TEXT)
+
+
+
+  const scramble = () => {
+    let pos = 0;
+
+    intervalRef.current = setInterval(() => {
+      const scrambled = TARGET_TEXT.split("")
+        .map((char, index) => {
+          if (pos / CYCLES_PER_LETTER > index) {
+            return char;
+          }
+
+          const randomCharIndex = Math.floor(Math.random() * CHARS.length);
+          const randomChar = CHARS[randomCharIndex];
+
+          return randomChar;
+        })
+        .join("");
+
+      setText(scrambled);
+      pos++;
+
+      if (pos >= TARGET_TEXT.length * CYCLES_PER_LETTER) {
+        stopScramble();
+      }
+    }, SHUFFLE_TIME);
+  };
+
+  const stopScramble = () => {
+    clearInterval(intervalRef.current || undefined);
+
+    setText(TARGET_TEXT);
+  };
+
+
 
   function time() {
     let a = 0;
@@ -18,16 +63,15 @@ export default function Home() {
     }, 100);
   }
 
+
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       let tl = gsap.timeline();
-
       tl.to("#loader h1", {
         delay: 0.5,
         duration: 1,
         onStart: time(),
       });
-
       tl.to("#loader",{
         top:"-100vh",
         delay:0.5,
@@ -36,31 +80,59 @@ export default function Home() {
     tl.from("#home",{
       opacity:0,
       duration:2,
-      delay:0.5
+      delay:0.5,
     })
+
     
-      
-    }, comp);
+    }, firstref);
 
     return () => ctx.revert();
   }, []);
 
+  const customfn=()=>{
+    scramble();
+  }
+
+  
+
   return (
     <>
-      <div id="main" ref={comp}>
+      <div id="main" ref={firstref}>
         <div id="loader">
           <h1>0%</h1>
         </div>
 
-        <div id="home" className="bg-black h-[100vh] text-lg flex justify-center">
-        <iframe
-  width="100%"
-  height="100%"
-  src="https://www.youtube.com/embed/AOJS6c5xV3g?si=FBheyZf_bGYBkEYw&autoplay=1&controls=0&showinfo=0&rel=0&mute=1"
-  title="YouTube video player"
-  allowfullscreen
-></iframe>
-
+        <div id="home" className="bg-black  text-lg flex justify-center">
+       
+       <motion.h1  whileHover={{
+        scale: 1.025,
+      }}
+      whileTap={{
+        scale: 0.975,
+      }}
+      onMouseEnter={scramble}
+      onMouseLeave={stopScramble} className="group relative overflow-hidden rounded-lg border-[1px] border-slate-500 bg-slate-700 px-4 py-2 font-mono font-medium uppercase text-slate-300 transition-colors hover:text-indigo-300">
+       
+        {text}
+        
+        <motion.span
+        initial={{
+          y: "100%",
+        }}
+        animate={{
+          y: "-100%",
+        }}
+        transition={{
+          repeat: Infinity,
+          repeatType: "mirror",
+          duration: 1,
+          ease: "linear",
+        }}
+        className="duration-300 absolute inset-0 z-0 scale-125 bg-gradient-to-t from-indigo-400/0 from-40% via-indigo-400/100 to-indigo-400/0 to-60% opacity-0 transition-opacity group-hover:opacity-100"
+      />
+    
+        </motion.h1>
+        
         </div>
       </div>
     </>
