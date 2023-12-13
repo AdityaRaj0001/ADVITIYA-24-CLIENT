@@ -12,6 +12,7 @@ const CHARS = "!@#$%^&*():{};|,.<>/?";
 export default function Home() {
   const firstref = useRef(null);
   const intervalRef = useRef(null);
+  const tl = useRef();
   const [text, setText] = useState(TARGET_TEXT)
 
 
@@ -60,38 +61,38 @@ export default function Home() {
         document.querySelector("#loader h1").innerHTML = "100%";
         clearInterval(interval1);
       }
-    }, 100);
+    }, 150);
   }
 
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      let tl = gsap.timeline();
-      tl.to("#loader h1", {
+
+      tl.current = gsap.
+      timeline()
+      .to("#loader h1", {
         delay: 0.5,
-        duration: 1,
-        onStart: time(),
-      });
-      tl.to("#loader",{
+        duration: 2,
+        onStart: time,
+      })
+      .to("#loader",{
         top:"-100vh",
         delay:0.5,
         duration:2
     })
-    tl.from("#home",{
+    .from("#home h1",{
       opacity:0,
-      duration:2,
-      delay:0.5,
+      duration:2
     })
-
+    .from("#home h1",{
+      onStart:scramble
+    })
     
     }, firstref);
 
     return () => ctx.revert();
   }, []);
 
-  const customfn=()=>{
-    scramble();
-  }
 
   
 
@@ -102,7 +103,7 @@ export default function Home() {
           <h1>0%</h1>
         </div>
 
-        <div id="home" className="bg-black  text-lg flex justify-center">
+        <div id="home" className="bg-black  text-lg flex h-[100vh] items-center justify-center">
        
        <motion.h1  whileHover={{
         scale: 1.025,
@@ -111,7 +112,7 @@ export default function Home() {
         scale: 0.975,
       }}
       onMouseEnter={scramble}
-      onMouseLeave={stopScramble} className="group relative overflow-hidden rounded-lg border-[1px] border-slate-500 bg-slate-700 px-4 py-2 font-mono font-medium uppercase text-slate-300 transition-colors hover:text-indigo-300">
+      onMouseLeave={stopScramble} className="group h-[20vh] flex items-center text-5xl relative overflow-hidden rounded-lg border-[1px] border-slate-500 bg-slate-700 px-4 font-mono  font-medium uppercase text-slate-300 transition-colors hover:text-indigo-300">
        
         {text}
         

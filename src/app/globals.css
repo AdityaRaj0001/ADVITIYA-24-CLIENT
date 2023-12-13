@@ -13,6 +13,7 @@
   padding:0;
   box-sizing: border-box;
   color:white;
+  font-family:font2;
 }
 
 html,body{
@@ -34,5 +35,5 @@ html,body{
 #loader h1{
   font-size:100px;
   font-weight:100;
-  font-family:font2;
+
 }
