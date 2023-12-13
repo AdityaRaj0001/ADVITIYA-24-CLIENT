@@ -51,18 +51,18 @@ export default function Home() {
 
 
 
-  function time() {
-    let a = 0;
-    let interval1 = setInterval(function () {
-      a += Math.floor(Math.random() * 20);
-      if (a < 100) {
-        document.querySelector("#loader h1").innerHTML = a + "%";
-      } else {
-        document.querySelector("#loader h1").innerHTML = "100%";
-        clearInterval(interval1);
-      }
-    }, 150);
-  }
+  // function time() {
+  //   let a = 0;
+  //   let interval1 = setInterval(function () {
+  //     a += Math.floor(Math.random() * 20);
+  //     if (a < 100) {
+  //       document.querySelector("#loader h1").innerHTML = a + "%";
+  //     } else {
+  //       document.querySelector("#loader h1").innerHTML = "100%";
+  //       clearInterval(interval1);
+  //     }
+  //   }, 150);
+  // }
 
 
   useLayoutEffect(() => {
@@ -70,19 +70,28 @@ export default function Home() {
 
       tl.current = gsap.
       timeline()
-      .to("#loader h1", {
-        delay: 0.5,
-        duration: 2,
-        onStart: time,
+      .from("#loader h1", {
+        x:40,
+        opacity:0,
+        duration:1,
+        stagger:0.1
+      })
+      .to("#loader h1",{
+        opacity:0,
+        x:-40,
+        duration:1,
+        stagger:0.1
       })
       .to("#loader",{
-        top:"-100vh",
-        delay:0.5,
-        duration:2
-    })
-    .from("#home h1",{
+        opacity:0,
+        onComplete: () => {
+          document.querySelector("#loader").style.display = "none";
+        }
+      })
+     
+     .from("#home h1",{
       opacity:0,
-      duration:2
+      duration:1
     })
     .from("#home h1",{
       onStart:scramble
@@ -100,7 +109,9 @@ export default function Home() {
     <>
       <div id="main" ref={firstref}>
         <div id="loader">
-          <h1>0%</h1>
+          <h1>The Future</h1>
+          <h1>has </h1>
+          <h1>Come</h1>
         </div>
 
         <div id="home" className="bg-black  text-lg flex h-[100vh] items-center justify-center">
