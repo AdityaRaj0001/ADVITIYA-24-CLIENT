@@ -7,13 +7,13 @@ const TARGET_TEXT = "Advitiya 2024";
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 50;
 const CHARS = "!@#$%^&*():{};|,.<>/?";
+import { Button } from "@/components/ui/button"
 
-export default function Home() {
+export default function intro() {
   const firstref = useRef(null);
   const intervalRef = useRef(null);
   const tl = useRef();
   const [text, setText] = useState(TARGET_TEXT);
-
 
   const scramble = () => {
     let pos = 0;
@@ -49,52 +49,51 @@ export default function Home() {
     setText(TARGET_TEXT);
   };
 
-  // function time() {
-  //   let a = 0;
-  //   let interval1 = setInterval(function () {
-  //     a += Math.floor(Math.random() * 20);
-  //     if (a < 100) {
-  //       document.querySelector("#loader h1").innerHTML = a + "%";
-  //     } else {
-  //       document.querySelector("#loader h1").innerHTML = "100%";
-  //       clearInterval(interval1);
-  //     }
-  //   }, 150);
-  // }
-
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       tl.current = gsap
         .timeline()
-        .from("#loader h1", {
-          delay:1,
-          x: 40,
-          opacity:0,
-          duration:1,
-          stagger: 0.1,
-        })
-        .to("#loader h1", {
-          opacity: 0,
-          x: -40,
-          duration: 1,
-          stagger: 0.1,
-        })
-        .to("#loader", {
-          opacity: 0,
-        })
-        .to("#loader",{
-          onStart: () => {
-            document.querySelector("#loader").style.display = "none";
-          },
-        })
-        .from("#home h1", {
-          opacity: 0,
-          duration: 1,
-        })
-        .from("#home h1", {
-          delay: 1,
-          onStart: scramble,
-        });
+        // .from("#loader h1", {
+        //   delay: 1,
+        //   x: 40,
+        //   opacity: 0,
+        //   duration: 1,
+        //   stagger: 0.1,
+        // })
+        // .to("#loader h1", {
+        //   opacity: 0,
+        //   x: -40,
+        //   duration: 1,
+        //   stagger: 0.1,
+        // })
+        // .to("#loader", {
+        //   opacity: 0,
+        // })
+        // .to("#loader", {
+        //   onStart: () => {
+        //     document.querySelector("#loader").style.display = "none";
+        //   },
+        // })
+        // .from("#intro h1", {
+        //   opacity: 0,
+        //   duration: 1,
+        // })
+        // .from("#intro h1", {
+        //   delay:0.5,
+        //   onStart: scramble,
+        // })
+        // .to("#intro h1",{
+        //   // delay:1,
+        //   // opacity:0,
+        //   // duration:1,
+        //   onComplete: () => {
+        //     document.querySelector("#intro").style.display = "none";
+        //   },
+        // })
+        // .from("#home",{
+        //   // duration:1,
+        //   opacity:1
+        // })
     }, firstref);
 
     return () => ctx.revert();
@@ -102,27 +101,32 @@ export default function Home() {
 
   return (
     <>
-      <div id="main" ref={firstref}>
-        <div id="loader" className="text-indigo-300">
-          <h1>Welcome to</h1>
-          <h1>the</h1>
-          <h1>Future</h1>
-        </div>
+      <div id="main " ref={firstref}>
+        {/* <div
+          id="loader"
+          className="text-indigo-300 h-[100vh] w-[100vw] bg-black z-2 flex items-center justify-center "
+        >
+          <div className="flex flex-col gap-2 justify-center items-center md:flex-row text-xl  md:text-2xl lg:text-3xl ">
+            <h1>Welcome to</h1>
+            <h1>the</h1>
+            <h1>Future</h1>
+          </div>
+        </div> */}
 
-        <div
-          id="home"
-          className="bg-black  text-lg flex h-[100vh] items-center justify-center"
+        {/* <div
+          id="intro"
+          className="bg-black  text-xl md:text-3xl lg:text-5xl flex h-[100vh] items-center justify-center"
         >
           <motion.h1
-            whileHover={{
-              scale: 1.025,
-            }}
-            whileTap={{
-              scale: 0.975,
-            }}
-            onMouseEnter={scramble}
-            onMouseLeave={stopScramble}
-            className="heading group h-[20vh] flex items-center text-5xl relative overflow-hidden rounded-lg border-[1px] border-none tracking-widest bg-slate-black px-4  font-medium uppercase transition-colors text-indigo-300"
+            // whileHover={{
+            //   scale: 1.025,
+            // }}
+            // whileTap={{
+            //   scale: 0.975,
+            // }}
+            // onMouseEnter={scramble}
+            // onMouseLeave={stopScramble}
+            className="heading group flex items-center text-xl md:text-3xl lg:text-5xl relative overflow-hidden rounded-lg border-[1px] border-none tracking-widest bg-slate-black px-4  font-medium  uppercase transition-colors text-indigo-300"
           >
             {text}
 
@@ -142,6 +146,16 @@ export default function Home() {
               className="animatedbar duration-300 absolute inset-0 z-0 scale-125 bg-gradient-to-t from-indigo-400/0 from-40% via-indigo-400/100 to-indigo-400/0 to-60% opacity-0 transition-opacity group-hover:opacity-100"
             />
           </motion.h1>
+        </div> */} 
+
+        <div id="page1" className="home bg-white relative h-[100vh] w-[100%]">
+          {/* <video src="./aftermovie.mp4" autoPlay loop muted className="h-[100%] w-[100%] object-cover absolute"></video> */}
+          <div className="page1-content h-[100%] w-[100%] relative text-white ">
+            <nav className="flex items-center justify-between px-[2vw] py-[4vh]">
+            <Button></Button>
+     
+            </nav>
+          </div>
         </div>
       </div>
     </>
@@ -150,7 +164,7 @@ export default function Home() {
 
     //   <h1>This is Start Page. Below are links to various sections of the pages</h1>
 
-    //   <Link href="/home">Go to Home</Link>
+    //   <Link href="/intro">Go to intro</Link>
     //   <Link href="/auth">Go to auth</Link>
     //   <Link href="/events">Go to events</Link>
     //   <Link href="/accommodation">Go to accommodation</Link>
