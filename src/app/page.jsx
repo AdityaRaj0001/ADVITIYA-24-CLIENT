@@ -67,9 +67,10 @@ export default function Home() {
       tl.current = gsap
         .timeline()
         .from("#loader h1", {
+          delay:1,
           x: 40,
-          opacity: 0,
-          duration: 1,
+          opacity:0,
+          duration:1,
           stagger: 0.1,
         })
         .to("#loader h1", {
