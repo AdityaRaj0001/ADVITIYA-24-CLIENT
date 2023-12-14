@@ -39,6 +39,7 @@ export default function intro() {
   const [text, setText] = useState(TARGET_TEXT);
   const [dropdownclicked, setdropdownclicked] = useState(false)
 
+
   const scramble = () => {
     let pos = 0;
     document.querySelector(".animatedbar").style.opacity = 100;
@@ -178,7 +179,7 @@ export default function intro() {
           </motion.h1>
         </div>  
 
-        <div id="page1" className="home bg-white  relative h-[100vh] w-[100%]">
+        <div id="page1" className="home bg-white hidden relative h-[100vh] w-[100%]">
           {/* <video src="./aftermovie.mp4" autoPlay loop muted className="h-[100%] w-[100%] object-cover absolute"></video> */}
           <div className="page1-content h-[100%] w-[100%] relative text-white ">
             <nav className="hidden xl:flex items-center justify-between px-[2vw] py-[4vh]">
