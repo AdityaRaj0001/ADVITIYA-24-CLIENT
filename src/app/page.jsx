@@ -32,7 +32,7 @@ import {
 //     )
 // }
 
-export default function intro() {
+export default function Intro() {
   const firstref = useRef(null);
   const intervalRef = useRef(null);
   const tl = useRef();
@@ -75,7 +75,6 @@ export default function intro() {
   };
 
   useLayoutEffect(() => {
-
     let ctx = gsap.context(() => {
       tl.current = gsap.timeline()
       .from("#loader h1", {
@@ -119,7 +118,7 @@ export default function intro() {
           document.querySelector("#page2").style.display="flex"
         },
       })
-      .from("nav #btn",{
+      .from("nav #nav-btn",{
         y:-100,
         opacity:0,
         duration:0.5,
@@ -183,9 +182,9 @@ export default function intro() {
           {/* <video src="./aftermovie.mp4" autoPlay loop muted className="h-[100%] w-[100%] object-cover absolute"></video> */}
           <div className="page1-content h-[100%] w-[100%] relative text-white ">
             <nav className="hidden xl:flex items-center justify-between px-[2vw] py-[4vh]">
-              <span id="btn">
+              <span id="nav-btn">
 
-              <DropdownMenu id="btn">
+              <DropdownMenu >
                 <DropdownMenuTrigger className="flex flex-row items-center gap-2 outline-none ">Events<MdOutlineArrowDropDownCircle/></DropdownMenuTrigger>
                 <DropdownMenuContent className="text-white">
                   <DropdownMenuItem>Hackathons</DropdownMenuItem>
@@ -197,14 +196,14 @@ export default function intro() {
                 </DropdownMenuContent>
               </DropdownMenu>
               </span>
-              <Button id="btn" variant="ghost">Schedule</Button>
-              <Button id="btn" variant="ghost">Accommodation</Button>
-              <Button id="btn" variant="ghost">Sponsors</Button>
-              <Button id="btn" variant="ghost">Inter-School-Conclave</Button>
-              <Button id="btn" variant="ghost">Contact Us</Button>
-              <Button id="btn" variant="ghost">About Us</Button>
-              <Button id="btn" variant="ghost">FAQs</Button>
-              <span id="btn"><DropdownMenu id="btn">
+              <Button id="nav-btn" variant="ghost">Schedule</Button>
+              <Button id="nav-btn" variant="ghost">Accommodation</Button>
+              <Button id="nav-btn" variant="ghost">Sponsors</Button>
+              <Button id="nav-btn" variant="ghost">Inter-School-Conclave</Button>
+              <Button id="nav-btn" variant="ghost">Contact Us</Button>
+              <Button id="nav-btn" variant="ghost">About Us</Button>
+              <Button id="nav-btn" variant="ghost">FAQs</Button>
+              <span id="nav-btn"><DropdownMenu >
                 <DropdownMenuTrigger className="flex flex-row items-center gap-2 outline-none text-2xl"> <CgProfile/><FaBars/> </DropdownMenuTrigger>
                 <DropdownMenuContent className="text-white mt-2 mr-2">
                   <DropdownMenuItem>Profile</DropdownMenuItem>
@@ -220,7 +219,7 @@ export default function intro() {
               <FaRegWindowClose />
               </div>
               <span id="btn">
-              <DropdownMenu id="btn">
+              <DropdownMenu >
                 <DropdownMenuTrigger className="flex flex-row items-center gap-2 outline-none ">Events<MdOutlineArrowDropDownCircle/></DropdownMenuTrigger>
                 <DropdownMenuContent className="text-white">
                   <DropdownMenuItem>Hackathons</DropdownMenuItem>
