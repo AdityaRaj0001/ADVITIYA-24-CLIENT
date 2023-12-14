@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MdOutlineArrowDropDownCircle } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
+import { FaRegWindowClose } from "react-icons/fa";
 import { BiUpArrow } from "react-icons/bi";
 import { useRef, useLayoutEffect, useState, useEffect } from "react";
 import gsap from "gsap";
@@ -76,50 +77,47 @@ export default function intro() {
 
     let ctx = gsap.context(() => {
       tl.current = gsap.timeline()
-      .from("#loader h1", {
-        onStart:()=>{
-          document.querySelector("#loader").style.display="flex"
-        },
-        delay: 1,
-        x: 40,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.1,
-      })
-      .to("#loader h1", {
-        opacity: 0,
-        x: -40,
-        duration: 1,
-        stagger: 0.1,
-      })
-      .to("#loader", {
-        opacity: 0,
-        onComplete: () => {
-          document.querySelector("#loader").style.display = "none";
-          document.querySelector("#intro").style.display = "flex";
-        }
-      })
-      .from("#intro h1", {
-        opacity: 0,
-        duration: 1,
-      })
-      .from("#intro h1", {
-        delay:0.5,
-        onStart: scramble,
-      })
-      .to("#intro h1",{
-        delay:1,
-        opacity:0,
-        duration:1,
-        onComplete: () => {
-          document.querySelector("#intro").style.display = "none";
-          document.querySelector("#page1").style.display="block"
-        },
-      })
-      .from("#home",{
-        // duration:1,
-        opacity:1
-      })
+      // .from("#loader h1", {
+      //   onStart:()=>{
+      //     document.querySelector("#loader").style.display="flex"
+      //   },
+      //   delay: 1,
+      //   x: 40,
+      //   opacity: 0,
+      //   duration: 1,
+      //   stagger: 0.1,
+      // })
+      // .to("#loader h1", {
+      //   opacity: 0,
+      //   x: -40,
+      //   duration: 1,
+      //   stagger: 0.1,
+      // })
+      // .to("#loader", {
+      //   opacity: 0,
+      //   onComplete: () => {
+      //     document.querySelector("#loader").style.display = "none";
+      //     document.querySelector("#intro").style.display = "flex";
+      //   }
+      // })
+      // .from("#intro h1", {
+      //   opacity: 0,
+      //   duration: 1,
+      // })
+      // .from("#intro h1", {
+      //   delay:0.5,
+      //   onStart: scramble,
+      // })
+      // .to("#intro h1",{
+      //   delay:1,
+      //   opacity:0,
+      //   duration:1,
+      //   onComplete: () => {
+      //     document.querySelector("#intro").style.display = "none";
+      //     document.querySelector("#page1").style.display="block"
+      //     document.querySelector("#page2").style.display="flex"
+      //   },
+      // })
       .from("nav #btn",{
         y:-100,
         opacity:0,
@@ -180,10 +178,10 @@ export default function intro() {
           </motion.h1>
         </div>  
 
-        <div id="page1" className="home bg-white hidden relative h-[100vh] w-[100%]">
+        <div id="page1" className="home bg-white  relative h-[100vh] w-[100%]">
           {/* <video src="./aftermovie.mp4" autoPlay loop muted className="h-[100%] w-[100%] object-cover absolute"></video> */}
           <div className="page1-content h-[100%] w-[100%] relative text-white ">
-            <nav className="flex items-center justify-between px-[2vw] py-[4vh]">
+            <nav className="hidden xl:flex items-center justify-between px-[2vw] py-[4vh]">
               <span id="btn">
 
               <DropdownMenu id="btn">
@@ -213,7 +211,53 @@ export default function intro() {
                 </DropdownMenuContent>
               </DropdownMenu></span>
             </nav>
+            <nav id="sidebar" className="hidden h-[100vh] flex-col xl:hidden items-center gap-4 md:gap-6  justify-center px-[2vw] py-[4vh]">
+              <div className=" w-full flex text-2xl items-start justify-end px-4" onClick={()=>{
+                document.querySelector("#sidebar").style.display="none";
+                document.querySelector("#mobile-nav").style.display="flex";
+              }}>
+              <FaRegWindowClose />
+              </div>
+              <span id="btn">
+              <DropdownMenu id="btn">
+                <DropdownMenuTrigger className="flex flex-row items-center gap-2 outline-none ">Events<MdOutlineArrowDropDownCircle/></DropdownMenuTrigger>
+                <DropdownMenuContent className="text-white">
+                  <DropdownMenuItem>Hackathons</DropdownMenuItem>
+                  <DropdownMenuItem>Workshops</DropdownMenuItem>
+                  <DropdownMenuItem>Exhibitions</DropdownMenuItem>
+                  <DropdownMenuItem>Talk Shows</DropdownMenuItem>
+                  <DropdownMenuItem>Competitions</DropdownMenuItem>
+                  <DropdownMenuItem>Robowars</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              </span>
+              <Button id="btn" variant="ghost">Schedule</Button>
+              <Button id="btn" variant="ghost">Sponsors</Button>
+              <Button id="btn" variant="ghost">Accommodation</Button>
+              <Button id="btn" variant="ghost">Inter-School-Conclave</Button>
+              <Button id="btn" variant="ghost">Contact Us</Button>
+              <Button id="btn" variant="ghost">About Us</Button>
+              <Button id="btn" variant="ghost">FAQs</Button>
+              <span id="btn"><DropdownMenu id="btn">
+                <DropdownMenuTrigger className="flex flex-row items-center gap-2 outline-none text-2xl"> <CgProfile/><FaBars/> </DropdownMenuTrigger>
+                <DropdownMenuContent className="text-white mt-2 mr-2">
+                  <DropdownMenuItem>Profile</DropdownMenuItem>
+                  <DropdownMenuItem>Login/Register</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu></span>
+            </nav>
+
+            <div id="mobile-nav" className="flex xl:hidden px-4 py-8 justify-between items-center">
+              <div id="left"><h1>LOGO</h1></div>
+              <div id="right" className="text-2xl" onClick={()=>{
+                document.querySelector("#sidebar").style.display="flex";
+                document.querySelector("#mobile-nav").style.display="none";
+              }}><FaBars/></div>
+            </div>
           </div>
+        </div>
+
+        <div id="page2" className="h-[100vh] w-[100%] hidden bg-white">
 
         </div>
       </div>
