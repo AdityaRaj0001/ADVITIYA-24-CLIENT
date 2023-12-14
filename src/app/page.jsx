@@ -77,47 +77,47 @@ export default function intro() {
 
     let ctx = gsap.context(() => {
       tl.current = gsap.timeline()
-      // .from("#loader h1", {
-      //   onStart:()=>{
-      //     document.querySelector("#loader").style.display="flex"
-      //   },
-      //   delay: 1,
-      //   x: 40,
-      //   opacity: 0,
-      //   duration: 1,
-      //   stagger: 0.1,
-      // })
-      // .to("#loader h1", {
-      //   opacity: 0,
-      //   x: -40,
-      //   duration: 1,
-      //   stagger: 0.1,
-      // })
-      // .to("#loader", {
-      //   opacity: 0,
-      //   onComplete: () => {
-      //     document.querySelector("#loader").style.display = "none";
-      //     document.querySelector("#intro").style.display = "flex";
-      //   }
-      // })
-      // .from("#intro h1", {
-      //   opacity: 0,
-      //   duration: 1,
-      // })
-      // .from("#intro h1", {
-      //   delay:0.5,
-      //   onStart: scramble,
-      // })
-      // .to("#intro h1",{
-      //   delay:1,
-      //   opacity:0,
-      //   duration:1,
-      //   onComplete: () => {
-      //     document.querySelector("#intro").style.display = "none";
-      //     document.querySelector("#page1").style.display="block"
-      //     document.querySelector("#page2").style.display="flex"
-      //   },
-      // })
+      .from("#loader h1", {
+        onStart:()=>{
+          document.querySelector("#loader").style.display="flex"
+        },
+        delay: 1,
+        x: 40,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.1,
+      })
+      .to("#loader h1", {
+        opacity: 0,
+        x: -40,
+        duration: 1,
+        stagger: 0.1,
+      })
+      .to("#loader", {
+        opacity: 0,
+        onComplete: () => {
+          document.querySelector("#loader").style.display = "none";
+          document.querySelector("#intro").style.display = "flex";
+        }
+      })
+      .from("#intro h1", {
+        opacity: 0,
+        duration: 1,
+      })
+      .from("#intro h1", {
+        delay:0.5,
+        onStart: scramble,
+      })
+      .to("#intro h1",{
+        delay:1,
+        opacity:0,
+        duration:1,
+        onComplete: () => {
+          document.querySelector("#intro").style.display = "none";
+          document.querySelector("#page1").style.display="block"
+          document.querySelector("#page2").style.display="flex"
+        },
+      })
       .from("nav #btn",{
         y:-100,
         opacity:0,
