@@ -59,6 +59,19 @@ export default function Intro() {
     document.querySelector(".animatedbar").style.opacity = 0;
     setText(TARGET_TEXT);
   };
+ 
+  useEffect(() => {
+    let circle=document.querySelector('.circle')
+    window.addEventListener('mousemove',(details)=>{
+      let x=details.clientX;
+      let y=details.clientY;
+  
+      circle.style.top=`${y}px`
+      circle.style.left=`${x}px`
+      
+    })
+  }, [])
+  
 
   const page1Content = useRef();
   const { contextSafe } = useGSAP({ scope: page1Content });
@@ -88,43 +101,43 @@ export default function Intro() {
       if (isLargeLaptop) {
         tl.current = gsap
           .timeline()
-          .from("#loader h1", {
-            onStart: () => {
-              document.querySelector("#loader").style.display = "flex";
-            },
-            delay: 1,
-            x: 40,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.1,
-          })
-          .to("#loader h1", {
-            opacity: 0,
-            x: -40,
-            duration: 1,
-            stagger: 0.1,
-          })
-          .to("#loader", {
-            opacity: 0,
-            onComplete: () => {
-              document.querySelector("#loader").style.display = "none";
-              document.querySelector("#intro").style.display = "flex";
-            },
-          })
-          .from("#intro h1", {
-            opacity: 0,
-            duration: 1,
-          })
-          .from("#intro h1", {
-            delay: 0.5,
-            onStart: scramble,
-          })
+          // .from("#loader h1", {
+          //   onStart: () => {
+          //     document.querySelector("#loader").style.display = "flex";
+          //   },
+          //   delay: 1,
+          //   x: 40,
+          //   opacity: 0,
+          //   duration: 1,
+          //   stagger: 0.1,
+          // })
+          // .to("#loader h1", {
+          //   opacity: 0,
+          //   x: -40,
+          //   duration: 1,
+          //   stagger: 0.1,
+          // })
+          // .to("#loader", {
+          //   opacity: 0,
+          //   onComplete: () => {
+          //     document.querySelector("#loader").style.display = "none";
+          //     document.querySelector("#intro").style.display = "flex";
+          //   },
+          // })
+          // .from("#intro h1", {
+          //   opacity: 0,
+          //   duration: 1,
+          // })
+          // .from("#intro h1", {
+          //   delay: 0.5,
+          //   onStart: scramble,
+          // })
           .to("#intro h1", {
-            delay: 1,
-            opacity: 0,
-            duration: 1,
+            // delay: 1,
+            // opacity: 0,
+            // duration: 1,
             onComplete: () => {
-              document.querySelector("#intro").style.display = "none";
+              // document.querySelector("#intro").style.display = "none";
               document.querySelector("#page1").style.display = "block";
               document.querySelector("#page2").style.display = "flex";
             },
@@ -133,48 +146,48 @@ export default function Intro() {
             y: -100,
             opacity: 0,
             duration: 0.5,
-            stagger: 0.2,
+            stagger: 0.3,
           });
       } else {
         tl.current = gsap
           .timeline()
-          .from("#loader h1", {
-            onStart: () => {
-              document.querySelector("#loader").style.display = "flex";
-            },
-            delay: 1,
-            x: 40,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.1,
-          })
-          .to("#loader h1", {
-            opacity: 0,
-            x: -40,
-            duration: 1,
-            stagger: 0.1,
-          })
-          .to("#loader", {
-            opacity: 0,
-            onComplete: () => {
-              document.querySelector("#loader").style.display = "none";
-              document.querySelector("#intro").style.display = "flex";
-            },
-          })
-          .from("#intro h1", {
-            opacity: 0,
-            duration: 1,
-          })
-          .from("#intro h1", {
-            delay: 0.5,
-            onStart: scramble,
-          })
+          // .from("#loader h1", {
+          //   onStart: () => {
+          //     document.querySelector("#loader").style.display = "flex";
+          //   },
+          //   delay: 1,
+          //   x: 40,
+          //   opacity: 0,
+          //   duration: 1,
+          //   stagger: 0.1,
+          // })
+          // .to("#loader h1", {
+          //   opacity: 0,
+          //   x: -40,
+          //   duration: 1,
+          //   stagger: 0.1,
+          // })
+          // .to("#loader", {
+          //   opacity: 0,
+          //   onComplete: () => {
+          //     document.querySelector("#loader").style.display = "none";
+          //     document.querySelector("#intro").style.display = "flex";
+          //   },
+          // })
+          // .from("#intro h1", {
+          //   opacity: 0,
+          //   duration: 1,
+          // })
+          // .from("#intro h1", {
+          //   delay: 0.5,
+          //   onStart: scramble,
+          //})
           .to("#intro h1", {
-            delay: 1,
-            opacity: 0,
-            duration: 1,
+            // delay: 1,
+            // opacity: 0,
+            // duration: 1,
             onComplete: () => {
-              document.querySelector("#intro").style.display = "none";
+              // document.querySelector("#intro").style.display = "none";
               document.querySelector("#page1").style.display = "block";
               document.querySelector("#page2").style.display = "flex";
             },
@@ -185,6 +198,7 @@ export default function Intro() {
             duration: 0.5,
             stagger: 0.2,
           });
+          
       }
     }, firstref);
 
@@ -193,7 +207,7 @@ export default function Intro() {
 
   return (
     <>
-      <div id="main " ref={firstref}>
+      <div id="main" ref={firstref} className="overflow-hidden">
         <div
           id="loader"
           className="text-indigo-300 h-[100vh]  w-[100vw] bg-black z-2 hidden  items-center justify-center "
@@ -238,7 +252,7 @@ export default function Intro() {
             ref={page1Content}
             className="page1-content h-[100%] w-[100%] relative text-white "
           >
-            <nav className="hidden xl:flex items-center justify-between px-[2vw] py-[4vh]">
+            <nav className="hidden  h-[65px] xl:flex items-center justify-between px-[2vw] py-[4vh]">
               <span id="nav-btn">
                 <DropdownMenu>
                   <DropdownMenuTrigger className="flex flex-row items-center gap-2 outline-none ">
@@ -351,7 +365,7 @@ export default function Intro() {
 
             <div
               id="mobile-nav"
-              className="flex xl:hidden px-4 py-8 justify-between items-center"
+              className="flex h-[30px] xl:hidden px-4 py-8 justify-between items-center"
             >
               <div id="left">
                 <h1>LOGO</h1>
@@ -360,17 +374,24 @@ export default function Intro() {
                 <FaBars />
               </div>
             </div>
+          
+          <div className="h-[calc(100%-30px)] bg-slate-600 hero flex justify-center items-center w-[100%] bg-cover bg-[url('https://images.unsplash.com/photo-1567201864585-6baec9110dac?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] ">
+            <div className="bg-transparent ">
+            <h1 className="text-9xl bg-transparent herotext">ADVITIYA'24</h1>
+            <p className="herosubtext text-right tracking-wide px-8 text-xl bg-transparent">TechFest IIT ROPAR</p>
+            </div>
+            
+            
+          </div>
+            <div className="circle pointer-events-none absolute bg-transparent h-[60px] w-[60px] rounded-full border-2 white -translate-y-1/2 -translate-x-1/2"></div>
           </div>
         </div>
-
         <div id="page2" className="h-[100vh] w-[100%] hidden bg-white"></div>
       </div>
     </>
 
     // <div className='flex flex-col text-lg'>
-
     //   <h1>This is Start Page. Below are links to various sections of the pages</h1>
-
     //   <Link href="/intro">Go to intro</Link>
     //   <Link href="/auth">Go to auth</Link>
     //   <Link href="/events">Go to events</Link>

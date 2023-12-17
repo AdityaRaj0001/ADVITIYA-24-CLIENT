@@ -19,3 +19,8 @@ html,body{
   height:100%;
   width:100%;
 }
+
+.hero{
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip:text;
+}
