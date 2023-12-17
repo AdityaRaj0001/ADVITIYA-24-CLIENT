@@ -61,151 +61,131 @@ export default function Intro() {
   };
 
   const page1Content = useRef();
-  const { contextSafe } = useGSAP({scope: page1Content});
+  const { contextSafe } = useGSAP({ scope: page1Content });
 
-  const openSidebar= contextSafe(()=>{
-    gsap.from(["#sidebar div","#sidebar #btn"], {
-      onStart:()=>{
+  const openSidebar = contextSafe(() => {
+    gsap.from(["#sidebar div", "#sidebar #btn"], {
+      onStart: () => {
         document.querySelector("#sidebar").style.display = "flex";
-        document.querySelector("#mobile-nav").style.display = "none" ;
+        document.querySelector("#mobile-nav").style.display = "none";
       },
-      y: -100,
+      y: -50,
       opacity: 0,
       duration: 0.3,
-      stagger: 0.2,
-    })
-  })
+      stagger: 0.1,
+    });
+  });
 
-  const closeSidebar= contextSafe(()=>{
-    gsap.to(["#sidebar div","#sidebar #btn"], {
-      onStart:()=>{
-        document.querySelector("#mobile-nav").style.display = "flex";
-      },
-      y: -100,
-      opacity: 0,
-      duration: 0.3,
-      stagger: 0.2,
-      onComplete:()=>{
-        document.querySelector("#sidebar").style.display = "none";
-      }
-    })
-  })
-  
+  const closeSidebar = contextSafe(() => {
+    document.querySelector("#mobile-nav").style.display = "flex";
+    document.querySelector("#sidebar").style.display = "none";
+  });
 
   useLayoutEffect(() => {
-
-    const isLargeLaptop=window.innerWidth >=1280
+    const isLargeLaptop = window.innerWidth >= 1280;
 
     let ctx = gsap.context(() => {
-
-      if(isLargeLaptop){
+      if (isLargeLaptop) {
         tl.current = gsap
-        .timeline()
-        .from("#loader h1", {
-          onStart: () => {
-            document.querySelector("#loader").style.display = "flex";
-          },
-          delay: 1,
-          x: 40,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.1,
-        })
-        .to("#loader h1", {
-          opacity: 0,
-          x: -40,
-          duration: 1,
-          stagger: 0.1,
-        })
-        .to("#loader", {
-          opacity: 0,
-          onComplete: () => {
-            document.querySelector("#loader").style.display = "none";
-            document.querySelector("#intro").style.display = "flex";
-          },
-        })
-        .from("#intro h1", {
-          opacity: 0,
-          duration: 1,
-        })
-        .from("#intro h1", {
-          delay: 0.5,
-          onStart: scramble,
-        })
-        .to("#intro h1", {
-          delay: 1,
-          opacity: 0,
-          duration: 1,
-          onComplete: () => {
-            document.querySelector("#intro").style.display = "none";
-            document.querySelector("#page1").style.display = "block";
-            document.querySelector("#page2").style.display = "flex";
-          },
-        })
-        .from(["nav #nav-btn"], {
-          y: -100,
-          opacity: 0,
-          duration: 0.5,
-          stagger: 0.2,
-        })
-
-      }
-
-      else {
+          .timeline()
+          .from("#loader h1", {
+            onStart: () => {
+              document.querySelector("#loader").style.display = "flex";
+            },
+            delay: 1,
+            x: 40,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.1,
+          })
+          .to("#loader h1", {
+            opacity: 0,
+            x: -40,
+            duration: 1,
+            stagger: 0.1,
+          })
+          .to("#loader", {
+            opacity: 0,
+            onComplete: () => {
+              document.querySelector("#loader").style.display = "none";
+              document.querySelector("#intro").style.display = "flex";
+            },
+          })
+          .from("#intro h1", {
+            opacity: 0,
+            duration: 1,
+          })
+          .from("#intro h1", {
+            delay: 0.5,
+            onStart: scramble,
+          })
+          .to("#intro h1", {
+            delay: 1,
+            opacity: 0,
+            duration: 1,
+            onComplete: () => {
+              document.querySelector("#intro").style.display = "none";
+              document.querySelector("#page1").style.display = "block";
+              document.querySelector("#page2").style.display = "flex";
+            },
+          })
+          .from(["nav #nav-btn"], {
+            y: -100,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.2,
+          });
+      } else {
         tl.current = gsap
-        .timeline()
-        .from("#loader h1", {
-          onStart: () => {
-            document.querySelector("#loader").style.display = "flex";
-          },
-          delay: 1,
-          x: 40,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.1,
-        })
-        .to("#loader h1", {
-          opacity: 0,
-          x: -40,
-          duration: 1,
-          stagger: 0.1,
-        })
-        .to("#loader", {
-          opacity: 0,
-          onComplete: () => {
-            document.querySelector("#loader").style.display = "none";
-            document.querySelector("#intro").style.display = "flex";
-          },
-        })
-        .from("#intro h1", {
-          opacity: 0,
-          duration: 1,
-        })
-        .from("#intro h1", {
-          delay: 0.5,
-          onStart: scramble,
-        })
-        .to("#intro h1", {
-          delay: 1,
-          opacity: 0,
-          duration: 1,
-          onComplete: () => {
-            document.querySelector("#intro").style.display = "none";
-            document.querySelector("#page1").style.display = "block";
-            document.querySelector("#page2").style.display = "flex";
-          },
-        })
-        .from(["#mobile-nav div"], {
-          y: -100,
-          opacity: 0,
-          duration: 0.5,
-          stagger: 0.2,
-        })
-        
+          .timeline()
+          .from("#loader h1", {
+            onStart: () => {
+              document.querySelector("#loader").style.display = "flex";
+            },
+            delay: 1,
+            x: 40,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.1,
+          })
+          .to("#loader h1", {
+            opacity: 0,
+            x: -40,
+            duration: 1,
+            stagger: 0.1,
+          })
+          .to("#loader", {
+            opacity: 0,
+            onComplete: () => {
+              document.querySelector("#loader").style.display = "none";
+              document.querySelector("#intro").style.display = "flex";
+            },
+          })
+          .from("#intro h1", {
+            opacity: 0,
+            duration: 1,
+          })
+          .from("#intro h1", {
+            delay: 0.5,
+            onStart: scramble,
+          })
+          .to("#intro h1", {
+            delay: 1,
+            opacity: 0,
+            duration: 1,
+            onComplete: () => {
+              document.querySelector("#intro").style.display = "none";
+              document.querySelector("#page1").style.display = "block";
+              document.querySelector("#page2").style.display = "flex";
+            },
+          })
+          .from(["#mobile-nav div"], {
+            y: -100,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.2,
+          });
       }
-     
-
-       
     }, firstref);
 
     return () => ctx.revert();
@@ -254,7 +234,10 @@ export default function Intro() {
           id="page1"
           className="home bg-white hidden relative h-[100vh] w-[100%]"
         >
-          <div ref={page1Content} className="page1-content h-[100%] w-[100%] relative text-white ">
+          <div
+            ref={page1Content}
+            className="page1-content h-[100%] w-[100%] relative text-white "
+          >
             <nav className="hidden xl:flex items-center justify-between px-[2vw] py-[4vh]">
               <span id="nav-btn">
                 <DropdownMenu>
@@ -311,10 +294,8 @@ export default function Intro() {
               id="sidebar"
               className="hidden z-10 h-[100vh] flex-col xl:hidden items-center gap-4 md:gap-6  justify-center px-[2vw] py-[4vh]"
             >
-              <div
-                className=" w-full flex text-2xl items-start justify-end px-4"
-              >
-                <FaRegWindowClose onClick={closeSidebar}  />
+              <div className=" w-full flex text-2xl items-start justify-end px-4">
+                <FaRegWindowClose onClick={closeSidebar} />
               </div>
               <span id="btn">
                 <DropdownMenu>
@@ -375,11 +356,7 @@ export default function Intro() {
               <div id="left">
                 <h1>LOGO</h1>
               </div>
-              <div
-                id="right"
-                className="text-2xl"
-                onClick={openSidebar}
-              >
+              <div id="right" className="text-2xl" onClick={openSidebar}>
                 <FaBars />
               </div>
             </div>
