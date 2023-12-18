@@ -59,19 +59,24 @@ export default function Intro() {
     document.querySelector(".animatedbar").style.opacity = 0;
     setText(TARGET_TEXT);
   };
- 
+
   useEffect(() => {
-    let circle=document.querySelector('.circle')
-    window.addEventListener('mousemove',(details)=>{
-      let x=details.clientX;
-      let y=details.clientY;
-  
-      circle.style.top=`${y}px`
-      circle.style.left=`${x}px`
-      
-    })
-  }, [])
-  
+    // let circle = document.querySelector(".circle");
+    // window.addEventListener("mousemove", (details) => {
+    //   let x = details.clientX;
+    //   let y = details.clientY;
+
+    //   circle.style.top = `${y}px`;
+    //   circle.style.left = `${x}px`;
+    // });
+
+    (
+      async()=>{
+        const LocomotiveScroll=(await import('locomotive-scroll')).default;
+        const locomotiveScroll=new LocomotiveScroll();
+      }
+    )()
+  }, []);
 
   const page1Content = useRef();
   const { contextSafe } = useGSAP({ scope: page1Content });
@@ -198,8 +203,9 @@ export default function Intro() {
             duration: 0.5,
             stagger: 0.2,
           });
-          
       }
+
+      
     }, firstref);
 
     return () => ctx.revert();
@@ -306,9 +312,9 @@ export default function Intro() {
             </nav>
             <nav
               id="sidebar"
-              className="hidden z-10 h-[100vh] flex-col xl:hidden items-center gap-4 md:gap-6  justify-center px-[2vw] py-[4vh]"
+              className="hidden z-10 h-[100vh] flex-col xl:hidden items-center gap-4 md:gap-6  justify-start px-[2vw] py-[4vh]"
             >
-              <div className=" w-full flex text-2xl items-start justify-end px-4">
+              <div className=" w-full flex text-2xl mt-8 items-start justify-end px-4">
                 <FaRegWindowClose onClick={closeSidebar} />
               </div>
               <span id="btn">
@@ -374,15 +380,17 @@ export default function Intro() {
                 <FaBars />
               </div>
             </div>
-          
-          <div className="h-[calc(100%-30px)] bg-slate-600 hero flex justify-center items-center w-[100%] bg-cover bg-[url('https://images.unsplash.com/photo-1567201864585-6baec9110dac?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] ">
-            <div className="bg-transparent ">
-            <h1 className="text-9xl bg-transparent herotext">ADVITIYA'24</h1>
-            <p className="herosubtext text-right tracking-wide px-8 text-xl bg-transparent">TechFest IIT ROPAR</p>
+
+            <div className="h-[calc(100%-30px)] bg-slate-600 hero flex justify-center items-center w-[100%] bg-cover bg-[url('https://images.unsplash.com/photo-1567201864585-6baec9110dac?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] ">
+              <div className="bg-transparent ">
+                <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl bg-transparent herotext">
+                  ADVITIYA'24
+                </h1>
+                <p className="herosubtext text-right tracking-wide  text-md sm:text-xl md:text-2xl lg:text-4xl bg-transparent">
+                  TechFest IIT ROPAR
+                </p>
+              </div>
             </div>
-            
-            
-          </div>
             <div className="circle pointer-events-none absolute bg-transparent h-[60px] w-[60px] rounded-full border-2 white -translate-y-1/2 -translate-x-1/2"></div>
           </div>
         </div>
