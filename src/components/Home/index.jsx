@@ -10,10 +10,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { MdOutlineArrowDropDownCircle } from "react-icons/md";
+import { FaAnglesDown } from "react-icons/fa6";
 import { CgProfile } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { FaRegWindowClose } from "react-icons/fa";
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useLayoutEffect, useEffect } from "react";
 const Index = () => {
   const page1 = useRef();
   const { contextSafe } = useGSAP({ scope: page1 });
@@ -56,20 +57,14 @@ const Index = () => {
             duration: 1,
             ease: "back.out(1.7)",
           })
-          // .from("#heromain", {
-          //   y: -100,
-          //   opacity: 0,
-          //   duration: 1,
-          //   ease: "back.out(1.7)",
-          // })
-          // .to("#heromain", { // Adjust this line based on your desired animation
-          //   scrollTrigger: {
-          //     trigger: "#page1",
-          //     start: "top center",
-          //     end: "bottom center",
-          //     scrub: true,
-          //   },
-          // });
+          .from("#scrolldown",{
+            y:-80,
+            opacity:0,
+            repeat:-1,
+            duration:1.5,
+            yoyo:true
+          })
+        
       } else {
         tl.current = gsap
           .timeline()
@@ -82,23 +77,35 @@ const Index = () => {
             y: -100,
             opacity: 0,
             duration: 1,
-          });
+          })
+          .from("#scrolldown",{
+            y:-100,
+            opacity:0,
+            repeat:-1,
+            yoyo:true
+          })
       }
+
+      const tl2=gsap.timeline({
+        scrollTrigger:{
+          markers:true,
+          scrub:1,
+        }
+      })
+      tl2
+      .to("#hero",{
+        y:100,
+        opacity:0,
+        duration:2,
+      })
     }, page1);
-
-    
-
-    
-
 
     return () => ctx.revert();
   }, []);
+
   return (
     <>
-      <div
-        ref={page1}
-        className="page1 h-[100vh] w-[100%] relative text-white"
-      >
+      <div ref={page1} className="page1 h-[100vh] w-[100%] relative text-white">
         <nav className="hidden  h-[65px] xl:flex items-center justify-between px-[2vw] py-[4vh]">
           <span id="nav-btn">
             <DropdownMenu>
@@ -224,9 +231,9 @@ const Index = () => {
 
         <div
           id="hero"
-          className="h-[calc(100%-65px)] bg-slate-600 hero flex justify-center items-center w-[100%] bg-cover bg-[url('https://images.unsplash.com/photo-1567201864585-6baec9110dac?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] "
+          className="h-[calc(100%-65px)] bg-slate-600 hero flex flex-col gap-10 justify-center items-center w-[100%] bg-cover bg-[url('https://images.unsplash.com/photo-1567201864585-6baec9110dac?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] "
         >
-          <div className="bg-transparent" id="heromain">
+          <div className="bg-transparent mt-28" id="heromain">
             <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl bg-transparent herotext">
               ADVITIYA&#39;24
             </h1>
@@ -234,10 +241,19 @@ const Index = () => {
               TechFest IIT ROPAR
             </p>
           </div>
+
+          <div id="scrolldown" className="text-5xl mt-20">
+            <FaAnglesDown />
+          </div>
         </div>
       </div>
 
-      <div id="page2" className="h-[100vh] w-[100%]  bg-white"></div>
+      <div
+        id="page2"
+        className="h-[100vh] w-[100%] flex justify-center items-start bg-white"
+      >
+        {/* <div id="square" className="w-[200px] h-[200px] bg-black"></div> */}
+      </div>
     </>
   );
 };

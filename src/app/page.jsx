@@ -4,12 +4,12 @@ import Home from "@/components/Home"
 import { useEffect,useState } from "react";
 
 const Page = () => {
-//   useEffect(() => {
-//     (async () => {
-//       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-//       const locomotiveScroll = new LocomotiveScroll();
-//     })();
-//   }, []);
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
 
 const [loading, setloading] = useState(true)
 
