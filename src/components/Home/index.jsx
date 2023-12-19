@@ -228,7 +228,7 @@ const Index = () => {
         >
           <div className="bg-transparent" id="heromain">
             <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl bg-transparent herotext">
-              ADVITIYA'24
+              ADVITIYA&#39;24
             </h1>
             <p className="herosubtext text-right tracking-wide  text-md sm:text-xl md:text-2xl lg:text-4xl bg-transparent">
               TechFest IIT ROPAR
