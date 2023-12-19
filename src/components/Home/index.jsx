@@ -81,6 +81,7 @@ const Index = () => {
           .from("#scrolldown",{
             y:-100,
             opacity:0,
+            duration:1.5,
             repeat:-1,
             yoyo:true
           })
@@ -88,7 +89,6 @@ const Index = () => {
 
       const tl2=gsap.timeline({
         scrollTrigger:{
-          markers:true,
           scrub:1,
         }
       })
@@ -234,10 +234,10 @@ const Index = () => {
           className="h-[calc(100%-65px)] bg-slate-600 hero flex flex-col gap-10 justify-center items-center w-[100%] bg-cover bg-[url('https://images.unsplash.com/photo-1567201864585-6baec9110dac?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] "
         >
           <div className="bg-transparent mt-28" id="heromain">
-            <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl bg-transparent herotext">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl bg-transparent herotext">
               ADVITIYA&#39;24
             </h1>
-            <p className="herosubtext text-right tracking-wide  text-md sm:text-xl md:text-2xl lg:text-4xl bg-transparent">
+            <p className="herosubtext text-right tracking-wide  text-sm sm:text-xl md:text-2xl lg:text-4xl bg-transparent">
               TechFest IIT ROPAR
             </p>
           </div>
