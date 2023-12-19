@@ -14,7 +14,7 @@ import { CgProfile } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { FaRegWindowClose } from "react-icons/fa";
 import { useRef, useLayoutEffect } from "react";
-const index = () => {
+const Index = () => {
   const page1 = useRef();
   const { contextSafe } = useGSAP({ scope: page1 });
   const tl = useRef();
@@ -242,4 +242,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
