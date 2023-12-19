@@ -8,6 +8,7 @@ import { useRef, useLayoutEffect, useState, useEffect } from "react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 const TARGET_TEXT = "Advitiya 2024";
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 50;
@@ -106,93 +107,99 @@ export default function Intro() {
       if (isLargeLaptop) {
         tl.current = gsap
           .timeline()
-          // .from("#loader h1", {
-          //   onStart: () => {
-          //     document.querySelector("#loader").style.display = "flex";
-          //   },
-          //   delay: 1,
-          //   x: 40,
-          //   opacity: 0,
-          //   duration: 1,
-          //   stagger: 0.1,
-          // })
-          // .to("#loader h1", {
-          //   opacity: 0,
-          //   x: -40,
-          //   duration: 1,
-          //   stagger: 0.1,
-          // })
-          // .to("#loader", {
-          //   opacity: 0,
-          //   onComplete: () => {
-          //     document.querySelector("#loader").style.display = "none";
-          //     document.querySelector("#intro").style.display = "flex";
-          //   },
-          // })
-          // .from("#intro h1", {
-          //   opacity: 0,
-          //   duration: 1,
-          // })
-          // .from("#intro h1", {
-          //   delay: 0.5,
-          //   onStart: scramble,
-          // })
-          .to("#intro h1", {
-            // delay: 1,
-            // opacity: 0,
-            // duration: 1,
+          .from("#loader h1", {
+            onStart: () => {
+              document.querySelector("#loader").style.display = "flex";
+            },
+            delay: 1,
+            x: 40,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.1,
+          })
+          .to("#loader h1", {
+            opacity: 0,
+            x: -40,
+            duration: 1,
+            stagger: 0.1,
+          })
+          .to("#loader", {
+            opacity: 0,
             onComplete: () => {
-              // document.querySelector("#intro").style.display = "none";
+              document.querySelector("#loader").style.display = "none";
+              document.querySelector("#intro").style.display = "flex";
+            },
+          })
+          .from("#intro h1", {
+            opacity: 0,
+            duration: 1,
+          })
+          .from("#intro h1", {
+            delay: 0.5,
+            onStart: scramble,
+          })
+          .to("#intro h1", {
+            delay: 1,
+            opacity: 0,
+            duration: 1,
+            onComplete: () => {
+              document.querySelector("#intro").style.display = "none";
               document.querySelector("#page1").style.display = "block";
               document.querySelector("#page2").style.display = "flex";
             },
           })
-          .from(["nav #nav-btn"], {
+          .from("nav #nav-btn", {
             y: -100,
             opacity: 0,
             duration: 0.5,
-            stagger: 0.3,
-          });
+            ease: "power1.out",
+          })
+          .from(["#hero"],{
+            y:-100,
+            opacity:0,
+            duration:1,
+            ease: "back.out(1.7)",
+          })
       } else {
         tl.current = gsap
           .timeline()
-          // .from("#loader h1", {
-          //   onStart: () => {
-          //     document.querySelector("#loader").style.display = "flex";
-          //   },
-          //   delay: 1,
-          //   x: 40,
-          //   opacity: 0,
-          //   duration: 1,
-          //   stagger: 0.1,
-          // })
-          // .to("#loader h1", {
-          //   opacity: 0,
-          //   x: -40,
-          //   duration: 1,
-          //   stagger: 0.1,
-          // })
-          // .to("#loader", {
-          //   opacity: 0,
-          //   onComplete: () => {
-          //     document.querySelector("#loader").style.display = "none";
-          //     document.querySelector("#intro").style.display = "flex";
-          //   },
-          // })
-          // .from("#intro h1", {
-          //   opacity: 0,
-          //   duration: 1,
-          // })
-          // .from("#intro h1", {
-          //   delay: 0.5,
-          //   onStart: scramble,
-          //})
-          .to("#intro h1", {
-            // delay: 1,
-            // opacity: 0,
-            // duration: 1,
+          .from("#loader h1", {
+            onStart: () => {
+              document.querySelector("#loader").style.display = "flex";
+            },
+            delay: 1,
+            x: 40,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.1,
+          })
+          .to("#loader h1", {
+            opacity: 0,
+            x: -40,
+            duration: 1,
+            stagger: 0.1,
+          })
+          .to("#loader", {
+            opacity: 0,
             onComplete: () => {
-              // document.querySelector("#intro").style.display = "none";
+              document.querySelector("#loader").style.display = "none";
+              document.querySelector("#intro").style.display = "flex";
+            },
+          })
+          .from("#intro h1", {
+            opacity: 0,
+            duration: 1,
+          })
+          .from("#intro h1", {
+            delay: 0.5,
+            onStart: scramble,
+          })
+          .to("#intro h1", {
+            delay: 1,
+            opacity: 0,
+            duration: 1,
+            onComplete: () => {
+              document.querySelector("#intro").style.display = "none";
               document.querySelector("#page1").style.display = "block";
               document.querySelector("#page2").style.display = "flex";
             },
@@ -201,11 +208,15 @@ export default function Intro() {
             y: -100,
             opacity: 0,
             duration: 0.5,
-            stagger: 0.2,
-          });
+          })
+          .from(["#hero"],{
+            y:-100,
+            opacity:0,
+            duration:1
+          })
       }
 
-      
+
     }, firstref);
 
     return () => ctx.revert();
@@ -216,7 +227,7 @@ export default function Intro() {
       <div id="main" ref={firstref} className="overflow-hidden">
         <div
           id="loader"
-          className="text-indigo-300 h-[100vh]  w-[100vw] bg-black z-2 hidden  items-center justify-center "
+          className="text-white h-[100vh]  w-[100vw] bg-black z-2 hidden  items-center justify-center "
         >
           <div className="flex flex-col gap-2 justify-center items-center md:flex-row text-xl  md:text-2xl lg:text-3xl ">
             <h1>Welcome to</h1>
@@ -229,7 +240,7 @@ export default function Intro() {
           id="intro"
           className="bg-black text-xl md:text-3xl lg:text-5xl hidden h-[100vh] items-center justify-center"
         >
-          <motion.h1 className="heading group flex items-center text-xl md:text-3xl lg:text-5xl relative overflow-hidden rounded-lg border-[1px] border-none tracking-widest bg-slate-black px-4  font-medium  uppercase transition-colors text-indigo-300">
+          <motion.h1 className="heading group flex items-center text-xl md:text-3xl lg:text-5xl relative overflow-hidden rounded-lg border-[1px] border-none tracking-widest bg-slate-black px-4  font-medium  uppercase transition-colors text-white">
             {text}
 
             <motion.span
@@ -312,7 +323,7 @@ export default function Intro() {
             </nav>
             <nav
               id="sidebar"
-              className="hidden z-10 h-[100vh] flex-col xl:hidden items-center gap-4 md:gap-6  justify-start px-[2vw] py-[4vh]"
+              className="hidden z-10 h-[100vh] flex-col xl:hidden  items-center gap-4 md:gap-6  justify-start px-[2vw] py-[4vh]"
             >
               <div className=" w-full flex text-2xl mt-8 items-start justify-end px-4">
                 <FaRegWindowClose onClick={closeSidebar} />
@@ -373,7 +384,7 @@ export default function Intro() {
               id="mobile-nav"
               className="flex h-[30px] xl:hidden px-4 py-8 justify-between items-center"
             >
-              <div id="left">
+              <div id="left" >
                 <h1>LOGO</h1>
               </div>
               <div id="right" className="text-2xl" onClick={openSidebar}>
@@ -381,9 +392,9 @@ export default function Intro() {
               </div>
             </div>
 
-            <div className="h-[calc(100%-30px)] bg-slate-600 hero flex justify-center items-center w-[100%] bg-cover bg-[url('https://images.unsplash.com/photo-1567201864585-6baec9110dac?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] ">
+            <div id="hero" className="h-[calc(100%-30px)] bg-slate-600 hero flex justify-center items-center w-[100%] bg-cover bg-[url('https://images.unsplash.com/photo-1567201864585-6baec9110dac?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] ">
               <div className="bg-transparent ">
-                <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl bg-transparent herotext">
+                <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl bg-transparent herotext">
                   ADVITIYA'24
                 </h1>
                 <p className="herosubtext text-right tracking-wide  text-md sm:text-xl md:text-2xl lg:text-4xl bg-transparent">
