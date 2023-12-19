@@ -3,7 +3,7 @@ import Intro from "@/components/Intro";
 import Home from "@/components/Home"
 import { useEffect,useState } from "react";
 
-const home = () => {
+const Page = () => {
 //   useEffect(() => {
 //     (async () => {
 //       const LocomotiveScroll = (await import("locomotive-scroll")).default;
@@ -20,4 +20,4 @@ const [loading, setloading] = useState(true)
   );
 };
 
-export default home;
+export default Page;
