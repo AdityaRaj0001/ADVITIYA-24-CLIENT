@@ -15,10 +15,13 @@ import { CgProfile } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { FaRegWindowClose } from "react-icons/fa";
 import { useRef, useLayoutEffect, useEffect } from "react";
-const Index = () => {
+import Link from "next/link";
+
+export default function Index() {
   const page1 = useRef();
   const { contextSafe } = useGSAP({ scope: page1 });
   const tl = useRef();
+  // const router = useRouter();
   const openSidebar = contextSafe(() => {
     gsap.from(["#sidebar div", "#sidebar #btn"], {
       onStart: () => {
@@ -57,14 +60,13 @@ const Index = () => {
             duration: 1,
             ease: "back.out(1.7)",
           })
-          .from("#scrolldown",{
-            y:-80,
-            opacity:0,
-            repeat:-1,
-            duration:1.5,
-            yoyo:true
-          })
-        
+          .from("#scrolldown", {
+            y: -80,
+            opacity: 0,
+            repeat: -1,
+            duration: 1.5,
+            yoyo: true,
+          });
       } else {
         tl.current = gsap
           .timeline()
@@ -78,26 +80,25 @@ const Index = () => {
             opacity: 0,
             duration: 1,
           })
-          .from("#scrolldown",{
-            y:-100,
-            opacity:0,
-            duration:1.5,
-            repeat:-1,
-            yoyo:true
-          })
+          .from("#scrolldown", {
+            y: -100,
+            opacity: 0,
+            duration: 1.5,
+            repeat: -1,
+            yoyo: true,
+          });
       }
 
-      const tl2=gsap.timeline({
-        scrollTrigger:{
-          scrub:1,
-        }
-      })
-      tl2
-      .to("#hero",{
-        y:100,
-        opacity:0,
-        duration:2,
-      })
+      const tl2 = gsap.timeline({
+        scrollTrigger: {
+          scrub: 1,
+        },
+      });
+      tl2.to("#hero", {
+        y: 100,
+        opacity: 0,
+        duration: 2,
+      });
     }, page1);
 
     return () => ctx.revert();
@@ -106,7 +107,7 @@ const Index = () => {
   return (
     <>
       <div ref={page1} className="page1 h-[100vh] w-[100%] relative text-white">
-        <nav className="hidden  h-[65px] xl:flex items-center justify-between px-[2vw] py-[4vh]">
+        <nav className="hidden h-[65px] xl:flex items-center justify-between px-[2vw] py-[4vh]">
           <span id="nav-btn">
             <DropdownMenu>
               <DropdownMenuTrigger className="flex flex-row items-center gap-2 outline-none ">
@@ -138,9 +139,11 @@ const Index = () => {
           <Button id="nav-btn" variant="ghost">
             Contact Us
           </Button>
+          <Link href="/aboutus">
           <Button id="nav-btn" variant="ghost">
             About Us
           </Button>
+          </Link>
           <Button id="nav-btn" variant="ghost">
             FAQs
           </Button>
@@ -196,7 +199,7 @@ const Index = () => {
           <Button id="btn" variant="ghost">
             Contact Us
           </Button>
-          <Button id="btn" variant="ghost">
+          <Button id="btn" variant="ghost" onClick={()=>{router.push("/aboutus")}}>
             About Us
           </Button>
           <Button id="btn" variant="ghost">
@@ -216,7 +219,6 @@ const Index = () => {
             </DropdownMenu>
           </span>
         </nav>
-
         <div
           id="mobile-nav"
           className="flex h-[30px] xl:hidden px-4 py-8 justify-between items-center"
@@ -256,6 +258,4 @@ const Index = () => {
       </div>
     </>
   );
-};
-
-export default Index;
+}

@@ -1,6 +1,6 @@
 "use client";
-import Intro from "@/components/Intro";
-import Home from "@/components/Home"
+import Intro from "@/components/Intro/index";
+import Home from "@/components/Home/index"
 import { useEffect,useState } from "react";
 
 const Page = () => {
