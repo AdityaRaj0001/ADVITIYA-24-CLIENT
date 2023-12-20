@@ -8,8 +8,7 @@ const Auth  = () => {
 
   return (
     <>
-    <div >Auth </div>
-    <a onClick={()=>{Router.push('/')}}>Go to start</a>
+    <div className='text-white'>Auth</div>
     
     </>
     

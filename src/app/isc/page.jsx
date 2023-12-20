@@ -2,7 +2,7 @@ import React from 'react'
 
 const ISC = () => {
   return (
-    <div>ISC</div>
+    <div className='text-white'>ISC</div>
   )
 }
 

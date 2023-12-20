@@ -2,7 +2,7 @@ import React from 'react'
 
 const FAQs = () => {
   return (
-    <div>FAQs</div>
+    <div className='text-white'>FAQs</div>
   )
 }
 

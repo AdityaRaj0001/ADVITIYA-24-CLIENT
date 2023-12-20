@@ -3,7 +3,7 @@ import React from 'react'
 
 const Accommodation = () => {
   return (
-    <div>accommodation</div>
+    <div className='text-white'>accommodation</div>
   )
 }
 
