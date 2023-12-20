@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
 
-const accommodation = () => {
+const Accommodation = () => {
   return (
     <div>accommodation</div>
   )
 }
 
-export default accommodation
+export default Accommodation

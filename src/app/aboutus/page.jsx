@@ -16,7 +16,7 @@ import { FaBars } from "react-icons/fa";
 import { FaRegWindowClose } from "react-icons/fa";
 import { useRef, useLayoutEffect} from "react";
 import Link from "next/link";
-const aboutus = () => {
+const Aboutus = () => {
 
   const page1 = useRef();
   const { contextSafe } = useGSAP({ scope: page1 });
@@ -226,4 +226,4 @@ const aboutus = () => {
   )
 }
 
-export default aboutus
+export default Aboutus
