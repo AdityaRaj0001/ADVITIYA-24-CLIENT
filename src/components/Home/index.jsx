@@ -48,7 +48,7 @@ export default function Index() {
       if (isLargeLaptop) {
         tl.current = gsap
           .timeline()
-          .from("nav #nav-btn", {
+          .from("nav #btn", {
             y: -100,
             opacity: 0,
             duration: 0.5,
@@ -108,7 +108,7 @@ export default function Index() {
     <>
       <div ref={page1} className="page1 h-[100vh] w-[100%] relative text-white">
         <nav className="hidden h-[65px] xl:flex items-center justify-between px-[2vw] py-[4vh]">
-          <span id="nav-btn">
+          <span id="btn">
             <DropdownMenu>
               <DropdownMenuTrigger className="flex flex-row items-center gap-2 outline-none ">
                 Events
@@ -124,30 +124,43 @@ export default function Index() {
               </DropdownMenuContent>
             </DropdownMenu>
           </span>
-          <Button id="nav-btn" variant="ghost">
+          <Link id="btn" href="/schedule">
+          <Button  variant="ghost">
             Schedule
           </Button>
-          <Button id="nav-btn" variant="ghost">
-            Accommodation
-          </Button>
-          <Button id="nav-btn" variant="ghost">
+          </Link>
+          <Link id="btn" href="/sponsors">
+          <Button  variant="ghost">
             Sponsors
           </Button>
-          <Button id="nav-btn" variant="ghost">
+          </Link>
+          <Link id="btn" href="/accommodation">
+          <Button  variant="ghost">
+            Accommodation
+          </Button>
+          </Link>
+         <Link id="btn" href="/isc">
+         <Button  variant="ghost">
             Inter-School-Conclave
           </Button>
-          <Button id="nav-btn" variant="ghost">
+         </Link>
+          <Link id="btn" href="/contactus">
+          <Button  variant="ghost">
             Contact Us
           </Button>
-          <Link href="/aboutus">
-          <Button id="nav-btn" variant="ghost">
+          </Link>
+          <Link id="btn" href="/aboutus">
+          <Button  variant="ghost">
             About Us
           </Button>
           </Link>
-          <Button id="nav-btn" variant="ghost">
+          <Link id="btn" href="/faqs">
+          <Button  variant="ghost">
             FAQs
           </Button>
-          <span id="nav-btn">
+          </Link>
+         
+          <span id="btn">
             <DropdownMenu>
               <DropdownMenuTrigger className="flex flex-row items-center gap-2 outline-none text-2xl">
                 {" "}
@@ -184,27 +197,42 @@ export default function Index() {
               </DropdownMenuContent>
             </DropdownMenu>
           </span>
-          <Button id="btn" variant="ghost">
+          <Link id="btn" href="/schedule">
+          <Button  variant="ghost">
             Schedule
           </Button>
-          <Button id="btn" variant="ghost">
+          </Link>
+          <Link id="btn" href="/sponsors">
+          <Button  variant="ghost">
             Sponsors
           </Button>
-          <Button id="btn" variant="ghost">
+          </Link>
+          <Link id="btn" href="/accommodation">
+          <Button  variant="ghost">
             Accommodation
           </Button>
-          <Button id="btn" variant="ghost">
+          </Link>
+         <Link id="btn" href="/isc">
+         <Button  variant="ghost">
             Inter-School-Conclave
           </Button>
-          <Button id="btn" variant="ghost">
+         </Link>
+          <Link id="btn" href="/contactus">
+          <Button  variant="ghost">
             Contact Us
           </Button>
-          <Button id="btn" variant="ghost" onClick={()=>{router.push("/aboutus")}}>
+          </Link>
+          <Link id="btn" href="/aboutus">
+          <Button  variant="ghost">
             About Us
           </Button>
-          <Button id="btn" variant="ghost">
+          </Link>
+          <Link id="btn" href="/faqs">
+          <Button  variant="ghost">
             FAQs
           </Button>
+          </Link>
+        
           <span id="btn">
             <DropdownMenu id="btn">
               <DropdownMenuTrigger className="flex flex-row items-center gap-2 outline-none text-2xl">
@@ -219,6 +247,7 @@ export default function Index() {
             </DropdownMenu>
           </span>
         </nav>
+
         <div
           id="mobile-nav"
           className="flex h-[30px] xl:hidden px-4 py-8 justify-between items-center"

@@ -108,7 +108,6 @@ export default function Index({setloading}) {
             <h1>Future</h1>
           </div>
         </div>
-
         <div
           id="intro"
           className="bg-black text-xl md:text-3xl lg:text-5xl hidden h-[100vh] items-center justify-center"
