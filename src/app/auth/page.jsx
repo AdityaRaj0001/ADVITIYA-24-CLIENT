@@ -34,7 +34,7 @@ const Signup = ({setsigninpage, signinpage}) => {
           </div>
           <div className="grid gap-2">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" placeholder="m@example.com" />
+            <Input id="email" type="email" className="text-xs lg:text-sm" placeholder="m@example.com" />
           </div>
           <div className="grid gap-2">
             <Label htmlFor="password">Password</Label>
@@ -79,7 +79,7 @@ const Signin = ({setsigninpage, signinpage}) => {
           </div>
           <div className="grid gap-2">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" placeholder="m@example.com" />
+            <Input id="email" type="email" className="text-xs lg:text-sm" placeholder="m@example.com" />
           </div>
           <div className="grid gap-2">
             <Label htmlFor="password">Password</Label>
@@ -107,7 +107,7 @@ const Auth = () => {
       <div id="main" className="w-100vw bg-transparent h-screen relative flex flex-col items-center justify-center md:flex-row ">
         <div
           id="left"
-          className="w-full bg-cover sm:bg-none bg-center md:bg-[url('https://cdn.dribbble.com/users/507150/screenshots/5380757/media/de2a1b1bafe3c7693b7f98362c933e66.gif')]  h-screen absolute   bg-slate-700 md:static md:w-1/2 "></div>
+          className="w-full bg-cover sm:bg-none bg-center md:bg-[url('https://cdn.dribbble.com/users/507150/screenshots/5380757/media/de2a1b1bafe3c7693b7f98362c933e66.gif')]  h-screen absolute   bg-black md:static md:w-1/2 "></div>
         <div id="right" className="w-full z-10   h-auto flex flex-col items-center justify-center md:w-1/2 ">
           {!signinpage && <Signup setsigninpage={setsigninpage} signinpage={signinpage} />}
           {signinpage && <Signin setsigninpage={setsigninpage} signinpage={signinpage}></Signin>}
