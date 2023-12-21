@@ -14,7 +14,7 @@ const Signup = ({setsigninpage, signinpage}) => {
     <>
       <Card className="w-[85%] sm:w-[70%] md:w-[85%] max-w-xl  bg-black bg-cover bg-center bg-[url('https://cdn.dribbble.com/users/507150/screenshots/5380757/media/de2a1b1bafe3c7693b7f98362c933e66.gif')] md:bg-none  text-white">
         <CardHeader className="space-y-1">
-          <CardTitle className="text-xl">Create an account</CardTitle>
+          <CardTitle className="text-[1.1rem] sm:text-[1.25rem]">Create an account</CardTitle>
           <CardDescription className="text-sm">Enter your email below to create your account</CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4">
