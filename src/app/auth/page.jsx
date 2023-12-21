@@ -57,7 +57,7 @@ const Signin = ({setsigninpage, signinpage}) => {
   const Router = useRouter();
   return (
     <>
-      <Card className="w-[85%] sm:w-[70%] md:w-[85%] max-w-xl bg-black  text-white">
+      <Card className="w-[85%] sm:w-[70%] md:w-[85%] max-w-xl  bg-black bg-cover bg-center bg-[url('https://cdn.dribbble.com/users/507150/screenshots/5380757/media/de2a1b1bafe3c7693b7f98362c933e66.gif')] md:bg-none  text-white">
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl">Welcome Back.</CardTitle>
           <CardDescription>Nice to have you here again</CardDescription>
@@ -107,7 +107,7 @@ const Auth = () => {
       <div id="main" className="w-100vw bg-transparent h-screen relative flex flex-col items-center justify-center md:flex-row ">
         <div
           id="left"
-          className="w-full bg-cover bg-center bg-[url('https://cdn.dribbble.com/users/507150/screenshots/5380757/media/de2a1b1bafe3c7693b7f98362c933e66.gif')] h-screen absolute   bg-slate-700 md:static md:w-1/2 "></div>
+          className="w-full bg-cover sm:bg-none bg-center md:bg-[url('https://cdn.dribbble.com/users/507150/screenshots/5380757/media/de2a1b1bafe3c7693b7f98362c933e66.gif')]  h-screen absolute   bg-slate-700 md:static md:w-1/2 "></div>
         <div id="right" className="w-full z-10   h-auto flex flex-col items-center justify-center md:w-1/2 ">
           {!signinpage && <Signup setsigninpage={setsigninpage} signinpage={signinpage} />}
           {signinpage && <Signin setsigninpage={setsigninpage} signinpage={signinpage}></Signin>}
