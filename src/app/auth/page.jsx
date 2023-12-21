@@ -8,7 +8,7 @@ import {Label} from '@/components/ui/label';
 import {Icons} from '@/components/icons';
 import {useState} from 'react';
 
-const Signup = ({setsigninpage, signinpage}) => {
+const Signup = ({setsigninpage, signinpage,setEmail,setPass,email,pass}) => {
   const Router = useRouter();
   return (
     <>
@@ -17,7 +17,7 @@ const Signup = ({setsigninpage, signinpage}) => {
           <CardTitle className="text-[1.1rem] sm:text-[1.25rem]">Create an account</CardTitle>
           <CardDescription className="text-sm">Enter your email below to create your account</CardDescription>
         </CardHeader>
-        <CardContent className="grid gap-4">
+        <CardContent className="grid gap-4 ">
           <div className="flex items-center">
             <Button >
               <Icons.google className="mr-2 h-4 w-4" />
@@ -32,20 +32,21 @@ const Signup = ({setsigninpage, signinpage}) => {
               <span className="bg-background px-2 text-muted-foreground bg-black">Or continue with</span>
             </div>
           </div>
-          <div className="grid gap-2">
+          <div className="grid gap-2 ">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" className="text-xs lg:text-sm" placeholder="m@example.com" />
+            <Input id="email" type="email" className="text-xs lg:text-sm text-black"  placeholder="m@example.com" />
           </div>
           <div className="grid gap-2">
             <Label htmlFor="password">Password</Label>
-            <Input id="password" type="password" />
+            <Input id="password" type="password" className="text-black"  />
           </div>
         </CardContent>
         <CardFooter className="flex-col">
           <Button className="w-full mb-2" onClick={() => Router.push('/')}>
             Create account
           </Button>
-          <Button className="w-full text-[10px] sm:text-[12px]" variant={'secondary'} onClick={() => setsigninpage(!signinpage)}>
+          <Button className="w-full text-[10px] sm:text-[12px]" variant={'secondary'}  onClick={() => setsigninpage(prev => !prev)}
+>
             Already a Registered User ? SignIn.
           </Button>
         </CardFooter>
@@ -53,7 +54,7 @@ const Signup = ({setsigninpage, signinpage}) => {
     </>
   );
 };
-const Signin = ({setsigninpage, signinpage}) => {
+const Signin = ({setsigninpage, signinpage,setEmail,setPass}) => {
   const Router = useRouter();
   return (
     <>
@@ -79,18 +80,19 @@ const Signin = ({setsigninpage, signinpage}) => {
           </div>
           <div className="grid gap-2">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" className="text-xs lg:text-sm" placeholder="m@example.com" />
+            <Input id="email" type="email" className="text-xs lg:text-sm text-black"  placeholder="m@example.com" />
           </div>
           <div className="grid gap-2">
             <Label htmlFor="password">Password</Label>
-            <Input id="password" type="password" />
+            <Input id="password" type="password" className="text-black"  />
           </div>
         </CardContent>
         <CardFooter className="flex-col">
           <Button className="w-full mb-2" onClick={() => Router.push('/')}>
             Login
           </Button>
-          <Button className="w-full text-[10px] sm:text-[12px]" variant={'secondary'} onClick={() => setsigninpage(!signinpage)}>
+          <Button className="w-full text-[10px] sm:text-[12px]" variant={'secondary'} onClick={() => setsigninpage(prev => !prev)}
+>
             Not a Registered User ? SignUp.
           </Button>
         </CardFooter>
@@ -101,6 +103,8 @@ const Signin = ({setsigninpage, signinpage}) => {
 
 const Auth = () => {
   const [signinpage, setsigninpage] = useState(false);
+  const [email, setEmail] = useState("")
+  const [pass, setPass] = useState("")
 
   return (
     <>
@@ -109,8 +113,8 @@ const Auth = () => {
           id="left"
           className="w-full bg-cover sm:bg-none bg-center md:bg-[url('https://cdn.dribbble.com/users/507150/screenshots/5380757/media/de2a1b1bafe3c7693b7f98362c933e66.gif')]  h-screen absolute   bg-black md:static md:w-1/2 "></div>
         <div id="right" className="w-full z-10   h-auto flex flex-col items-center justify-center md:w-1/2 ">
-          {!signinpage && <Signup setsigninpage={setsigninpage} signinpage={signinpage} />}
-          {signinpage && <Signin setsigninpage={setsigninpage} signinpage={signinpage}></Signin>}
+          {!signinpage && <Signup setsigninpage={setsigninpage}  />}
+          {signinpage && <Signin setsigninpage={setsigninpage} ></Signin>}
         </div>
         
       </div>
