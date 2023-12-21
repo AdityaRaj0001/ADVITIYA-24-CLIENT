@@ -14,7 +14,7 @@ const Page = () => {
 const [loading, setloading] = useState(true)
 
   return (
-    <main>
+    <main className="bg-black">
       {loading?<Intro setloading={setloading}/>:<Home/>}
     </main>
   );

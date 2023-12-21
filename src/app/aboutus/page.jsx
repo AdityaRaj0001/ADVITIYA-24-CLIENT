@@ -69,7 +69,7 @@ const Aboutus = () => {
   }, []);
 
   return (
-    <div ref={page1} className="page1 h-[100vh] w-[100%] relative text-white">
+    <div ref={page1} className="page1 h-[100vh] w-[100%] relative bg-black text-white">
         <nav className="hidden h-[65px] xl:flex items-center justify-between px-[2vw] py-[4vh]">
           <span id="btn">
             <DropdownMenu>
@@ -149,7 +149,7 @@ const Aboutus = () => {
                 Events
                 <MdOutlineArrowDropDownCircle />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white">
+              <DropdownMenuContent className="text-white bg-black ">
                 <DropdownMenuItem>Hackathons</DropdownMenuItem>
                 <DropdownMenuItem>Workshops</DropdownMenuItem>
                 <DropdownMenuItem>Exhibitions</DropdownMenuItem>
@@ -201,14 +201,13 @@ const Aboutus = () => {
                 <CgProfile />
                 <FaBars />{" "}
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white mt-2 mr-2">
+              <DropdownMenuContent className="text-white mt-2 mr-2 bg-black">
                 <DropdownMenuItem>Profile</DropdownMenuItem>
                 <DropdownMenuItem>Login/Register</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </span>
         </nav>
-
         <div
           id="mobile-nav"
           className="flex h-[30px] xl:hidden px-4 py-8 justify-between items-center"

@@ -97,7 +97,7 @@ export default function Index({setloading}) {
 
   return (
     <>
-      <div id="main" ref={firstref} className="overflow-hidden">
+      <div id="main" ref={firstref} className="overflow-hidden bg-black">
         <div
           id="loader"
           className="text-white h-[100vh]  w-[100vw] bg-black z-2 hidden  items-center justify-center "

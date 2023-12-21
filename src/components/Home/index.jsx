@@ -106,7 +106,7 @@ export default function Index() {
 
   return (
     <>
-      <div ref={page1} className="page1 h-[100vh] w-[100%] relative text-white">
+      <div ref={page1} className="bg-black page1 h-[100vh] w-[100%] relative text-white">
         <nav className="hidden h-[65px] xl:flex items-center justify-between px-[2vw] py-[4vh]">
           <span id="btn">
             <DropdownMenu>
@@ -114,7 +114,7 @@ export default function Index() {
                 Events
                 <MdOutlineArrowDropDownCircle />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white">
+              <DropdownMenuContent className="text-white bg-black ">
                 <DropdownMenuItem>Hackathons</DropdownMenuItem>
                 <DropdownMenuItem>Workshops</DropdownMenuItem>
                 <DropdownMenuItem>Exhibitions</DropdownMenuItem>
@@ -167,9 +167,9 @@ export default function Index() {
                 <CgProfile />
                 <FaBars />{" "}
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white mt-2 mr-2">
+              <DropdownMenuContent className="text-white bg-black mt-2 mr-2">
                 <DropdownMenuItem>Profile</DropdownMenuItem>
-                <DropdownMenuItem>Login/Register</DropdownMenuItem>
+                <Link href='/auth'><DropdownMenuItem>Login/Register</DropdownMenuItem></Link>
               </DropdownMenuContent>
             </DropdownMenu>
           </span>
@@ -187,13 +187,13 @@ export default function Index() {
                 Events
                 <MdOutlineArrowDropDownCircle />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white">
+              <DropdownMenuContent className="text-white mt-2 bg-black ">
                 <DropdownMenuItem>Hackathons</DropdownMenuItem>
                 <DropdownMenuItem>Workshops</DropdownMenuItem>
                 <DropdownMenuItem>Exhibitions</DropdownMenuItem>
                 <DropdownMenuItem>Talk Shows</DropdownMenuItem>
                 <DropdownMenuItem>Competitions</DropdownMenuItem>
-                <DropdownMenuItem>Robowars</DropdownMenuItem>
+                <DropdownMenuItem >Robowars</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </span>
@@ -240,14 +240,13 @@ export default function Index() {
                 <CgProfile />
                 <FaBars />{" "}
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white mt-2 mr-2">
+              <DropdownMenuContent className="text-white mt-2 mr-2 bg-black ">
                 <DropdownMenuItem>Profile</DropdownMenuItem>
-                <DropdownMenuItem>Login/Register</DropdownMenuItem>
+                <Link href='/auth'><DropdownMenuItem>Login/Register</DropdownMenuItem></Link>
               </DropdownMenuContent>
             </DropdownMenu>
           </span>
         </nav>
-
         <div
           id="mobile-nav"
           className="flex h-[30px] xl:hidden px-4 py-8 justify-between items-center"
@@ -264,7 +263,7 @@ export default function Index() {
           id="hero"
           className="h-[calc(100%-65px)] bg-slate-600 hero flex flex-col gap-10 justify-center items-center w-[100%] bg-cover bg-[url('https://images.unsplash.com/photo-1567201864585-6baec9110dac?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] "
         >
-          <div className="bg-transparent mt-28" id="heromain">
+          <div className=" mt-28" id="heromain">
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl bg-transparent herotext">
               ADVITIYA&#39;24
             </h1>
