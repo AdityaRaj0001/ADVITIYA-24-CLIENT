@@ -99,7 +99,7 @@ const Signin = ({setsigninpage, signinpage}) => {
   );
 };
 
-const auth = () => {
+const Auth = () => {
   const [signinpage, setsigninpage] = useState(false);
 
   return (
@@ -118,4 +118,4 @@ const auth = () => {
   );
 };
 
-export default auth;
+export default Auth;
