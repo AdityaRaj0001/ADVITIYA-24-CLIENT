@@ -36,7 +36,7 @@ const SignIn = () => {
             </CardHeader>
             <CardContent className="grid gap-4">
               <div className="flex items-center">
-                <Button>
+                <Button onClick={() => Router.push("/auth")}>
                   <Icons.google className="mr-2 h-4 w-4" />
                   Google
                 </Button>
