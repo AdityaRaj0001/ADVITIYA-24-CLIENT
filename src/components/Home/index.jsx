@@ -169,7 +169,7 @@ export default function Index() {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="text-white bg-black mt-2 mr-2">
                 <DropdownMenuItem>Profile</DropdownMenuItem>
-                <Link href='/auth'><DropdownMenuItem>Login/Register</DropdownMenuItem></Link>
+                <Link href='/signup'><DropdownMenuItem>Login/Register</DropdownMenuItem></Link>
               </DropdownMenuContent>
             </DropdownMenu>
           </span>
@@ -242,7 +242,7 @@ export default function Index() {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="text-white mt-2 mr-2 bg-black ">
                 <DropdownMenuItem>Profile</DropdownMenuItem>
-                <Link href='/auth'><DropdownMenuItem>Login/Register</DropdownMenuItem></Link>
+                <Link href='/signup'><DropdownMenuItem>Login/Register</DropdownMenuItem></Link>
               </DropdownMenuContent>
             </DropdownMenu>
           </span>
