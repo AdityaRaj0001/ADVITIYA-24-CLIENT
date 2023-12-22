@@ -19,6 +19,7 @@
     "gsap": "^3.12.3",
     "locomotive-scroll": "^5.0.0-beta.11",
     "lucide-react": "^0.294.0",
+    "mdb-react-ui-kit": "^7.0.0",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
