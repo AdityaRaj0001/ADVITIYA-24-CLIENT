@@ -9,7 +9,7 @@ const Auth = () => {
   return (
     <>
       <div className='text-white text-2xl'>
-        Google Auth
+        Google Auth Page
       </div>
     </>
   );
