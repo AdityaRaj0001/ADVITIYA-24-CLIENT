@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { toast } from "react-toastify";
-const serverURL = "http://localhost:5000";
+const serverURL = "https://advitiya-server.onrender.com";
 
 export const userRegister = async (user) => {
 	try {
