@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiEdit, FiChevronDown, FiTrash, FiShare, FiPlusSquare } from "react-icons/fi";

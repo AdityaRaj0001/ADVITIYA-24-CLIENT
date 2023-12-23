@@ -1,7 +1,7 @@
+'use client'
 import React from 'react';
 import './Registration.css'; // Import the registration.css file
-import {
-  MDBBtn,
+import { MDBBtn,
   MDBContainer,
   MDBRow,
   MDBCol,

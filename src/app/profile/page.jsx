@@ -1,13 +1,15 @@
 "use client";
 import { userLogout } from "@/apis/api";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React,{useEffect} from "react";
 import { toast } from "react-toastify";
 
 const Page = () => {
 	const router = useRouter();
-    const token  = localStorage.getItem("userToken");
-    
+	let token;
+	useEffect(() => {
+		 token  = localStorage.getItem("userToken");
+	  }, [])
 	const handleLogout = async() => {
 		localStorage.removeItem("userToken");
         const res = await userLogout(token);

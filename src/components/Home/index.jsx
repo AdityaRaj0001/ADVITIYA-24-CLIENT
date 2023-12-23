@@ -16,8 +16,10 @@ import { FaBars } from "react-icons/fa";
 import { FaRegWindowClose } from "react-icons/fa";
 import { useRef, useLayoutEffect, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Index() {
+  const Router=useRouter()
   const page1 = useRef();
   const { contextSafe } = useGSAP({ scope: page1 });
   const tl = useRef();
@@ -115,7 +117,7 @@ export default function Index() {
                 <MdOutlineArrowDropDownCircle />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="text-white bg-black ">
-                <DropdownMenuItem>Hackathons</DropdownMenuItem>
+                <DropdownMenuItem >Hackathons</DropdownMenuItem>
                 <DropdownMenuItem>Workshops</DropdownMenuItem>
                 <DropdownMenuItem>Exhibitions</DropdownMenuItem>
                 <DropdownMenuItem>Talk Shows</DropdownMenuItem>
