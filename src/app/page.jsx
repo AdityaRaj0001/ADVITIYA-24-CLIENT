@@ -11,7 +11,7 @@ const Page = () => {
     })();
   }, []);
 
-const [loading, setloading] = useState(true)
+const [loading, setloading] = useState(false)
 
   return (
     <main className="bg-black">
