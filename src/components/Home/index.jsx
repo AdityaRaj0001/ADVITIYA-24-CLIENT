@@ -221,11 +221,11 @@ export default function Index() {
         </nav>
         <img
           src="Layer_1.svg"
-          className="absolute asset top-0 left-0 h-[200px] md:h-[280px]  xl:h-[340px]"
+          className="absolute pointer-events-none asset top-0 left-0 h-[200px] md:h-[280px]  xl:h-[340px]"
         />
         <img
           src="Ellipse 22.svg"
-          className="absolute asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
+          className="absolute pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
         />
         <div
           id="mobile-nav"
@@ -242,9 +242,10 @@ export default function Index() {
           id="hero"
           className="h-[calc(100%-65px)] relative hero flex flex-col gap-10 justify-center items-center overflow-hidden w-[100%] "
         >
-          <div className="relative  flex items-center justify-center   xl:w-[100vw] h-[100%] ">
+          <div className="relative flex items-center justify-center xl:w-[100vw] h-[100%]">
+            
             <div
-              className="absolute z-50 xl:static xl:w-1/2 flex flex-col   bg-cover "
+              className="absolute z-50 xl:static xl:w-1/2 flex flex-col   bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] "
               id="heromain"
             >
               <h1 className="text-4xl sm:text-6xl  text-center  md:text-7xl lg:text-8xl xl:text-7xl font-bold herotext">
@@ -263,11 +264,11 @@ export default function Index() {
             />
             <img
               src="./Asset 9@4x 1.svg"
-              className="absolute asset z-10  h-[90px] bottom-28 -left-12 xl:bottom-72 xl:left-16 xl:h-[120px] "
+              className="absolute asset z-10  h-[90px] bottom-28 -left-8 xl:bottom-52 xl:left-16 xl:h-[120px] "
             />
             <img
               src="./Asset 4@10x 1.svg"
-              className="hidden xl:block xl:absolute asset z-10 h-[60px] top-8 left-16 xl:top-40 xl:left-44 xl:h-[100px]"
+              className="hidden xl:block xl:absolute asset z-10 h-[60px] top-8 left-16 xl:top-32 xl:left-44 xl:h-[100px]"
             />
             </div>
           </div>
