@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -110,7 +111,7 @@ export default function Index() {
                 Events
                 <MdOutlineArrowDropDownCircle />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white bg-black ">
+              <DropdownMenuContent className="text-white bg-[#12121c] ">
                 <DropdownMenuItem>Hackathons</DropdownMenuItem>
                 <DropdownMenuItem>Workshops</DropdownMenuItem>
                 <DropdownMenuItem>Exhibitions</DropdownMenuItem>
@@ -150,7 +151,7 @@ export default function Index() {
                 <CgProfile />
                 <FaBars />{" "}
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white bg-black mt-2 mr-2">
+              <DropdownMenuContent className="text-white bg-[#12121c] mt-2 mr-2">
                 <DropdownMenuItem>Profile</DropdownMenuItem>
                 <Link href="/signup">
                   <DropdownMenuItem>Login/Register</DropdownMenuItem>
@@ -172,7 +173,7 @@ export default function Index() {
                 Events
                 <MdOutlineArrowDropDownCircle />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white mt-2 bg-black ">
+              <DropdownMenuContent className="text-white mt-2 bg-[#12121c] ">
                 <DropdownMenuItem>Hackathons</DropdownMenuItem>
                 <DropdownMenuItem>Workshops</DropdownMenuItem>
                 <DropdownMenuItem>Exhibitions</DropdownMenuItem>
@@ -212,7 +213,7 @@ export default function Index() {
                 <CgProfile />
                 <FaBars className="hidden xl:block" />{" "}
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white mt-2 mr-2 bg-black ">
+              <DropdownMenuContent className="text-white mt-2 mr-2 bg-[#12121c] ">
                 <DropdownMenuItem>Profile</DropdownMenuItem>
                 <Link href="/signup">
                   <DropdownMenuItem>Login/Register</DropdownMenuItem>
