@@ -286,7 +286,7 @@ export default function Index() {
 
       <div
         id="page2"
-        className="h-[100vh] w-[100%]"
+        className="w-[100%]"
       >
         <OurVideos />
       </div>
