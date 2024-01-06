@@ -328,7 +328,7 @@ export default function Index() {
 
       <div
         id="page2"
-        className="h-auto w-[100%] relative flex items-center justify-center   bg-[#12121c]"
+        className="h-auto w-[100%] relative flex items-center justify-center bg-[#12121c]"
       >
         <img
           src="Group 1000003971.svg"
@@ -412,7 +412,7 @@ export default function Index() {
                   <span className="relative flex justify-center items-center">
                     <img
                       src="Polygon 1.svg"
-                      className=" h-[30px] w-[30px] absolute"
+                      className="  absolute"
                       alt=""
                     />
                     <a>15</a>
@@ -420,7 +420,7 @@ export default function Index() {
                   <span className="relative flex justify-center items-center">
                     <img
                       src="Polygon 1.svg"
-                      className="w-[30px] h-[30px] absolute"
+                      className="h-[100%] absolute"
                       alt=""
                     />
                     <a>16</a>

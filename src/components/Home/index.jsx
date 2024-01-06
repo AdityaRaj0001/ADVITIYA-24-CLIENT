@@ -107,12 +107,13 @@ export default function Index() {
         <nav className="hidden h-[65px] z-10 xl:flex items-center justify-between px-[2vw] py-[4vh]">
           <span id="btn">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex shadow-2xl flex-row items-center gap-2 outline-none ">
+              <DropdownMenuTrigger  className="flex shadow-2xl flex-row items-center gap-2 outline-none ">
                 Events
                 <MdOutlineArrowDropDownCircle />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="text-white bg-[#12121c] ">
-                <DropdownMenuItem>Hackathons</DropdownMenuItem>
+                <Link href={'/events'}><DropdownMenuItem >Hackathons</DropdownMenuItem></Link>
+                
                 <DropdownMenuItem>Workshops</DropdownMenuItem>
                 <DropdownMenuItem>Exhibitions</DropdownMenuItem>
                 <DropdownMenuItem>Talk Shows</DropdownMenuItem>
