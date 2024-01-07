@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -15,20 +15,17 @@ import { FaAnglesDown } from "react-icons/fa6";
 import { CgProfile } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { FaRegWindowClose } from "react-icons/fa";
-import { useRef, useLayoutEffect, useEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import OurVideos from "../our-videos/OurVideos";
 import Compitition from "../compitition/Compitition";
 import Heighlight from "../heighlight/Heighlight";
 import Footer from "../footer/Footer";
 
 export default function Index() {
-  const Router = useRouter();
   const page1 = useRef();
   const { contextSafe } = useGSAP({ scope: page1 });
   const tl = useRef();
-  // const router = useRouter();
   const openSidebar = contextSafe(() => {
     gsap.from(["#sidebar div", "#sidebar #btn"], {
       onStart: () => {
@@ -109,27 +106,13 @@ export default function Index() {
         className="bg-[#12121c] page1 h-[100vh] w-[100%] relative text-white"
       >
         <nav className="hidden h-[65px] z-10 xl:flex items-center justify-between px-[2vw] py-[4vh]">
-          <span id="btn">
-            <DropdownMenu>
-              <DropdownMenuTrigger  className="flex shadow-2xl flex-row items-center gap-2 outline-none ">
-                Events
-                <MdOutlineArrowDropDownCircle />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white bg-[#12121c] ">
-                <Link href={'/events'}><DropdownMenuItem >Hackathons</DropdownMenuItem></Link>
-                
-                <DropdownMenuItem>Workshops</DropdownMenuItem>
-                <DropdownMenuItem>Exhibitions</DropdownMenuItem>
-                <DropdownMenuItem>Talk Shows</DropdownMenuItem>
-                <DropdownMenuItem>Competitions</DropdownMenuItem>
-                <DropdownMenuItem>Robowars</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </span>
-          <Link id="btn" href="/schedule">
+          <Link id="btn" href="/events" className="z-10">
+            <Button variant="ghost">Events</Button>
+          </Link>
+          <Link id="btn" href="/schedule" className="z-10">
             <Button variant="ghost">Schedule</Button>
           </Link>
-          <Link id="btn" href="/sponsors">
+          <Link id="btn" href="/sponsors" className="z-10">
             <Button variant="ghost">Sponsors</Button>
           </Link>
           <Link id="btn" href="/accommodation">
@@ -148,8 +131,11 @@ export default function Index() {
             <Button variant="ghost">FAQs</Button>
           </Link>
 
-          <span id="btn" className="relative h-[50px] w-[100px] flex justify-center items-center">
-          <img src="Vector.svg" className="absolute  w-[200px]" alt="" />
+          <span
+            id="btn"
+            className="relative h-[50px] w-[100px] flex justify-center items-center"
+          >
+            <img src="Vector.svg" className="absolute  w-[200px]" alt="" />
             <DropdownMenu>
               <DropdownMenuTrigger className="flex z-10 flex-row items-center gap-2 outline-none text-2xl">
                 {" "}
@@ -172,22 +158,9 @@ export default function Index() {
           <div className=" w-full flex text-2xl mt-8 items-start justify-end px-4">
             <FaRegWindowClose onClick={closeSidebar} />
           </div>
-          <span id="btn">
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex flex-row items-center gap-2 outline-none ">
-                Events
-                <MdOutlineArrowDropDownCircle />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white mt-2 bg-[#12121c] ">
-                <DropdownMenuItem>Hackathons</DropdownMenuItem>
-                <DropdownMenuItem>Workshops</DropdownMenuItem>
-                <DropdownMenuItem>Exhibitions</DropdownMenuItem>
-                <DropdownMenuItem>Talk Shows</DropdownMenuItem>
-                <DropdownMenuItem>Competitions</DropdownMenuItem>
-                <DropdownMenuItem>Robowars</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </span>
+          <Link id="btn" href="/events" className="z-10">
+            <Button variant="ghost">Events</Button>
+          </Link>
           <Link id="btn" href="/schedule">
             <Button variant="ghost">Schedule</Button>
           </Link>
@@ -210,9 +183,12 @@ export default function Index() {
             <Button variant="ghost">FAQs</Button>
           </Link>
 
-          <span id="btn" className="relative h-[50px] w-[100px] flex justify-center items-center">
+          <span
+            id="btn"
+            className="relative h-[50px] w-[100px] flex justify-center items-center"
+          >
             <img src="Vector.svg" className="absolute  w-[200px]" alt="" />
-            <DropdownMenu  >
+            <DropdownMenu>
               <DropdownMenuTrigger className="flex flex-row z-10 items-center gap-2 outline-none text-2xl">
                 {" "}
                 <CgProfile />
@@ -251,7 +227,6 @@ export default function Index() {
           className="h-[calc(100%-65px)] relative hero flex flex-col gap-10 justify-center items-center overflow-hidden w-[100%] "
         >
           <div className="relative flex items-center justify-center xl:w-[100vw] h-[100%]">
-            
             <div
               className="absolute z-50 xl:static xl:w-1/2 flex flex-col   bg-cover bg-center xl:bg-[url('https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] "
               id="heromain"
@@ -264,20 +239,22 @@ export default function Index() {
               </p>
             </div>
             <div className="relative   xl:flex xl:items-center xl:justify-center h-[70%] sm:h-[75%] md:h-[80%] xl:w-1/2 xl:h-[100%]">
-
-            <img src="./Arwork1.svg" className=" z-30 opacity-70 xl:opacity-100  asset h-[100%] xl:h-[80%] " />
-            <img
-              src="./Vector Smart Object 1.svg"
-              className="absolute asset blur-sm z-10  h-[90px] top-24 -right-12 xl:top-44 xl:right-8"
-            />
-            <img
-              src="./Asset 9@4x 1.svg"
-              className="absolute asset z-10  h-[90px] bottom-44 -left-12 xl:bottom-64 xl:left-4 xl:h-[120px] "
-            />
-            <img
-              src="./Asset 4@10x 1.svg"
-              className="hidden xl:block xl:absolute asset z-10 h-[60px]  xl:top-32 xl:left-44 xl:h-[100px]"
-            />
+              <img
+                src="./Arwork1.svg"
+                className=" z-30 opacity-70 xl:opacity-100  asset h-[100%] xl:h-[80%] "
+              />
+              <img
+                src="./Vector Smart Object 1.svg"
+                className="absolute asset blur-sm z-10  h-[90px] top-24 -right-12 xl:top-44 xl:right-8"
+              />
+              <img
+                src="./Asset 9@4x 1.svg"
+                className="absolute asset z-10  h-[90px] bottom-44 -left-12 xl:bottom-64 xl:left-4 xl:h-[120px] "
+              />
+              <img
+                src="./Asset 4@10x 1.svg"
+                className="hidden xl:block xl:absolute asset z-10 h-[60px]  xl:top-32 xl:left-44 xl:h-[100px]"
+              />
             </div>
           </div>
 
@@ -287,36 +264,21 @@ export default function Index() {
         </div>
       </div>
 
-      <div
-        id="page2"
-        className="w-[100%]"
-      >
+      {/* <div id="page2" className="w-[100%]">
         <OurVideos />
       </div>
 
-      <div
-        id="page3"
-        className=" w-[100%]"
-      >
+      <div id="page3" className=" w-[100%]">
         <Compitition />
       </div>
 
-      <div
-        id="page4"
-        className="w-[100%]"
-      >
+      <div id="page4" className="w-[100%]">
         <Heighlight />
       </div>
 
-      <div
-        id="page5"
-        className="w-[100%]"
-      >
+      <div id="page5" className="w-[100%]">
         <Footer />
-      </div>
-
-
-
+      </div> */}
     </>
   );
 }

@@ -22,10 +22,10 @@ import { FaRegWindowClose } from "react-icons/fa";
 import { useRef, useLayoutEffect } from "react";
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   padding: 20px;
-  justify-content: center;
+
   @media screen and (max-width: 1024px) {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
@@ -74,7 +74,7 @@ const Main = ({ params }) => {
     }
   };
 
-  const dataToMap = getDataArray(params.category);
+  const eventsdataToMap = getDataArray(params.category);
 
   useLayoutEffect(() => {
     const isLargeLaptop = window.innerWidth >= 1280;
@@ -127,20 +127,6 @@ const Main = ({ params }) => {
         duration: 2,
       });
     }, page1);
-
-    // const tl3 = gsap.timeline({
-    //   scrollTrigger: {
-    //     scrub:1,
-    //     markers:true,
-    //     trigger:"#page1",
-    //     start:"50% center",
-    //     end:"bottom center"
-    //   },
-    // });
-
-    // tl3.from("#page2 .asset",{
-    //   opacity:0
-    // })
 
     return () => ctx.revert();
   }, []);
@@ -339,7 +325,7 @@ const Main = ({ params }) => {
       </div>
 
       <GridContainer className="bg-[#12121c]">
-        {dataToMap.map((event, index) => (
+        {eventsdataToMap.map((event, index) => (
           <Link key={index} href={`/events/${params.category}/[event]`} as={`/events/${params.category}/${event.text}`}>
             <Card
               text={event.text}

@@ -48,12 +48,6 @@ const Hovercard = () => {
           </Link>
         ))}
 
-        {/*       
-      <Card text="Webinars " smalltext="lorem2" largetext="lorem02" image={'./image.png'} circleColor="green"/>
-      <Card text="Workshops " smalltext="lorem3" largetext="lorem03" image={'./image.png'}/>
-      <Card text="Talk Shows " smalltext="lorem4" largetext="lorem04" image={'./image.png'}/>
-      <Card text="Robowars " smalltext="lorem5" largetext="lorem05" image={'./image.png'}/>
-      <Card text="Exhibitons " smalltext="lorem6" largetext="lorem06" image={'./image.png'}/> */}
       </GridContainer>
     </>
   );
@@ -157,27 +151,14 @@ const Main = () => {
         ref={page1}
         className="bg-[#12121c] page1 h-[100vh] w-[100%] relative text-white"
       >
-        <nav className="hidden h-[65px] z-10 xl:flex items-center justify-between px-[2vw] py-[4vh]">
-          <span id="btn">
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex shadow-2xl flex-row items-center gap-2 outline-none ">
-                Events
-                <MdOutlineArrowDropDownCircle />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white bg-[#12121c] ">
-                <DropdownMenuItem>Hackathons</DropdownMenuItem>
-                <DropdownMenuItem>Workshops</DropdownMenuItem>
-                <DropdownMenuItem>Exhibitions</DropdownMenuItem>
-                <DropdownMenuItem>Talk Shows</DropdownMenuItem>
-                <DropdownMenuItem>Competitions</DropdownMenuItem>
-                <DropdownMenuItem>Robowars</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </span>
-          <Link id="btn" href="/schedule">
+       <nav className="hidden h-[65px] z-10 xl:flex items-center justify-between px-[2vw] py-[4vh]">
+          <Link id="btn" href="/events" className="z-10">
+            <Button variant="ghost">Events</Button>
+          </Link>
+          <Link id="btn" href="/schedule" className="z-10">
             <Button variant="ghost">Schedule</Button>
           </Link>
-          <Link id="btn" href="/sponsors">
+          <Link id="btn" href="/sponsors" className="z-10">
             <Button variant="ghost">Sponsors</Button>
           </Link>
           <Link id="btn" href="/accommodation">
@@ -223,22 +204,9 @@ const Main = () => {
           <div className=" w-full flex text-2xl mt-8 items-start justify-end px-4">
             <FaRegWindowClose onClick={closeSidebar} />
           </div>
-          <span id="btn">
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex flex-row items-center gap-2 outline-none ">
-                Events
-                <MdOutlineArrowDropDownCircle />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white mt-2 bg-[#12121c] ">
-                <DropdownMenuItem>Hackathons</DropdownMenuItem>
-                <DropdownMenuItem>Workshops</DropdownMenuItem>
-                <DropdownMenuItem>Exhibitions</DropdownMenuItem>
-                <DropdownMenuItem>Talk Shows</DropdownMenuItem>
-                <DropdownMenuItem>Competitions</DropdownMenuItem>
-                <DropdownMenuItem>Robowars</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </span>
+          <Link id="btn" href="/events" className="z-10">
+            <Button variant="ghost">Events</Button>
+          </Link>
           <Link id="btn" href="/schedule">
             <Button variant="ghost">Schedule</Button>
           </Link>
@@ -304,7 +272,7 @@ const Main = () => {
           id="hero"
           className="h-[calc(100%-65px)] relative hero flex flex-col gap-10 justify-center items-center overflow-hidden w-[100%] "
         >
-          <div className="relative flex items-center justify-center xl:w-[100vw] h-[100%]">
+          {/* <div className="relative flex items-center justify-center xl:w-[100vw] h-[100%]">
             <div
               className="absolute z-50 xl:static xl:w-1/2 flex flex-col   bg-cover bg-center xl:bg-[url('https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] "
               id="heromain"
@@ -338,6 +306,9 @@ const Main = () => {
 
           <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
             <FaAnglesDown />
+          </div> */}
+          <div id="scrolldown" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-widest mt-20">
+            <h1>Coming Soon</h1>
           </div>
         </div>
       </div>
