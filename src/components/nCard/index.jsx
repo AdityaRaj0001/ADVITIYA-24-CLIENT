@@ -2,7 +2,7 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import React, {useState} from "react";
 import styled from "styled-components";
-import { Details } from "./Details";
+import { Details } from "./details";
 
 const CardWrapper = styled.div`
   display: grid;
