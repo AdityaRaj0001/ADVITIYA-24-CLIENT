@@ -37,7 +37,7 @@ const Hovercard = () => {
     <>
       <GridContainer className="bg-[#12121c]">
         {eventsData.map((events, index) => (
-          <Link href="/events/[category]" as={`/events/${events.text}`}>
+          <Link key={index} href="/events/[category]" as={`/events/${events.text}`}>
             <Card
               text={events.text}
               smalltext={events.smalltext}
