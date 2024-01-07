@@ -18,6 +18,10 @@ import { FaRegWindowClose } from "react-icons/fa";
 import { useRef, useLayoutEffect, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import OurVideos from "../our-videos/OurVideos";
+import Compitition from "../compitition/Compitition";
+import Heighlight from "../heighlight/Heighlight";
+import Footer from "../footer/Footer";
 
 export default function Index() {
   const Router = useRouter();
@@ -285,10 +289,34 @@ export default function Index() {
 
       <div
         id="page2"
-        className="h-[100vh] w-[100%] flex justify-center items-start bg-white"
+        className="w-[100%]"
       >
-        {/* <div id="square" className="w-[200px] h-[200px] bg-black"></div> */}
+        <OurVideos />
       </div>
+
+      <div
+        id="page3"
+        className=" w-[100%]"
+      >
+        <Compitition />
+      </div>
+
+      <div
+        id="page4"
+        className="w-[100%]"
+      >
+        <Heighlight />
+      </div>
+
+      <div
+        id="page5"
+        className="w-[100%]"
+      >
+        <Footer />
+      </div>
+
+
+
     </>
   );
 }
