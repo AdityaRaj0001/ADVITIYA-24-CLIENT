@@ -23,7 +23,7 @@ import Heighlight from "../heighlight/Heighlight";
 import Footer from "../footer/Footer";
 
 export default function Index() {
-  const Router=useRouter()
+  const Router = useRouter();
   const page1 = useRef();
   const { contextSafe } = useGSAP({ scope: page1 });
   const tl = useRef();
@@ -112,7 +112,10 @@ export default function Index() {
 
   return (
     <>
-      <div ref={page1} className="bg-black page1 h-[100vh] w-[100%] relative text-white">
+      <div
+        ref={page1}
+        className="bg-black page1 h-[100vh] w-[100%] relative text-white"
+      >
         <nav className="hidden h-[65px] xl:flex items-center justify-between px-[2vw] py-[4vh]">
           <span id="btn">
             <DropdownMenu>
@@ -121,7 +124,7 @@ export default function Index() {
                 <MdOutlineArrowDropDownCircle />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="text-white bg-black ">
-                <DropdownMenuItem >Hackathons</DropdownMenuItem>
+                <DropdownMenuItem>Hackathons</DropdownMenuItem>
                 <DropdownMenuItem>Workshops</DropdownMenuItem>
                 <DropdownMenuItem>Exhibitions</DropdownMenuItem>
                 <DropdownMenuItem>Talk Shows</DropdownMenuItem>
@@ -131,41 +134,27 @@ export default function Index() {
             </DropdownMenu>
           </span>
           <Link id="btn" href="/schedule">
-          <Button  variant="ghost">
-            Schedule
-          </Button>
+            <Button variant="ghost">Schedule</Button>
           </Link>
           <Link id="btn" href="/sponsors">
-          <Button  variant="ghost">
-            Sponsors
-          </Button>
+            <Button variant="ghost">Sponsors</Button>
           </Link>
           <Link id="btn" href="/accommodation">
-          <Button  variant="ghost">
-            Accommodation
-          </Button>
+            <Button variant="ghost">Accommodation</Button>
           </Link>
-         <Link id="btn" href="/isc">
-         <Button  variant="ghost">
-            Inter-School-Conclave
-          </Button>
-         </Link>
+          <Link id="btn" href="/isc">
+            <Button variant="ghost">Inter-School-Conclave</Button>
+          </Link>
           <Link id="btn" href="/contactus">
-          <Button  variant="ghost">
-            Contact Us
-          </Button>
+            <Button variant="ghost">Contact Us</Button>
           </Link>
           <Link id="btn" href="/aboutus">
-          <Button  variant="ghost">
-            About Us
-          </Button>
+            <Button variant="ghost">About Us</Button>
           </Link>
           <Link id="btn" href="/faqs">
-          <Button  variant="ghost">
-            FAQs
-          </Button>
+            <Button variant="ghost">FAQs</Button>
           </Link>
-         
+
           <span id="btn">
             <DropdownMenu>
               <DropdownMenuTrigger className="flex flex-row items-center gap-2 outline-none text-2xl">
@@ -175,7 +164,9 @@ export default function Index() {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="text-white bg-black mt-2 mr-2">
                 <DropdownMenuItem>Profile</DropdownMenuItem>
-                <Link href='/signup'><DropdownMenuItem>Login/Register</DropdownMenuItem></Link>
+                <Link href="/signup">
+                  <DropdownMenuItem>Login/Register</DropdownMenuItem>
+                </Link>
               </DropdownMenuContent>
             </DropdownMenu>
           </span>
@@ -199,46 +190,32 @@ export default function Index() {
                 <DropdownMenuItem>Exhibitions</DropdownMenuItem>
                 <DropdownMenuItem>Talk Shows</DropdownMenuItem>
                 <DropdownMenuItem>Competitions</DropdownMenuItem>
-                <DropdownMenuItem >Robowars</DropdownMenuItem>
+                <DropdownMenuItem>Robowars</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </span>
           <Link id="btn" href="/schedule">
-          <Button  variant="ghost">
-            Schedule
-          </Button>
+            <Button variant="ghost">Schedule</Button>
           </Link>
           <Link id="btn" href="/sponsors">
-          <Button  variant="ghost">
-            Sponsors
-          </Button>
+            <Button variant="ghost">Sponsors</Button>
           </Link>
           <Link id="btn" href="/accommodation">
-          <Button  variant="ghost">
-            Accommodation
-          </Button>
+            <Button variant="ghost">Accommodation</Button>
           </Link>
-         <Link id="btn" href="/isc">
-         <Button  variant="ghost">
-            Inter-School-Conclave
-          </Button>
-         </Link>
+          <Link id="btn" href="/isc">
+            <Button variant="ghost">Inter-School-Conclave</Button>
+          </Link>
           <Link id="btn" href="/contactus">
-          <Button  variant="ghost">
-            Contact Us
-          </Button>
+            <Button variant="ghost">Contact Us</Button>
           </Link>
           <Link id="btn" href="/aboutus">
-          <Button  variant="ghost">
-            About Us
-          </Button>
+            <Button variant="ghost">About Us</Button>
           </Link>
           <Link id="btn" href="/faqs">
-          <Button  variant="ghost">
-            FAQs
-          </Button>
+            <Button variant="ghost">FAQs</Button>
           </Link>
-        
+
           <span id="btn">
             <DropdownMenu id="btn">
               <DropdownMenuTrigger className="flex flex-row items-center gap-2 outline-none text-2xl">
@@ -248,7 +225,9 @@ export default function Index() {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="text-white mt-2 mr-2 bg-black ">
                 <DropdownMenuItem>Profile</DropdownMenuItem>
-                <Link href='/signup'><DropdownMenuItem>Login/Register</DropdownMenuItem></Link>
+                <Link href="/signup">
+                  <DropdownMenuItem>Login/Register</DropdownMenuItem>
+                </Link>
               </DropdownMenuContent>
             </DropdownMenu>
           </span>
@@ -291,29 +270,17 @@ export default function Index() {
         <OurVideos />
       </div>
 
-      <div
-        id="page3"
-        className=" w-[100%]"
-      >
+      <div id="page3" className=" w-[100%]">
         <Compitition />
       </div>
 
-      <div
-        id="page4"
-        className="w-[100%]"
-      >
+      <div id="page4" className="w-[100%]">
         <Heighlight />
       </div>
 
-      <div
-        id="page5"
-        className="w-[100%]"
-      >
+      <div id="page5" className="w-[100%]">
         <Footer />
       </div>
-
-
-
     </>
   );
 }
