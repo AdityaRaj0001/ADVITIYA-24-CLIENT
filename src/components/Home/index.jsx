@@ -23,7 +23,6 @@ import Heighlight from "../heighlight/Heighlight";
 import Footer from "../footer/Footer";
 
 export default function Index() {
-  const Router = useRouter();
   const page1 = useRef();
   const { contextSafe } = useGSAP({ scope: page1 });
   const tl = useRef();
@@ -104,6 +103,8 @@ export default function Index() {
     <>
       <div
         ref={page1}
+        className="bg-[#12121c] page1 h-[100vh] w-[100%] relative text-white"
+        >
         <nav className="hidden h-[65px] z-10 xl:flex items-center justify-between px-[2vw] py-[4vh]">
           <Link id="btn" href="/events" className="z-10">
             <Button variant="ghost">Events</Button>
@@ -264,7 +265,7 @@ export default function Index() {
         </div>
       </div>
 
-      {/* <div id="page2" className="w-[100%]">
+      <div id="page2" className="w-[100%]">
         <OurVideos />
       </div>
 
@@ -280,8 +281,6 @@ export default function Index() {
         <Footer />
 
       </div>
-
-      </div> */}
 
     </>
   );
