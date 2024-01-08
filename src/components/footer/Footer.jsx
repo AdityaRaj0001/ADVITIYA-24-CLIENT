@@ -7,26 +7,28 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="h-[500px] relative ">
-      <div className="absolute bottom-0">
+    <div className="lg:h-[500px] relative">
+      <div className="absolute bottom-0 hidden lg:block">
         <Image src={footerBg} />
         <div className="absolute top-7 bottom-2 right-10 left-10">
           <Image src={footerborder} />
         </div>
       </div>
 
-      <div className="w-full h-full relative z-10 pt-40 pr-20 pl-28 pb-16">
-        <div className=" h-full text-white grid grid-cols-8 gap-4">
-          <div className="h-full relative col-span-2">
+      <div className="lg:w-full w-[90%] h-full relative z-10 lg:pt-40 pt-10 lg:pr-20 pr-0 lg:pl-28 pl-0 lg:pb-16 pb-10 mx-auto">
+        <div className=" h-full text-white grid grid-cols-8 lg:gap-4 gap-2">
+          <div className="h-full relative lg:col-span-2 col-span-8 items-center flex lg:block justify-center">
             <Image className="w-[200px] h-[200px]" src={logoBorder} />
-            <div className="absolute flex items-center justify-center w-[200px] h-[200px] top-0 left-0 bottom-0 p-10">
+            <div className="absolute flex items-center justify-center mx-auto w-[200px] h-[200px] top-0 lg:left-0 bottom-0 p-10">
               <Image src={logo} className="w-full" />
             </div>
           </div>
 
-          <div className="col-span-3">
-            <h2 className="text-[30px] uppercase italic pt-10">Location</h2>
-            <div className="flex gap-3 pt-6 items-center">
+          <div className="lg:col-span-3 col-span-8">
+            <h2 className="lg:text-[30px] text-[25px] uppercase italic lg:pt-10 pt-5">
+              Location
+            </h2>
+            <div className="flex gap-3 lg:pt-6 pt-5 lg:items-center">
               <div>
                 <div
                   className="w-[60px] h-[60px] flex items-center justify-center"
@@ -62,13 +64,13 @@ const Footer = () => {
                 </div>
               </div>
 
-              <p>
+              <p className="text-sm lg:text-base">
                 Indian Institute Of Technology Ropar Rupnagar, Punjab, India
                 14001
               </p>
             </div>
 
-            <div className="flex items-center gap-3 pt-5">
+            <div className="flex lg:items-center gap-3 pt-5">
               <div>
                 <div
                   className="w-[60px] h-[60px] flex items-center justify-center"
@@ -104,10 +106,12 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="col-span-3">
-            <h2 className="text-[30px] uppercase italic pt-10">Follow Us On</h2>
+          <div className="lg:col-span-3 col-span-8">
+            <h2 className="lg:text-[30px] text-[25px] uppercase italic pt-10">
+              Follow Us On
+            </h2>
 
-            <div className="pt-7 flex gap-5">
+            <div className="lg:pt-7 pt-5 flex lg:gap-5 gap-4">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

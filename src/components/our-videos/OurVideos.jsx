@@ -6,7 +6,7 @@ import video from "../../assets/images/video.png";
 
 const OurVideos = () => {
   return (
-    <div className="text-[#fff] max-w-[90%] mx-auto">
+    <div className="text-[#fff] w-[90%] mx-auto">
       <div className="relative">
         <OurVideosTitle />
         <h2
@@ -16,15 +16,18 @@ const OurVideos = () => {
           Our Video
         </h2>
       </div>
+      <h2 className="lg:text-[25px] text-[22px] mt-5 lg:hidden uppercase italic">
+        Latest Videos
+      </h2>
       <div>
-        <div>
-          <div className="grid grid-cols-2 h-[580px]">
+        <div className="lg:mt-0 mb-16 lg:mb-0">
+          <div className="lg:grid hidden lg:grid-cols-2 grid-cols-1 h-[580px]">
             <div className="h-full ">
               <h2 className="pt-5 text-[40px] uppercase italic">
                 Latest Videos
               </h2>
               <div className="mt-6 absolute">
-                <div className="relative z-10">
+                <div className="relative z-10 hidden lg:block">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="827"
@@ -128,7 +131,7 @@ const OurVideos = () => {
                 </div>
               </div>
             </div>
-            <div className="h-full relative w-[110%] z-20">
+            <div className="h-full relative w-[110%] z-20 right-10">
               <div className="h-[67%] flex ">
                 <div className="h-[100%] pt-10 mt-auto w-[84%] mx-auto">
                   <Image src={video} className="w-full h-full object-cover" />
@@ -140,8 +143,7 @@ const OurVideos = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 h-[580px] mt-16">
-            
+          <div className="lg:grid hidden grid-cols-2 h-[580px] mt-16">
             <div className="h-full relative w-[110%] z-20">
               <div className="h-[65%] flex ">
                 <div className="h-[100%] pt-10 mt-auto w-[84%] mx-auto">
@@ -153,8 +155,7 @@ const OurVideos = () => {
               </div>
             </div>
 
-            <div className="h-full relative" style={{left: -130}}>
-             
+            <div className="h-full relative" style={{ left: -130 }}>
               <div className="mt-16 absolute">
                 <div className="relative z-10">
                   <svg
@@ -262,13 +263,42 @@ const OurVideos = () => {
             </div>
           </div>
 
-          
+          <CardMobile />
+          <CardMobile />
         </div>
-
-       
       </div>
     </div>
   );
 };
 
 export default OurVideos;
+
+const CardMobile = () => (
+  <div className="mt-10 lg:hidden">
+    <div className="relative w-[100%]">
+      <div className=" flex ">
+        <div className="h-[100%] pt-[22px] mt-auto w-[86%] mx-auto">
+          <Image src={video} className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute top-0">
+          <Image src={BG} />
+        </div>
+      </div>
+    </div>
+
+    <div className="mt-12 ">
+      <h2 className="lg:text-[25px] text-[22px] uppercase italic">
+        Latest Videos
+      </h2>
+      <p className="lg:pt-5 pt-3 lg:text-lg text-sm">
+        Teleport to the 27th Edition of Techfest and celebrate the interplay
+        between Magic, Science & Technology. Step into the realm of wonders
+        where the frontiers of imagination are translated into real-world
+        possibilities. From ancient mysticism to cutting-edge innovations,
+        explore the endless spectrum of creativity and ingenuity. Get ready for
+        a Techno-Mystical extravaganza and embark on a miraculous journey of
+        discovery into the unknown!
+      </p>
+    </div>
+  </div>
+);

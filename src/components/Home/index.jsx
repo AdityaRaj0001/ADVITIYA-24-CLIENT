@@ -23,6 +23,7 @@ import Heighlight from "../heighlight/Heighlight";
 import Footer from "../footer/Footer";
 
 export default function Index() {
+  const Router = useRouter();
   const page1 = useRef();
   const { contextSafe } = useGSAP({ scope: page1 });
   const tl = useRef();
@@ -103,8 +104,6 @@ export default function Index() {
     <>
       <div
         ref={page1}
-        className="bg-[#12121c] page1 h-[100vh] w-[100%] relative text-white"
-      >
         <nav className="hidden h-[65px] z-10 xl:flex items-center justify-between px-[2vw] py-[4vh]">
           <Link id="btn" href="/events" className="z-10">
             <Button variant="ghost">Events</Button>
@@ -130,6 +129,7 @@ export default function Index() {
           <Link id="btn" href="/faqs">
             <Button variant="ghost">FAQs</Button>
           </Link>
+
 
           <span
             id="btn"
@@ -182,7 +182,6 @@ export default function Index() {
           <Link id="btn" href="/faqs">
             <Button variant="ghost">FAQs</Button>
           </Link>
-
           <span
             id="btn"
             className="relative h-[50px] w-[100px] flex justify-center items-center"
@@ -190,6 +189,7 @@ export default function Index() {
             <img src="Vector.svg" className="absolute  w-[200px]" alt="" />
             <DropdownMenu>
               <DropdownMenuTrigger className="flex flex-row z-10 items-center gap-2 outline-none text-2xl">
+
                 {" "}
                 <CgProfile />
                 <FaBars className="hidden xl:block" />{" "}
@@ -278,7 +278,11 @@ export default function Index() {
 
       <div id="page5" className="w-[100%]">
         <Footer />
+
+      </div>
+
       </div> */}
+
     </>
   );
 }

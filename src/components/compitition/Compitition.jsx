@@ -2,20 +2,69 @@ import React from "react";
 import Heading from "../heading/Heading";
 import Image from "next/image";
 import compitition1 from "../../assets/images/compitition1.jpg";
+import { BlueLight, CardBorder } from "@/assets/Icons";
+import compititionStructure1 from "../../assets/images/compititionStructure1.png";
+import hexagonal from "../../assets/images/hexagonal.svg";
 
 const Compitition = () => {
+  const data = [
+    {
+      image: compitition1,
+      title: "COZMOCLENCH",
+      price: "1,00,000",
+    },
+    {
+      image: compitition1,
+      title: "COZMOCLENCH",
+      price: "1,00,000",
+    },
+    {
+      image: compitition1,
+      title: "COZMOCLENCH",
+      price: "1,00,000",
+    },
+    {
+      image: compitition1,
+      title: "COZMOCLENCH",
+      price: "1,00,000",
+    },
+    {
+      image: compitition1,
+      title: "COZMOCLENCH",
+      price: "1,00,000",
+    },
+    {
+      image: compitition1,
+      title: "COZMOCLENCH",
+      price: "1,00,000",
+    },
+  ];
   return (
-    <div className="">
-      <div className=" max-w-[90%] mx-auto text-[#fff]">
+    <div className="relative overflow-hidden text-[#fff]">
+      <div
+        className="text-[100px] hidden lg:block top-0 bottom-0 text-transparent left-20 absolute italic opacity-20 z-30"
+        style={{ transform: "rotate(-90deg)", WebkitTextStroke: "2px #fff" }}
+      >
+        COMPETITIONS
+      </div>
+      <div className="hidden lg:block">
+        <div className="absolute max-w-[600px] top-5  left-0 ">
+          <Image className="w-full opacity-20" src={hexagonal} />
+          <div className="absolute max-w-[500px] w-[50%] top-10 left-10 rounded-full  bg-[#8FE600] opacity-20 blur-[202px] aspect-square"></div>
+        </div>
+        <Image
+          className="absolute max-w-[400px] right-0 rotate-45 z-10"
+          style={{ top: -70 }}
+          src={compititionStructure1}
+        />
+      </div>
+      <div className=" max-w-[90%] mx-auto">
         <Heading title="Competitions" heading="Competitions" />
 
-        <div className="grid grid-cols-3 gap-[50px] my-[102px] ">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+        <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-[50px] gap-[30px] lg:my-[100px] my-[40px] ">
+          {data?.map((item, i) => (
+            <Card data={item} />
+          ))}
         </div>
       </div>
     </div>
@@ -24,80 +73,31 @@ const Compitition = () => {
 
 export default Compitition;
 
-const Card = () => (
-  <div className="relative h-[445px]">
+const Card = ({ data }) => (
+  <div className="relative aspect-square">
     <div className="absolute bottom-0 right-0 left-0 top-0">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="100%"
-        height="100%"
-        viewBox="0 0 540 567"
-        fill="none"
-      >
-        <path
-          d="M1.22285 1.2231H270H355.422L538.777 152.874V272.66V517.868L472.163 565.777H270H135H1.22262L1.22285 417.75V278.5V1.2231Z"
-          stroke="#797979"
-          stroke-width="2.44571"
-        />
-      </svg>
+      <CardBorder />
     </div>
 
     <div className="absolute top-0 bottom-0 left-0 right-0 pt-32 flex items-center justify-center">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="700"
-        height="600"
-        viewBox="0 0 673 673"
-        fill="none"
-      >
-        <g filter="url(#filter0_f_424_707)">
-          <ellipse
-            cx="336.189"
-            cy="336.895"
-            rx="91.4551"
-            ry="91.4261"
-            fill="#03B9BB"
-          />
-        </g>
-        <defs>
-          <filter
-            id="filter0_f_424_707"
-            x="0.162155"
-            y="0.897018"
-            width="672.053"
-            height="671.995"
-            filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
-          >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="BackgroundImageFix"
-              result="shape"
-            />
-            <feGaussianBlur
-              stdDeviation="122.286"
-              result="effect1_foregroundBlur_424_707"
-            />
-          </filter>
-        </defs>
-      </svg>
+      <BlueLight />
     </div>
-    <div className="relative p-[25px] h-full">
-      <div className="h-[78%]">
+    <div className="relative lg:p-[35px] lg:pt-[25px] p-7 pt-5 h-full">
+      <div className="lg:h-[80%] h-[76%]">
         <Image
           style={{
             clipPath: "polygon(63% 0%, 100% 36%, 100% 100%, 0 100%, 0 0)",
           }}
           className="h-[100%]  object-cover"
-          src={compitition1}
+          src={data?.image}
         />
       </div>
 
-      <div className="mt-[25px]">
-        <h3 className="text-[25px] font-bold ">COZMOCLENCH</h3>
-        <p className="text-[15px] text-[#ccc]">(INR 1,00,000)</p>
+      <div className="lg:mt-[25px] mt-5">
+        <h3 className="lg:text-[25px] text-[20px] font-bold ">{data?.title}</h3>
+        <p className="lg:text-[15px] text-[14px] text-[#ccc]">
+          (INR {data?.price})
+        </p>
       </div>
     </div>
   </div>

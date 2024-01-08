@@ -5,9 +5,12 @@ const Heading = ({ title, heading }) => {
   return (
     <div className="text-[#fff]">
       <div className="relative">
-        <Image src={HeadingBg} className="w-[259px] h-[45px] object-contain" />
+        <Image
+          src={HeadingBg}
+          className="lg:w-[259px] w-[200px] h-[45px] object-contain"
+        />
         <h2
-          className="absolute top-[50%] left-[20px] text-[18px]"
+          className="absolute top-[50%] lg:left-[20px] left-[14px] lg:text-[18px] text-[14px]"
           style={{ transform: "translateY(-50%)" }}
         >
           {title}
@@ -15,7 +18,9 @@ const Heading = ({ title, heading }) => {
       </div>
 
       <div>
-        <h2 className=" text-6xl italic uppercase mt-5">{heading}</h2>
+        <h2 className=" lg:text-6xl text-3xl italic uppercase lg:mt-5 mt-3">
+          {heading}
+        </h2>
       </div>
     </div>
   );
