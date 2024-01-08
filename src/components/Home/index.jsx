@@ -259,12 +259,12 @@ export default function Index() {
             </div>
           </div>
 
-          <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
+          {/* <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
             <FaAnglesDown />
-          </div>
+          </div> */}
         </div>
       </div>
-
+{/* 
       <div id="page2" className="w-[100%]">
         <OurVideos />
       </div>
@@ -280,7 +280,7 @@ export default function Index() {
       <div id="page5" className="w-[100%]">
         <Footer />
 
-      </div>
+      </div> */}
 
     </>
   );
