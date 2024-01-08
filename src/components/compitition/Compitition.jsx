@@ -63,7 +63,7 @@ const Compitition = () => {
 
         <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-[50px] gap-[30px] lg:my-[100px] my-[40px] ">
           {data?.map((item, i) => (
-            <Card data={item} />
+            <Card data={item} key={i} />
           ))}
         </div>
       </div>
