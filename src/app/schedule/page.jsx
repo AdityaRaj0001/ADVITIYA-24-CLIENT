@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -17,8 +17,9 @@ import { FaBars } from "react-icons/fa";
 import { FaRegWindowClose } from "react-icons/fa";
 import { useRef, useLayoutEffect } from "react";
 import Link from "next/link";
+import Footer from "@/components/footer/Footer";
+import ScheduleComponet from "@/components/schedule/Schedule";
 const Schedule = () => {
-
   const page1 = useRef();
   const { contextSafe } = useGSAP({ scope: page1 });
   const tl = useRef();
@@ -96,7 +97,8 @@ const Schedule = () => {
   }, []);
 
   return (
-    <div
+    <>
+      <div
         ref={page1}
         className="bg-[#12121c] page1 h-[100vh] w-[100%] relative text-white"
       >
@@ -255,12 +257,19 @@ const Schedule = () => {
           {/* <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
             <FaAnglesDown />
           </div> */}
-          <div id="scrolldown" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-widest mt-20">
+          <div
+            id="scrolldown"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-widest mt-20"
+          >
             <h1>Coming Soon</h1>
           </div>
         </div>
-    </div>
-  )
-}
+      </div>
 
-export default Schedule
+      <ScheduleComponet />
+      <Footer />
+    </>
+  );
+};
+
+export default Schedule;
