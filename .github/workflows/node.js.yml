@@ -24,10 +24,10 @@ jobs:
             node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: yarn install 
+        run: npm install
 
       - name: Create Build
-        run: yarn run build 
+        run: npm run build 
 
       - name: Restart the server
         run: pm2 restart run.sh --name iitrpr
