@@ -34,7 +34,7 @@ const Page = () => {
 
 
   return (
-    <main className="bg-black">
+    <main className="">
       {loading?<Intro setloading={setloading}/>:<Home/>}
     </main>
   );
