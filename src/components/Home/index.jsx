@@ -264,7 +264,7 @@ export default function Index() {
           </div> */}
         </div>
       </div>
-{/* 
+
       <div id="page2" className="w-[100%]">
         <OurVideos />
       </div>
@@ -280,7 +280,7 @@ export default function Index() {
       <div id="page5" className="w-[100%]">
         <Footer />
 
-      </div> */}
+      </div>
 
     </>
   );
