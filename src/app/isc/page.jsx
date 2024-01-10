@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -17,20 +17,37 @@ import { FaBars } from "react-icons/fa";
 import { FaRegWindowClose } from "react-icons/fa";
 import { useRef, useLayoutEffect } from "react";
 import Link from "next/link";
-import Nav from "../../components/navigation/page"
-const ISC = () => {
+import Nav from "../../components/navigation/page";
+import Heighlight from "@/components/heighlight/Heighlight";
+import compititionStructure1 from "@/assets/images/compititionStructure1.png";
+import Image from "next/image";
+import Heading from "@/components/heading/Heading";
+import Incbg from "../../assets/images/indbg.svg";
+import "../globals.css";
+import hexagonal from "../../assets/images/hexagonal.svg";
 
+const ISC = () => {
+  const data = [
+    {
+      title: "What is TSP?",
+      about:
+        "Zeitgeist’23 presents the second edition of TSP,i.e, Techno School Program, a school outreach program for 8th to 12th-grade students. It consists of an annual competition wherein students compete in two phases of the Open Olympiad and flex their skills through the Junior Scientist Competition. Phase 1 of the Olympiad will be conducted in schools if the school is participating and if students are directly registering then it will be conducted online on 16th march from 6.00 pm to 7.30 pm. Phase 2 will be conducted during Zeitgeist’23 on 23rd March   Lead More. ",
+    },
+    {
+      title: "Why TSP?",
+      about:
+        "TSP aims to bring together the best young minds from all over the country under one roof and to expose the students to the technical culture of IIT Ropar. The main objective of which is developing and nurturing younger minds of the country at the grassroots level. It provides a platform for school kids to learn core experience and knowledge, exercise coordination abilities, to think outside the box while proposing solutions. ",
+    },
+  ];
   const page1 = useRef();
 
-
   return (
-    <div
+    <>
+      <div
         ref={page1}
         className="bg-[#12121c] page1 h-[100vh] w-[100%] relative text-white"
       >
-        <Nav/>
-
-
+        <Nav />
 
         <div
           id="hero"
@@ -70,12 +87,65 @@ const ISC = () => {
           {/* <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
             <FaAnglesDown />
           </div> */}
-          <div id="scrolldown" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-widest mt-20">
+          <div
+            id="scrolldown"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-widest mt-20"
+          >
             <h1>Coming Soon</h1>
           </div>
         </div>
-    </div>
-  )
-}
+      </div>
+      <div id="page2" className="w-[100%]">
+        <div className=" w-full    relative">
+          <Image
+            className="absolute max-w-[400px] right-0 rotate-45 z-10"
+            style={{ top: -70 }}
+            src={compititionStructure1}
+          />
+          <div className=" mx-auto max-w-[90%]">
+            <Heading title="Our Abpot us" heading="About Us" />
+            <div className="grid grid-cols-2 pt-[56px] gap-2">
+              {data.map((item, i) => (
+                <Box index={i} data={item} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="page3" className="w-[100%] mt-[60px] conbg relative ">
 
-export default ISC
+          <div className="absolute max-w-[500px] w-[50%] top-10 left-10 rounded-full  bg-[#8FE600] opacity-20 blur-[202px] aspect-square">
+          <Image className="w-[40%] opacity-10" src={hexagonal} />
+          </div>
+
+
+                    <div className="flex justify-between items-center py-20 mx-auto w-[90%]   ">
+                    <Heading title="CONDUCTION" heading="Conduction" />
+                    <div className="flex ">
+                      <div>
+                            <h4 className="text-[13px] text-white border-l-4 border-l-color-white pl-3 " style={{lineHeight:"25px"}}>The event will be organized in two <br/>categories.Category-1: 8th to 10th <br/> classNameCategory-2: 11th and 12th className</h4>
+                      </div>
+
+                    </div>
+                    </div>
+      </div>
+    </>
+  );
+};
+
+export default ISC;
+
+const Box = ({ data }) => (
+  <div>
+    <div className="pb-[59px] pt-[78px] pr-[68px] pl-[96px] bg-cover bg-center relative aboutbg h-[435px]">
+      {/* <Image
+    src={Incbg}
+    className=" absolute max-w-90% "
+    /> */}
+      <h2 className="uppercase italic text-[#fff] pb-5">{data.title}</h2>
+      <p className=" text-[13px] text-white " style={{ lineHeight: "20px" }}>
+        {data.about}
+      </p>
+    </div>
+  </div>
+);

@@ -27,3 +27,12 @@ body {
     -webkit-background-clip: text;
   }
 }
+
+.aboutbg{
+  background: url(../assets/images/aboutbg1.png)  no-repeat;
+  background-size: 95%;
+}
+/* .conbg{
+  background: url(../assets/images/conbg.png) left top no-repeat;
+  background-size: contain;
+} */
