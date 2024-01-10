@@ -4,10 +4,9 @@ import React, { useState } from "react";
 import Border from '../../assets/images/scheduleBorder.svg'
 
 const ScheduleComponet = () => {
-  const [activeButton, setActiveButton] = useState(2);
+  const [activeButton, setActiveButton] = useState(1);
   return (
-    <div className="w-[90%] mx-auto min-h-screen lg:py-[91px] py-[30px] text-white">
-      <div className="">
+    <div className="w-[90%] mx-auto min-h-screen lg:py-[91px] pt-[100px] text-white">
         <div
           className="h-[3px] w-full relative lg:mb-5"
           style={{
@@ -340,7 +339,7 @@ const ScheduleComponet = () => {
             
           </div>
         </div>
-      </div>
+      
     </div>
   );
 };
