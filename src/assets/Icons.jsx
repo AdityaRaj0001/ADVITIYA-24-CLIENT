@@ -143,3 +143,90 @@ export const LeftArrow = () => (
     </defs>
   </svg>
 );
+
+export const SmallDot = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="12"
+    height="12"
+    viewBox="0 0 12 12"
+    fill="none"
+  >
+    <circle cx="6" cy="6" r="6" fill="white" />
+  </svg>
+);
+
+export const BigDot = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <circle cx="12" cy="12" r="12" fill="white" />
+    <circle
+      cx="12"
+      cy="12"
+      r="7.5"
+      fill="url(#paint0_linear_802_1632)"
+      stroke="url(#paint1_linear_802_1632)"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_802_1632"
+        x1="-14.0645"
+        y1="-28.8116"
+        x2="23.8689"
+        y2="-24.1526"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="white" />
+        <stop offset="1" stop-color="#6F26FF" />
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear_802_1632"
+        x1="-6.46911"
+        y1="-0.869705"
+        x2="20.6536"
+        y2="3.08844"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="white" />
+        <stop offset="1" stop-color="white" stop-opacity="0" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+export const ActiveDot = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="38"
+    height="38"
+    viewBox="0 0 44 44"
+    fill="none"
+  >
+    <circle
+      cx="22"
+      cy="22"
+      r="19"
+      fill="#442860"
+      stroke="white"
+      stroke-width="6"
+    />
+  </svg>
+);
+
+export const DeactiveDot = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="38"
+    height="38"
+    viewBox="0 0 44 44"
+    fill="none"
+  >
+    <circle cx="22" cy="22" r="22" fill="#D9D9D9" />
+    <circle cx="22" cy="22" r="14" fill="#12131B" />
+  </svg>
+);
