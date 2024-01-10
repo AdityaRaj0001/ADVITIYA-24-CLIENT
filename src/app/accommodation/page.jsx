@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import tabData from "./accommodationData";
 import Navbar from "@/components/Navbar/index";
-import Hero from "@/components/Hero/index";
+import Hero from "@/components/Hero";
 import { Button } from "@/components/ui/button";
 import {
   Select,

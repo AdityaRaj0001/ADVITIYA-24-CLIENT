@@ -3,7 +3,7 @@ import React, { useLayoutEffect,useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaAnglesDown } from "react-icons/fa6";
-const index = ({maintext,subtext}) => {
+const Index = ({maintext,subtext}) => {
   const page1 = useRef();
   const tl = useRef();
   useLayoutEffect(() => {
@@ -101,4 +101,4 @@ const index = ({maintext,subtext}) => {
   );
 };
 
-export default index;
+export default Index;

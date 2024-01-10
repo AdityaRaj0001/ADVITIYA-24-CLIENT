@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Navbar from "@/components/Navbar/index";
-import Hero from "@/components/Hero/index";
+import Hero from "@/components/Hero";
 import OurVideos from "../our-videos/OurVideos";
 import Compitition from "../compitition/Compitition";
 import Heighlight from "../heighlight/Heighlight";

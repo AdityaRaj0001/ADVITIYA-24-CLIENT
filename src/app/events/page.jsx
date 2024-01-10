@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Navbar from "@/components/Navbar/index";
-import Hero from "@/components/Hero/index";
+import Hero from "@/components/Hero";
 import styled from "styled-components";
 import { Card } from "../../components/nCard";
 import { eventsData } from "./data";
