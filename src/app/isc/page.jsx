@@ -6,6 +6,7 @@ import Footer from "@/components/footer/Footer";
 import Heighlight from "@/components/heighlight/Heighlight";
 import ContactUs from "@/components/inter/ContactUs";
 import RegistrationProcess from "@/components/inter/RegistrationProcess";
+import Conduction from "@/components/conduction/Conduction";
 const ISC = () => {
   return (
     <>
@@ -24,7 +25,7 @@ const ISC = () => {
         <Navbar />
         <Hero maintext="TECHNO SCHOOL PROGRAM" subtext="" />
       </div>
-
+      <Conduction/>
       <RegistrationProcess />
       <Heighlight />
       <ContactUs />
