@@ -12,19 +12,19 @@ const Index = ({ maintext, subtext }) => {
     let ctx = gsap.context(() => {
       tl.current = gsap
         .timeline()
-        // .from(["#heromain"], {
-        //   delay: 1.5,
-        //   y: -100,
-        //   opacity: 0,
-        //   duration: 1,
-        //   ease: "back.out(1.7)",
-        // })
-        // .from([".asset"], {
-        //   opacity: 0,
-        //   duration: 0.5,
-        //   stagger: 0.3,
-        //   // ease: "back.out(1.7)",
-        // })
+        .from(["#heromain"], {
+          delay: 1.5,
+          y: -100,
+          opacity: 0,
+          duration: 1,
+          ease: "back.out(1.7)",
+        })
+        .from([".asset"], {
+          opacity: 0,
+          duration: 0.5,
+          stagger: 0.3,
+          // ease: "back.out(1.7)",
+        })
         .from("#scrolldown", {
           y: -80,
           opacity: 0,
@@ -55,7 +55,7 @@ const Index = ({ maintext, subtext }) => {
       ref={page1}
       className="h-[calc(100%-65px)] relative hero flex flex-col gap-10 justify-center items-center overflow-hidden w-[100%] "
     >
-      {/* <div
+      <div
         id="hero"
         className="relative flex items-center justify-center xl:w-[100vw] h-[100%]"
       >
@@ -96,15 +96,15 @@ const Index = ({ maintext, subtext }) => {
         </div>
       </div>
 
-      <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
+      {/* <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
         <FaAnglesDown />
       </div> */}
-      <div
+      {/* <div
         id="scrolldown"
         className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-widest mt-20"
       >
         <h1>Coming Soon</h1>
-      </div>
+      </div> */}
     </div>
   );
 };

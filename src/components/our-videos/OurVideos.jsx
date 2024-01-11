@@ -134,7 +134,7 @@ const OurVideos = () => {
             <div className="h-full relative w-[110%] z-20 right-10">
               <div className="h-[67%] flex ">
                 <div className="h-[100%] pt-10 mt-auto w-[84%] mx-auto">
-                  <Image src={video} className="w-full h-full object-cover" />
+                <iframe  width="560" height="315" src="https://www.youtube.com/embed/Fwn-ZAxCq4g?si=vQsd07LBv1Df6vFr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className="z-50 w-full h-full object-cover"></iframe>
                 </div>
                 <div className="absolute top-0">
                   <Image src={BG} />
@@ -147,7 +147,7 @@ const OurVideos = () => {
             <div className="h-full relative w-[110%] z-20">
               <div className="h-[65%] flex ">
                 <div className="h-[100%] pt-10 mt-auto w-[84%] mx-auto">
-                  <Image src={video} className="w-full h-full object-cover" />
+                <iframe  width="560" height="315" src="https://www.youtube.com/embed/Fwn-ZAxCq4g?si=vQsd07LBv1Df6vFr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className="z-50 w-full h-full object-cover"></iframe>
                 </div>
                 <div className="absolute top-0">
                   <Image src={BG} />
@@ -278,7 +278,7 @@ const CardMobile = () => (
     <div className="relative w-[100%]">
       <div className=" flex ">
         <div className="h-[100%] pt-[22px] mt-auto w-[86%] mx-auto">
-          <Image src={video} className="w-full h-full object-cover" />
+        <iframe  width="560" height="315" src="https://www.youtube.com/embed/Fwn-ZAxCq4g?si=vQsd07LBv1Df6vFr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className="z-50 w-full h-full object-cover"></iframe>
         </div>
         <div className="absolute top-0">
           <Image src={BG} />

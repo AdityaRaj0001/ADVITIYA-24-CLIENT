@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Navbar from "@/components/Navbar/index";
-import Hero from "@/components/Hero";
+import Hero from "@/components/Hero/index3";
 import OurVideos from "../our-videos/OurVideos";
 import Compitition from "../compitition/Compitition";
 import Heighlight from "../heighlight/Heighlight";
@@ -27,7 +27,7 @@ export default function Index() {
         <Hero maintext="ADVITIYA'24" subtext="TechFest IIT ROPAR" />
       </div>
 
-      <div id="page2" className="w-[100%]">
+      {/* <div id="page2" className="w-[100%]">
         <OurVideos />
       </div>
 
@@ -42,7 +42,7 @@ export default function Index() {
       <div id="page5" className="w-[100%]">
         <Footer />
 
-      </div>
+      </div> */}
 
     </>
   );

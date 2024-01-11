@@ -70,7 +70,7 @@ const SignIn = () => {
     <>
       <div
         id="main"
-        className="w-100vw   h-screen relative flex flex-col items-center justify-center md:flex-row "
+        className="w-100vw bg-black   h-screen relative flex flex-col items-center justify-center md:flex-row "
       >
         <img
           src="Layer_1.svg"
@@ -94,7 +94,7 @@ const SignIn = () => {
               <CardDescription>Nice to have you here again</CardDescription>
             </CardHeader>
             <CardContent className="grid gap-4">
-              <div className="flex items-center ">
+              {/* <div className="flex items-center ">
                 <Button className="bg-transparent" onClick={() => Router.push("/google-auth")}>
                   <img src="grommet-icons_google.svg" className="mr-2"/>
                   sign in with google
@@ -109,7 +109,7 @@ const SignIn = () => {
                     Or continue with
                   </span>
                 </div>
-              </div>
+              </div> */}
               <div className="grid gap-2 ">
                 <Label htmlFor="email">Email Address</Label>
                 <Input
@@ -144,7 +144,7 @@ const SignIn = () => {
               </div>
             </CardContent>
             <CardFooter className="flex-col">
-              <Button className="w-full mb-2 bg-transparent relative " onClick={(e) => handleSubmit(e)}>
+              <Button disabled={true} className="w-full mb-2 bg-transparent relative " onClick={(e) => handleSubmit(e)}>
 			  <img src="Rectangle 356.svg" className="absolute w-full  " alt="" />
             <p className="z-10">Login</p>
               </Button>

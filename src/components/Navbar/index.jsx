@@ -47,12 +47,14 @@ const Navbar = () => {
     let ctx = gsap.context(() => {
       if (isLargeLaptop) {
         tl.current = gsap.timeline().from("nav #btn", {
+          y:-60,
           opacity: 0,
           duration: 1.5,
           ease: "power1.out",
         });
       } else {
         tl.current = gsap.timeline().from(["#mobile-nav div"], {
+            y:-60,
             opacity: 0,
             duration: 1.5,
         });
