@@ -5,16 +5,13 @@ import cardBg1 from "../../assets/images/cardbg1.png";
 import cardBg2 from "../../assets/images/cardbg2.svg";
 import cardBg3 from "../../assets/images/cardbg3.svg";
 import registrationBg from "../../assets/images/registrationBg.svg";
+import hexagonal from "../../assets/images/hexagonal.svg";
 
 const RegistrationProcess = () => {
   return (
     <div className="relative w-full overflow-x-hidden text-white">
-      {/* <div
-        className="absolute opacity-50 h-[890px] flex justify-end "
-        style={{ top: -100, right: "-11.5%" }}
-      >
-        <Image src={registrationBg} className="h-full object-contain ml-auto" />
-      </div> */}
+    
+      
       <div className="w-[90%] mx-auto lg:my-[130px] my-[40px] relative z-10">
         <Heading title="Registration" heading="Registration Process" />
 
@@ -123,7 +120,9 @@ const RegistrationProcess = () => {
               <Image src={cardBg3} className="w-full" />
 
               <div className="absolute top-0 right-0 left-0 bottom-0 lg:px-[45px] lg:py-[41px] p-5">
-                <h2 className="lg:mb-4 mb-3 lg:text-[25px] text-[22px] italic uppercase">Techwalk</h2>
+                <h2 className="lg:mb-4 mb-3 lg:text-[25px] text-[22px] italic uppercase">
+                  Techwalk
+                </h2>
 
                 <ul className="flex flex-col gap-3">
                   <li className="flex gap-3 lg:text-base text-sm ">
