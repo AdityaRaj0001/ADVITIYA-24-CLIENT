@@ -49,14 +49,14 @@ const Navbar = () => {
         tl.current = gsap.timeline().from("nav #btn", {
           y:-60,
           opacity: 0,
-          duration: 1.5,
+          duration: 0.5,
           ease: "power1.out",
         });
       } else {
         tl.current = gsap.timeline().from(["#mobile-nav div"], {
             y:-60,
             opacity: 0,
-            duration: 1.5,
+            duration: 0.5,
         });
       }
      
