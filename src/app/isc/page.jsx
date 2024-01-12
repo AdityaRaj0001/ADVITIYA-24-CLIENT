@@ -8,6 +8,7 @@ import ContactUs from "@/components/inter/ContactUs";
 import RegistrationProcess from "@/components/inter/RegistrationProcess";
 import AboutUs from "@/components/inter/AboutUs";
 import OurPrize from "@/components/inter/OurPrize";
+import Conduction from "@/components/conduction/Conduction";
 const ISC = () => {
   return (
     <>
@@ -28,6 +29,7 @@ const ISC = () => {
       </div>
 
       <AboutUs />
+      <Conduction/>
       <RegistrationProcess />
       <OurPrize />
       <Heighlight />
