@@ -22,9 +22,9 @@ const Schedule = () => {
         <Navbar />
         <Hero maintext="Schedule" subtext="" />
       </div>
-
+{/* 
       <ScheduleComponet />
-      <Footer />
+      <Footer /> */}
     </>
   );
 };

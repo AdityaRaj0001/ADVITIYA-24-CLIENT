@@ -99,7 +99,7 @@ const Signup = () => {
     <>
       <div
         id="main"
-        className="w-100vw  h-screen relative flex flex-col items-center justify-center md:flex-row "
+        className="w-100vw bg-black  h-screen relative flex flex-col items-center justify-center md:flex-row "
       >
         <img
           src="Layer_1.svg"
@@ -128,7 +128,7 @@ const Signup = () => {
             </CardHeader>
             {nextclicked ? (
               <CardContent className="grid gap-4 ">
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                   <Button
                     className="bg-transparent"
                     onClick={() => Router.push("/google-auth")}
@@ -146,7 +146,7 @@ const Signup = () => {
                       Or continue with
                     </span>
                   </div>
-                </div>
+                </div> */}
                 <div className="grid gap-2 ">
                   <Label htmlFor="email">Email Address</Label>
                   <Input
@@ -202,7 +202,7 @@ const Signup = () => {
               </CardContent>
             ) : (
               <CardContent className="grid gap-4 ">
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                   <Button
                     className="bg-transparent"
                     onClick={() => Router.push("/google-auth")}
@@ -220,7 +220,7 @@ const Signup = () => {
                       Or continue with
                     </span>
                   </div>
-                </div>
+                </div> */}
                 <div className="grid gap-2 ">
                   <Label htmlFor="name">Full Name</Label>
                   <Input
@@ -266,6 +266,7 @@ const Signup = () => {
                 <Button
                   className="w-full mb-2 bg-transparent relative "
                   onClick={(e) => handleSubmit(e)}
+                  disabled={true}
                 >
                   <img
                     src="Rectangle 356.svg"
