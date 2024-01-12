@@ -28,13 +28,13 @@ const ISC = () => {
         <Hero maintext="TECHNO SCHOOL PROGRAM" subtext="" />
       </div>
 
-      <AboutUs />
+      {/* <AboutUs />
       <Conduction/>
       <RegistrationProcess />
       <OurPrize />
       <Heighlight />
       <ContactUs />
-      <Footer />
+      <Footer /> */}
     </>
   );
 };
