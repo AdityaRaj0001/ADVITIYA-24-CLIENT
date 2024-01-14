@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Icons } from "@/components/icons";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa6";
 import { userRegister } from "@/apis/api";
@@ -88,7 +87,7 @@ const Signup = () => {
 
       if (res.data?.token) {
         localStorage.setItem("userToken", res.data.token);
-        Router.push("/profile");
+        Router.push("/dashboard");
         setTimeout(() => {
           toast.info("Please check your email!");
         }, 4000);

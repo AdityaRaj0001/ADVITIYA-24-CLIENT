@@ -57,7 +57,7 @@ const SignIn = () => {
 
 			if (res.data?.token) {
 				localStorage.setItem("userToken", res.data.token);
-				Router.push("/profile");
+				Router.push("/dashboard");
 			} else {
 				toast.error("Something went wrong, please try again later");
 			}
