@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar/index";
 import Hero from "@/components/Hero";
 const FAQs = () => {
   return (
+    <>
     <div
       id="page1"
       className="bg-[#12121c] h-[100vh] w-[100%] relative text-white"
@@ -17,8 +18,10 @@ const FAQs = () => {
         className="absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
       />
       <Navbar />
-      <Hero maintext="FAQs  Page" subtext="" />
+      {/* <Hero maintext="FAQs  Page" subtext="" /> */}
     </div>
+
+    </>
   );
 };
 
