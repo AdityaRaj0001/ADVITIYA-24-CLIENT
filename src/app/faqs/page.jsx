@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/accordion"
 const FAQs = () => {
   return (
+    <>
     <div
       id="page1"
       className="bg-[#12121c] h-[100vh] w-[100%] relative text-white"
@@ -54,6 +55,8 @@ const FAQs = () => {
     </Accordion>
       </div>
     </div>
+
+    </>
   );
 };
 

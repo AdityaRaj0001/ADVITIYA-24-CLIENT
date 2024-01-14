@@ -1,11 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
 import HeadingBg from "../../assets/images/headingBg.svg";
 import heighlightImage from "../../assets/images/heighlight.png";
 import hexagonal2 from "../../assets/images/hexagonal2.svg";
 import Image from "next/image";
 import { LeftArrow, RightArrow } from "@/assets/Icons";
+import HighlightsData from "./data";
 
 const Heighlight = () => {
+
+  const [highlightindex, sethighlightindex] = useState(0)
+  console.log(HighlightsData[0])
+
+
   return (
     <div className="relative h-[800px] lg:h-auto">
       <div className="absolute right-0 w-[400px] opacity-25 hidden lg:block">
@@ -122,21 +128,18 @@ const Heighlight = () => {
 
               <h2 className="lg:text-[50px] text-3xl uppercase italic mt-2 lg:mt-5">Highlights</h2>
 
+          
+
               <div className="w-full relative z-10 mt-8 lg:hidden">
-              <Image
-                src={heighlightImage}
+              <img
+                src={HighlightsData[highlightindex].image}
                 alt="vgg"
                 className="w-[100%] object-contain"
               />
             </div>
 
-              <p className="mt-5 text-sm lg:text-base">
-                Welcome to Zeitgeist, the most anticipated and biggest
-                techno-cultural fest in North India that showcases myriad
-                events, workshops and talk series and is ornamented by the
-                presence of various big names from different industries such as-
-                Diljit Dosanjh, Anubhav Singh Bassi, the local Trian band,
-                vishal-shekhar, zakir khan, sonam bajwa etc.
+              <p className="mt-5 p-2 text-sm lg:text-base">
+               {HighlightsData[highlightindex].desc}
               </p>
 
               <div className="mt-5 flex justify-center lg:justify-start">
@@ -150,11 +153,11 @@ const Heighlight = () => {
               </div>
             </div>
 
-            <div className="h-full w-full relative z-10 hidden lg:block">
-              <Image
-                src={heighlightImage}
+            <div className="h-full w-full relative items-center justify-center z-10 hidden lg:flex">
+              <img
+                src={HighlightsData[highlightindex].image}
                 alt="vgg"
-                className="w-[70%] ml-auto object-contain"
+                className="w-[90%]  object-contain"
               />
             </div>
 

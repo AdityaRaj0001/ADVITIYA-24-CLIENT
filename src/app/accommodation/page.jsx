@@ -46,7 +46,7 @@ export default function Index() {
         <Hero maintext="Accommodation" subtext="" />
       </div>
 
-      {/* <div
+      <div
         id="page2"
         className="h-auto w-[100%] relative flex items-center justify-center bg-[#12121c]"
       >
@@ -110,7 +110,7 @@ export default function Index() {
           </div>
         )}
 
-        {step === 1 && (
+        {/* {step === 1 && (
           <div className="h-[100vh] z-30  w-full gap-12 flex-col relative overflow-hidden flex items-center justify-center">
             <div className="flex flex-col md:flex-row  gap-6 w-[80%] h-[50%] md:h-[30%]">
               <div className="w-full flex-col h-[40%] items-center justify-center   relative flex ">
@@ -251,9 +251,9 @@ export default function Index() {
               <span className="text-white z-20">back</span>
             </div>
           </div>
-        )}
+        )} */}
 
-        {step === 2 && (
+        {step === 1 && (
           <div className="flex h-[100vh] items-center justify-center text-white">
             <Card className="w-[90%] sm:w-[70%] md:w-[85%] max-w-xl bg-[#12121c]   text-white">
               <CardHeader className="space-y-1">
@@ -389,7 +389,8 @@ export default function Index() {
             </Card>
           </div>
         )}
-      </div> */}
+      </div>
     </>
   );
 }
+

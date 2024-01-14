@@ -27,7 +27,7 @@ export default function Index() {
         <Hero maintext="ADVITIYA'24" subtext="TechFest IIT ROPAR" />
       </div>
 
-      {/* <div id="page2" className="w-[100%]">
+      <div id="page2" className="w-[100%]">
         <OurVideos />
       </div>
 
@@ -42,7 +42,7 @@ export default function Index() {
       <div id="page5" className="w-[100%]">
         <Footer />
 
-      </div> */}
+      </div>
 
     </>
   );
