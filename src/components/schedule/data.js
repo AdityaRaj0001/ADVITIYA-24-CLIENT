@@ -1,6 +1,6 @@
 const scheduleData = [
     {
-      "2pm": ["Inauguration Ceremony", "Speaker A"],
+      "2pm": ["Inauguration Ceremony", "A warm welcome for all the attendees and kickstart the fest"],
       "4pm": ["Softcom Hackathon", "Judge B"],
       "6pm": ["Networking Session", "Facilitator C"],
       "8pm": ["Panel Discussion", "Moderator D"],

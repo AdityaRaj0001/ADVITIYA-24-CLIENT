@@ -2,12 +2,12 @@
 import React from "react";
 import Navbar from "@/components/Navbar/index";
 import Hero from "@/components/Hero";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+// import {
+//   Accordion,
+//   AccordionContent,
+//   AccordionItem,
+//   AccordionTrigger,
+// } from "@/components/ui/accordion"
 const FAQs = () => {
   return (
     <>
@@ -24,8 +24,8 @@ const FAQs = () => {
         className="absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
       />
       <Navbar />
-      {/* <Hero maintext="FAQs  Page" subtext="" /> */}
-      <div className="flex flex-col justify-center h-screen relative lg:w-7/12 lg:mt-7 w-full my-auto mx-auto px-4 text-xl">
+      <Hero maintext="FAQs  Page" subtext="" />
+      {/* <div className="flex flex-col justify-center h-screen relative lg:w-7/12 lg:mt-7 w-full my-auto mx-auto px-4 text-xl">
       <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger>1. Why Should I Participate in Datamatics Hackathon?</AccordionTrigger>
@@ -53,7 +53,7 @@ const FAQs = () => {
         </AccordionContent>
       </AccordionItem>
     </Accordion>
-      </div>
+      </div> */}
     </div>
 
     </>

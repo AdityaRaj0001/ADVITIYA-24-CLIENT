@@ -68,15 +68,16 @@ const Navbar = () => {
     <>
       <div ref={page1}>
         <nav className="hidden h-[65px] z-10 xl:flex items-center justify-between px-[2vw] py-[4vh]">
+        <Link id="btn" href="/" className="z-10">
+            <Button variant="ghost">Home</Button>
+          </Link>
           <Link id="btn" href="/events" className="z-10">
             <Button variant="ghost">Events</Button>
           </Link>
           <Link id="btn" href="/schedule" className="z-10">
             <Button variant="ghost">Schedule</Button>
           </Link>
-          <Link id="btn" href="/sponsors" className="z-10">
-            <Button variant="ghost">Sponsors</Button>
-          </Link>
+          
           <Link id="btn" href="/accommodation">
             <Button variant="ghost">Accommodation</Button>
           </Link>
@@ -120,15 +121,16 @@ const Navbar = () => {
           <div className=" w-full flex text-2xl mt-8 items-start justify-end px-4">
             <FaRegWindowClose onClick={closeSidebar} />
           </div>
+          <Link id="btn" href="/">
+            <Button variant="ghost">Home</Button>
+          </Link>
           <Link id="btn" href="/events" className="z-10">
             <Button variant="ghost">Events</Button>
           </Link>
           <Link id="btn" href="/schedule">
             <Button variant="ghost">Schedule</Button>
           </Link>
-          <Link id="btn" href="/sponsors">
-            <Button variant="ghost">Sponsors</Button>
-          </Link>
+          
           <Link id="btn" href="/accommodation">
             <Button variant="ghost">Accommodation</Button>
           </Link>

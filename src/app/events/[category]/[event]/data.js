@@ -6,7 +6,7 @@ const eventData = [
       timeline: "Timeline of Hackathon1",
       faqs: "FAQs of Hackathon1",
       rules: "Rules of Hackathon1",
-      contact: "Contact information for Hackathon1"
+      contact: "Contact information for Hackathon1",
     },
     {
       text: "Hackathon2",
