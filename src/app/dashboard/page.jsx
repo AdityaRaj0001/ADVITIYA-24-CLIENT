@@ -36,7 +36,6 @@ const Dashboard = () => {
 				};
 				dispatch(setActiveUser(user));
 
-
 				if (localStorage.getItem("userToken") === null) {
 					if (data?.token) {
 						localStorage.setItem("userToken", data.token);
@@ -72,7 +71,7 @@ const Dashboard = () => {
 
 	useEffect(() => {
 		getUser();
-	}, [activeUser]);
+	}, []);
 
 	const logoutUser = async () => {
 		try {
