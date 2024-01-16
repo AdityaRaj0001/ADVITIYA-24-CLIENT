@@ -72,7 +72,7 @@ const Dashboard = () => {
 
 	useEffect(() => {
 		getUser();
-	}, []);
+	}, [activeUser]);
 
 	const logoutUser = async () => {
 		try {
