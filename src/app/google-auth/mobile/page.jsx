@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { toast } from "react-toastify";
 
 const MobileForm = () => {
 	const searchParams = useSearchParams();
@@ -25,6 +26,11 @@ const MobileForm = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+
+		if(mobile.length !== 10){
+			return toast.error("Enter a valid mobile number");
+			
+		}
 
 		const newUser = {
 			name,
