@@ -108,7 +108,7 @@ const BottomContainer = styled.div`
 const Text = styled.h1`
   color: #fff;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 14rem;
   z-index: 10;
   font-size: 23px;  
   font-weight: 900;
@@ -165,6 +165,138 @@ const ExploreLink = styled.a`
 
 
 export function Card({text,smalltext,largetext,image,circleColor}) {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const rotateX = useTransform(y, [-100, 100], [30, -30]);
+  const rotateY = useTransform(x, [-100, 100], [-30, 30]);
+  const [isHovered, setIsHovered] = useState(false);
+  
+  return (
+    <CardWrapper>
+      <CardContainer
+        style={{ x, y, rotateX, rotateY, z: 100 }}
+        drag
+        dragElastic={0.04}
+        dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+        whileTap={{ cursor: "grabbing" }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <TopContainer>
+          {/* <CircleWrapper>
+            <Circle circleColor={circleColor}/>
+          </CircleWrapper> */}
+          <Wrapper>
+            {/* <Secondimage
+              style={{ x, y, rotateX, rotateY, rotate: "-25deg", z: 100000 }}
+              drag
+              dragElastic={0.04}
+              dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+              whileTap={{ cursor: "grabbing"}}
+            >
+              <img src={image} alt="Shoe" />
+            </Secondimage> */}
+             <img src={image} className="h-full object-contain"/>
+          </Wrapper>
+         
+          <Text>{text}</Text>
+
+          
+          
+        </TopContainer>
+        
+        
+        
+        <BottomContainer>
+        <Details smalltext={""} largetext={largetext}/>
+        
+            {/* <Description className={isHovered ? "show" : ""}>
+              <p>{text}</p>
+            </Description> */}
+{/* 
+            {isHovered && (
+        <ExploreContainer>
+          <ExploreLink href="#">Register</ExploreLink>
+          <ExploreLink href="#">Explore</ExploreLink>
+        </ExploreContainer>
+      )} */}
+        
+        </BottomContainer>
+
+
+     </CardContainer>
+
+     
+    </CardWrapper>
+  );
+}
+export function Card2({text,smalltext,largetext,image,circleColor}) {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const rotateX = useTransform(y, [-100, 100], [30, -30]);
+  const rotateY = useTransform(x, [-100, 100], [-30, 30]);
+  const [isHovered, setIsHovered] = useState(false);
+  
+  return (
+    <CardWrapper>
+      <CardContainer
+        style={{ x, y, rotateX, rotateY, z: 100 }}
+        drag
+        dragElastic={0.04}
+        dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+        whileTap={{ cursor: "grabbing" }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <TopContainer>
+          {/* <CircleWrapper>
+            <Circle circleColor={circleColor}/>
+          </CircleWrapper> */}
+          <Wrapper>
+            {/* <Secondimage
+              style={{ x, y, rotateX, rotateY, rotate: "-25deg", z: 100000 }}
+              drag
+              dragElastic={0.04}
+              dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+              whileTap={{ cursor: "grabbing"}}
+            >
+              <img src={image} alt="Shoe" />
+            </Secondimage> */}
+             <img src={image} className="h-full object-contain"/>
+          </Wrapper>
+         
+          <Text>{text}</Text>
+
+          
+          
+        </TopContainer>
+        
+        
+        
+        <BottomContainer>
+        <Details smalltext={""} largetext={largetext}/>
+        
+            {/* <Description className={isHovered ? "show" : ""}>
+              <p>{text}</p>
+            </Description> */}
+{/* 
+            {isHovered && (
+        <ExploreContainer>
+          <ExploreLink href="#">Register</ExploreLink>
+          <ExploreLink href="#">Explore</ExploreLink>
+        </ExploreContainer>
+      )} */}
+        
+        </BottomContainer>
+
+
+     </CardContainer>
+
+     
+    </CardWrapper>
+  );
+}
+export function Card3({text,smalltext,largetext,image,circleColor}) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotateX = useTransform(y, [-100, 100], [30, -30]);

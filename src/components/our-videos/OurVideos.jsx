@@ -7,7 +7,7 @@ import video from "../../assets/images/video.png";
 const OurVideos = () => {
   return (
     <div className="text-[#fff] w-[90%] mx-auto">
-      <div className="relative">
+      <div className="relative lg:ml-8">
         <OurVideosTitle />
         <h2
           className="absolute top-[50%] pl-[15px]"

@@ -2,7 +2,8 @@
 import React from "react";
 import Navbar from "@/components/Navbar/index";
 import Hero from "@/components/Hero/index3";
-import OurVideos from "../our-videos/OurVideos";
+// import OurVideos from "../our-videos/OurVideos";
+import OurVideos2 from "../our-videos/OurVideos2";
 import Compitition from "../compitition/Compitition";
 import Heighlight from "../heighlight/Heighlight";
 import Footer from "../footer/Footer";
@@ -27,8 +28,11 @@ export default function Index() {
         <Hero maintext="ADVITIYA'24" subtext="TechFest IIT ROPAR" />
       </div>
 
-      <div id="page2" className="w-[100%]">
+      {/* <div id="page2" className="w-[100%]">
         <OurVideos />
+      </div> */}
+      <div >
+        <OurVideos2 />
       </div>
 
       <div id="page3" className=" w-[100%]">

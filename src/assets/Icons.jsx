@@ -1,10 +1,9 @@
 export const OurVideosTitle = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="259"
-    height="45"
     viewBox="0 0 259 45"
     fill="none"
+    className="absolute max-w-[300px] "
   >
     <path
       fill-rule="evenodd"

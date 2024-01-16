@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import styled from "styled-components";
-import { Card } from "../../../components/nCard";
+import { Card2  } from "../../../components/nCard";
 import Link from "next/link";
 import { HackathonsData, ExhibitionsData } from "../data";
 import Navbar from "@/components/Navbar/index";
@@ -57,7 +57,7 @@ const Main = ({ params }) => {
             href={`/events/${params.category}/[event]`}
             as={`/events/${params.category}/${event.text}`}
           >
-            <Card
+            <Card2
               text={event.text}
               smalltext={event.smalltext}
               largetext={event.smalltext}

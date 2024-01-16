@@ -26,10 +26,10 @@ const Hovercard = () => {
           <Link key={index} href="/events/[category]" as={`/events/${events.text}`}>
             <Card
               text={events.text}
-              smalltext={events.smalltext}
+              // smalltext={events.smalltext}
               largetext={events.smalltext}
               image={events.image}
-              circleColor={events.circleColor}
+              // circleColor={events.circleColor}
             />
           </Link>
         ))}
