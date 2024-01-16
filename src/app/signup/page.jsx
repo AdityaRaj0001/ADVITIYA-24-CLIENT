@@ -182,7 +182,7 @@ const Signup = () => {
 
 						<CardFooter className="flex-col">
 							{nextclicked ? (
-								<Button className="w-full mb-2 bg-transparent relative " onClick={(e) => handleSubmit(e)} disabled={true}>
+								<Button className="w-full mb-2 bg-transparent relative " onClick={(e) => handleSubmit(e)} disabled={!userData || !userData.password}>
 									<img src="Rectangle 356.svg" className="absolute w-full  " alt="" />
 									<p className="z-10">Create Account</p>
 								</Button>
