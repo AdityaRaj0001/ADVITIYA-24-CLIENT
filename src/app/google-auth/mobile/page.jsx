@@ -45,6 +45,7 @@ const MobileForm = () => {
 		console.log(res.data);
 
 		if (res.status === 201) {
+			toast.success("User registered successfully");
 			localStorage.setItem("userToken", res.data.token);
 			router.push(`/dashboard?token=${res.data.token}`);
 		} else {
