@@ -47,10 +47,8 @@ const SignIn = () => {
 			return toast.warn("Please enter a valid email!");
 		}
 
-		console.log(userData);
 
 		const res = await userLogin(userData);
-		console.log(res);
 
 		if (res?.status === 200) {
 			toast.success("User Logged in Successfully");

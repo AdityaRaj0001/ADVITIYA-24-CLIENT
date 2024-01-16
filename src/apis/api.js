@@ -5,7 +5,7 @@ const serverURL = process.env.NEXT_PUBLIC_SERVER_URL;
 export const userRegister = async (user) => {
 	try {
 		const response = await axios.post(`${serverURL}/api/users/register`, user);
-		console.log("User Registered Successfully at API", user);
+		// console.log("User Registered Successfully at API", user);
 		return response;
 	} catch (err) {
         toast.error(err.response.data.message)
@@ -17,7 +17,7 @@ export const userRegister = async (user) => {
 export const userLogin = async (user) => {
 	try {
 		const response =await axios.post(`${serverURL}/api/users/login`, user);
-		console.log("User Login Successfully at API", user);
+		// console.log("User Login Successfully at API", user);
 		return response;
 	} catch (err) {
         toast.error(err.response.data.message);
@@ -33,7 +33,7 @@ export const userLogout = async (token) => {
 				Authorization: token,
 			},
 		});
-        console.log("User Logout Successful at API");
+        // console.log("User Logout Successful at API");
 		return response;
 	} catch (err) {
         toast.error(err.response.data.message);

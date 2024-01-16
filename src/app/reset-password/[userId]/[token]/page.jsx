@@ -32,9 +32,9 @@ const ForgotPassword = (props) => {
 		console.log("response: ", res);
 
 		if (res?.status === 201) {
-			alert("Password Reset Successfully");
+			toast.success("Password Reset Successfully");
 		} else {
-			alert("Password Reset Failed");
+			toast.error("Password Reset Failed");
 		}
 		router.push("/signin");
 		setPassword("");

@@ -99,9 +99,9 @@ const Navbar = () => {
 							<DropdownMenuTrigger className="flex z-10 flex-row items-center gap-2 outline-none text-2xl">{activeUser && activeUser.email ? <FaBars /> : <CgProfile />}</DropdownMenuTrigger>
 							<DropdownMenuContent className="text-white bg-[#12121c] mt-2 mr-2">
 								{activeUser && activeUser.email ? (
-                  <Link href="/dashboard">
-									<DropdownMenuItem>Profile</DropdownMenuItem>
-                  </Link>
+									<Link href="/dashboard">
+										<DropdownMenuItem>Profile</DropdownMenuItem>
+									</Link>
 								) : (
 									<Link href="/signin">
 										<DropdownMenuItem>Login/Register</DropdownMenuItem>

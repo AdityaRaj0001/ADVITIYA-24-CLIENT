@@ -18,6 +18,8 @@ const Dashboard = () => {
 	const dispatch = useDispatch();
 	const { activeUser } = useSelector((state) => state);
 
+	// const userToken = localStorage?.getItem("userToken");
+
 	const getUser = async () => {
 		try {
 			if (!token) {
@@ -33,6 +35,7 @@ const Dashboard = () => {
 					college: data?.user?.college_name,
 				};
 				dispatch(setActiveUser(user));
+
 
 				if (localStorage.getItem("userToken") === null) {
 					if (data?.token) {
@@ -69,7 +72,7 @@ const Dashboard = () => {
 
 	useEffect(() => {
 		getUser();
-	}, [activeUser]);
+	}, []);
 
 	const logoutUser = async () => {
 		try {
@@ -83,7 +86,7 @@ const Dashboard = () => {
 				localStorage.removeItem("userToken");
 				router.push("/");
 				toast.success("User Logged Out Successfully");
-				// dispatch(setActiveUser(null));
+				dispatch(setActiveUser(null));
 			}
 		} catch (error) {
 			console.error("Error during logout:", error);
