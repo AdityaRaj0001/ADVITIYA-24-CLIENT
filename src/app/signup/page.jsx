@@ -79,15 +79,11 @@ const Signup = () => {
     console.log(res);
 
     if (res?.status === 201) {
-      toast.success("User Registered Successfully");
-      // const loginData = {
-      // 	email: userData.email,
-      // 	password: userData.password,
-      // };
+      toast.success("User Registered Successfully")
 
       if (res.data?.token) {
         localStorage.setItem("userToken", res.data.token);
-        Router.push("/dashboard");
+        Router.push(`/dashboard?token=${res.data.token}`);
         setTimeout(() => {
           toast.info("Please check your email!");
         }, 4000);
