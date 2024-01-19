@@ -36,33 +36,65 @@ export const eventsData = [
 
 // data.js
 export const ExhibitionsData = [
+  {
+    text: "Exhibition1",
+    largetext: "lorem13",
+    image: "../eventcardbg.png",
+  },
+  {
+    text: "Exhibition2",
+    largetext: "lorem14",
+    image: "../eventcardbg.png",
+  },
+  {
+    text: "Exhibition3",
+    largetext: "lorem15",
+    image: "../eventcardbg.png",
+  },
+  {
+    text: "Exhibition4",
+    largetext: "lorem16",
+    image: "../eventcardbg.png",
+  },
+  {
+    text: "Exhibition5",
+    largetext: "lorem17",
+    image: "../eventcardbg.png",
+  },
+  {
+    text: "Exhibition6",
+    largetext: "lorem18",
+    image: "../eventcardbg.png",
+  },
+];
+export const HackathonsData = [
     {
-      text: "Exhibition1",
+      text: "Hackathon1",
       largetext: "lorem13",
       image: "../eventcardbg.png",
     },
     {
-      text: "Exhibition2",
+      text: "Hackathon2",
       largetext: "lorem14",
       image: "../eventcardbg.png",
     },
     {
-      text: "Exhibition3",
+      text: "Hackathon3",
       largetext: "lorem15",
       image: "../eventcardbg.png",
     },
     {
-      text: "Exhibition4",
+      text: "Hackathon4",
       largetext: "lorem16",
       image: "../eventcardbg.png",
     },
     {
-      text: "Exhibition5",
+      text: "Hackathon5",
       largetext: "lorem17",
       image: "../eventcardbg.png",
     },
     {
-      text: "Exhibition6",
+      text: "Hackathon6",
       largetext: "lorem18",
       image: "../eventcardbg.png",
     },

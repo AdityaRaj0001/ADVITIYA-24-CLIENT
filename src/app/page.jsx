@@ -30,16 +30,16 @@ const Page = () => {
        setloading(false);
      }
 
-       // Add event listener for beforeunload
-    // window.addEventListener("beforeunload", () => {
-    //   // Clear sessionStorage to reset the flag on hard reload
-    //   sessionStorage.removeItem("hasBeenOpenedBefore");
-    // });
+      //  Add event listener for beforeunload
+    window.addEventListener("beforeunload", () => {
+      // Clear sessionStorage to reset the flag on hard reload
+      sessionStorage.removeItem("hasBeenOpenedBefore");
+    });
 
-    // // Cleanup the event listener on component unmount
-    // return () => {
-    //   window.removeEventListener("beforeunload", () => {});
-    // };
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("beforeunload", () => {});
+    };
 
   }, []);
 

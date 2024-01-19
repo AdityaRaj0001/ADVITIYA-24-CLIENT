@@ -79,7 +79,7 @@ const SignIn = () => {
 							<CardDescription>Nice to have you here again</CardDescription>
 						</CardHeader>
 						<CardContent className="grid gap-4">
-							<div className="flex items-center ">
+							{/* <div className="flex items-center ">
 								<Button className="bg-transparent" onClick={handleGoogleLogin}>
 									<img src="grommet-icons_google.svg" className="mr-2" />
 									Continue with Google
@@ -92,7 +92,7 @@ const SignIn = () => {
 								<div className="relative flex justify-center text-xs uppercase">
 									<span className="bg-background px-2 text-muted-foreground bg-[#12121c]">Or continue with</span>
 								</div>
-							</div>
+							</div> */}
 							<div className="grid gap-2 ">
 								<Label htmlFor="email">Email Address</Label>
 								<Input type="email" name="email" id="email" className="text-xs lg:text-sm text-black" placeholder="Enter your email address" onChange={(e) => handleValueChange(e)} required />

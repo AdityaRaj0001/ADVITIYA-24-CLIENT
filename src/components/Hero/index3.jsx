@@ -96,9 +96,9 @@ const Index = ({ maintext, subtext }) => {
         </div>
       </div>
 
-      <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
+      {/* <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
         <FaAnglesDown />
-      </div>
+      </div> */}
       {/* <div
         id="scrolldown"
         className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-widest mt-20"

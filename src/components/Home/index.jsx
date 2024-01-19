@@ -9,10 +9,9 @@ import Heighlight from "../heighlight/Heighlight";
 import Footer from "../footer/Footer";
 
 export default function Index() {
-
   return (
     <>
-       <div
+      <div
         id="page1"
         className="bg-[#12121c] h-[100vh] w-[100%] relative text-white"
       >
@@ -31,7 +30,7 @@ export default function Index() {
       {/* <div id="page2" className="w-[100%]">
         <OurVideos />
       </div> */}
-      <div >
+      {/* <div>
         <OurVideos2 />
       </div>
 
@@ -45,9 +44,7 @@ export default function Index() {
 
       <div id="page5" className="w-[100%]">
         <Footer />
-
-      </div>
-
+      </div> */}
     </>
   );
 }

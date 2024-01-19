@@ -53,7 +53,7 @@ const Navbar = () => {
           ease: "power1.out",
         });
       } else {
-        tl.current = gsap.timeline().from(["#mobile-nav div"], {
+        tl.current = gsap.timeline().from(["#mobile-nav div","#mobile-nav img"], {
             y:-60,
             opacity: 0,
             duration: 0.5,
@@ -169,10 +169,11 @@ const Navbar = () => {
         </nav>
         <div
           id="mobile-nav"
-          className="flex z-10 h-[30px] xl:hidden px-4 py-8 justify-between items-center"
+          className="flex  relative z-10 h-[30px] xl:hidden px-4 py-8 justify-between items-center"
         >
-          <div id="left">
-            <h1>LOGO</h1>
+            <img className="w-[200px] absolute -left-4 mt-6 " src="./logo.png"/>
+          <div id="left" className="h-full relative w-[20%] flex items-center justify-center">
+            {/* <img className="w-[300px] absolute top-0 left-0 " src="./logo.png"/> */}
           </div>
           <div id="right" className="text-2xl" onClick={openSidebar}>
             <FaBars />
