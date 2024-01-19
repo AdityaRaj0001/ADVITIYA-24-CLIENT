@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
 	title: "ADVITIYA'24",
 	description: "TechFest IIT ROPAR",
+	icons: {
+		icon: "/icon.png",
+		},
 };
 
 export default function RootLayout({ children }) {
