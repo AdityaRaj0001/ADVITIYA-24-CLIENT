@@ -13,7 +13,7 @@ const Index = ({ maintext, subtext }) => {
       tl.current = gsap
         .timeline()
         .from(["#heromain"], {
-          delay: 1.5,
+          delay: 0.5,
           y: -100,
           opacity: 0,
           duration: 1,
@@ -46,7 +46,7 @@ const Index = ({ maintext, subtext }) => {
         opacity: 0,
         duration: 2,
       });
-    }, page1);
+    }, );
 
     return () => ctx.revert();
   }, []);

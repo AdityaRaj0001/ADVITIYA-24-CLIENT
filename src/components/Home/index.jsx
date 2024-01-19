@@ -17,11 +17,11 @@ export default function Index() {
       >
         <img
           src="Layer_1.svg"
-          className="absolute pointer-events-none asset top-0  left-0 h-[200px] md:h-[280px]  xl:h-[340px]"
+          className="asset absolute pointer-events-none asset top-0  left-0 h-[200px] md:h-[280px]  xl:h-[340px]"
         />
         <img
           src="Ellipse 22.svg"
-          className="absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
+          className="asset absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
         />
         <Navbar />
         <Hero maintext="ADVITIYA'24" subtext="TechFest IIT ROPAR" />
