@@ -46,7 +46,7 @@ export default function Index() {
         <Hero maintext="Accommodation" subtext="" />
       </div>
 
-      {/* <div
+      <div
         id="page2"
         className="h-auto w-[100%] relative flex items-center justify-center bg-[#12121c]"
       >
@@ -389,7 +389,7 @@ export default function Index() {
             </Card>
           </div>
         )}
-      </div> */}
+      </div>
     </>
   );
 }

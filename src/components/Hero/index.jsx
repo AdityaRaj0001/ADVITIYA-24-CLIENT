@@ -55,7 +55,7 @@ const Index = ({ maintext, subtext }) => {
       ref={page1}
       className="h-[calc(100%-65px)] relative hero flex flex-col gap-10 justify-center items-center overflow-hidden w-[100%] "
     >
-      {/* <div
+      <div
         id="hero"
         className="relative flex items-center justify-center xl:w-[100vw] h-[100%]"
       >
@@ -78,7 +78,7 @@ const Index = ({ maintext, subtext }) => {
         </div>
         <div className="relative   xl:flex xl:items-center xl:justify-center h-[70%] sm:h-[75%] md:h-[80%] xl:w-1/2 xl:h-[100%]">
           <img
-            src="./Arwork1.svg"
+            src="./Arwork 1.png"
             className=" z-30 opacity-70 xl:opacity-100  asset h-[100%] xl:h-[80%] "
           />
           <img
@@ -94,17 +94,17 @@ const Index = ({ maintext, subtext }) => {
             className="hidden xl:block xl:absolute asset z-10 h-[60px]  xl:top-32 xl:left-44 xl:h-[100px]"
           />
         </div>
-      </div> */}
+      </div>
 
-      {/* <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
+      <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
         <FaAnglesDown />
-      </div> */}
-      <div
+      </div>
+      {/* <div
         id="scrolldown"
         className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-widest mt-20"
       >
         <h1>Coming Soon</h1>
-      </div>
+      </div> */}
     </div>
   );
 };

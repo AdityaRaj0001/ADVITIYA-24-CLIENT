@@ -30,7 +30,7 @@ export default function Index() {
       {/* <div id="page2" className="w-[100%]">
         <OurVideos />
       </div> */}
-      {/* <div>
+      <div>
         <OurVideos2 />
       </div>
 
@@ -44,7 +44,7 @@ export default function Index() {
 
       <div id="page5" className="w-[100%]">
         <Footer />
-      </div> */}
+      </div>
     </>
   );
 }

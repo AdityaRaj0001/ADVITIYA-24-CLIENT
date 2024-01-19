@@ -66,8 +66,8 @@ const Main = () => {
       <Hero maintext="Events" subtext="Page" />
     </div>
 
-      {/* <Hovercard />
-       */}
+      <Hovercard />
+      
     </>
   );
 };
