@@ -74,7 +74,7 @@ const ScheduleComponet = () => {
 
         <div className="mt-16 lg:mt-0 left-[7px] lg:absolute top-28 bottom-0 w-full">
           {index===0 && day1timings.map((data,i)=>(
-            <div className="w-full grid grid-cols-12 pb-[40px]">
+            <div key={i} className="w-full grid grid-cols-12 pb-[40px]">
             <div className="col-span-1 hidden lg:block">
               <ActiveDot />
             </div>
@@ -134,7 +134,7 @@ const ScheduleComponet = () => {
           </div>
           ))}
           {index===1 && day2timings.map((data,i)=>(
-            <div className="w-full grid grid-cols-12 pb-[40px]">
+            <div key={i} className="w-full grid grid-cols-12 pb-[40px]">
             <div className="col-span-1 hidden lg:block">
               <ActiveDot />
             </div>
@@ -194,7 +194,7 @@ const ScheduleComponet = () => {
           </div>
           ))}
           {index===2 && day3timings.map((data,i)=>(
-            <div className="w-full grid grid-cols-12 pb-[40px]">
+            <div key={i} className="w-full grid grid-cols-12 pb-[40px]">
             <div className="col-span-1 hidden lg:block">
               <ActiveDot />
             </div>
