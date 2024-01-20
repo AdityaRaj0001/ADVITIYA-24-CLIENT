@@ -1,8 +1,9 @@
-'use client'
-import { motion, useMotionValue, useTransform } from "framer-motion";
-import React, {useState} from "react";
+"use client";
+import { motion, useMotionValue, useTransform,useSpring } from "framer-motion";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Details } from "./details";
+import { FiMousePointer } from "react-icons/fi";
 
 const CardWrapper = styled.div`
   display: grid;
@@ -11,11 +12,7 @@ const CardWrapper = styled.div`
   padding: 20px;
   justify-content: center;
   align-items: center;
-  
-  
 `;
-
-
 
 const CardContainer = styled(motion.div)`
   width: 265px;
@@ -59,10 +56,7 @@ const Description = styled.div`
     opacity: 1;
     transform: translateY(0%);
   }
-
-  
 `;
-
 
 const CircleWrapper = styled.div`
   position: absolute;
@@ -104,13 +98,12 @@ const BottomContainer = styled.div`
   flex-direction: column;
 `;
 
-
 const Text = styled.h1`
   color: #fff;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 14rem;
   z-index: 10;
-  font-size: 23px;  
+  font-size: 23px;
   font-weight: 900;
 `;
 
@@ -121,7 +114,6 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
 `;
 
 const Secondimage = styled(motion.div)`
@@ -135,20 +127,20 @@ const Secondimage = styled(motion.div)`
     width: auto;
     height: 100%;
     user-select: none;
-    pointer-events:none;
+    pointer-events: none;
   }
 `;
 
 const ExploreContainer = styled.div`
-position: absolute; /* Position ExploreContainer */
-bottom: 0; /* Place it at the bottom */
-left: 50%; /* Adjust as needed */
-transform: translateX(-50%); /* Center horizontally */
-display: flex;
-justify-content: space-between;
-width: 100%; /* Full width */
-max-width: 265px; /* Adjust as needed */
-margin-top: 10px;
+  position: absolute; /* Position ExploreContainer */
+  bottom: 0; /* Place it at the bottom */
+  left: 50%; /* Adjust as needed */
+  transform: translateX(-50%); /* Center horizontally */
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Full width */
+  max-width: 265px; /* Adjust as needed */
+  margin-top: 10px;
 `;
 
 const ExploreLink = styled.a`
@@ -162,15 +154,125 @@ const ExploreLink = styled.a`
   }
 `;
 
-
-
-export function Card({text,smalltext,largetext,image,circleColor}) {
+export function Card({ text, smalltext, largetext, image, circleColor }) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotateX = useTransform(y, [-100, 100], [30, -30]);
   const rotateY = useTransform(x, [-100, 100], [-30, 30]);
   const [isHovered, setIsHovered] = useState(false);
-  
+
+  return (
+    <CardWrapper>
+      <CardContainer
+        style={{ x, y, rotateX, rotateY, z: 100 }}
+        drag
+        dragElastic={0.04}
+        dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+        whileTap={{ cursor: "grabbing" }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <TopContainer>
+          {/* <CircleWrapper>
+            <Circle circleColor={circleColor}/>
+          </CircleWrapper> */}
+          <Wrapper>
+            {/* <Secondimage
+              style={{ x, y, rotateX, rotateY, rotate: "-25deg", z: 100000 }}
+              drag
+              dragElastic={0.04}
+              dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+              whileTap={{ cursor: "grabbing"}}
+            >
+              <img src={image} alt="Shoe" />
+            </Secondimage> */}
+            <img src={image} className="h-full object-contain" />
+          </Wrapper>
+
+          <Text>{text}</Text>
+        </TopContainer>
+
+        <BottomContainer>
+          <Details smalltext={""} largetext={largetext} />
+
+          {/* <Description className={isHovered ? "show" : ""}>
+              <p>{text}</p>
+            </Description> */}
+          {/* 
+            {isHovered && (
+        <ExploreContainer>
+          <ExploreLink href="#">Register</ExploreLink>
+          <ExploreLink href="#">Explore</ExploreLink>
+        </ExploreContainer>
+      )} */}
+        </BottomContainer>
+      </CardContainer>
+    </CardWrapper>
+  );
+}
+export function Card2({ text, smalltext, largetext, image, circleColor }) {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const rotateX = useTransform(y, [-100, 100], [30, -30]);
+  const rotateY = useTransform(x, [-100, 100], [-30, 30]);
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <CardWrapper>
+      <CardContainer
+        style={{ x, y, rotateX, rotateY, z: 100 }}
+        drag
+        dragElastic={0.04}
+        dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+        whileTap={{ cursor: "grabbing" }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <TopContainer>
+          {/* <CircleWrapper>
+            <Circle circleColor={circleColor}/>
+          </CircleWrapper> */}
+          <Wrapper>
+            {/* <Secondimage
+              style={{ x, y, rotateX, rotateY, rotate: "-25deg", z: 100000 }}
+              drag
+              dragElastic={0.04}
+              dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+              whileTap={{ cursor: "grabbing"}}
+            >
+              <img src={image} alt="Shoe" />
+            </Secondimage> */}
+            <img src={image} className="h-full object-contain" />
+          </Wrapper>
+
+          <Text>{text}</Text>
+        </TopContainer>
+
+        <BottomContainer>
+          <Details smalltext={""} largetext={largetext} />
+
+          {/* <Description className={isHovered ? "show" : ""}>
+              <p>{text}</p>
+            </Description> */}
+          {/* 
+            {isHovered && (
+        <ExploreContainer>
+          <ExploreLink href="#">Register</ExploreLink>
+          <ExploreLink href="#">Explore</ExploreLink>
+        </ExploreContainer>
+      )} */}
+        </BottomContainer>
+      </CardContainer>
+    </CardWrapper>
+  );
+}
+export function Card3({ text, smalltext, largetext, image, circleColor }) {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const rotateX = useTransform(y, [-100, 100], [30, -30]);
+  const rotateY = useTransform(x, [-100, 100], [-30, 30]);
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <CardWrapper>
       <CardContainer
@@ -184,7 +286,7 @@ export function Card({text,smalltext,largetext,image,circleColor}) {
       >
         <TopContainer>
           <CircleWrapper>
-            <Circle circleColor={circleColor}/>
+            <Circle circleColor={circleColor} />
           </CircleWrapper>
           <Wrapper>
             <Secondimage
@@ -192,39 +294,115 @@ export function Card({text,smalltext,largetext,image,circleColor}) {
               drag
               dragElastic={0.04}
               dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-              whileTap={{ cursor: "grabbing"}}
+              whileTap={{ cursor: "grabbing" }}
             >
               <img src={image} alt="Shoe" />
             </Secondimage>
           </Wrapper>
           <Text>{text}</Text>
-
-          
-          
         </TopContainer>
-        
-        
-        
+
         <BottomContainer>
-        <Details smalltext={smalltext} largetext={largetext}/>
-        
-            {/* <Description className={isHovered ? "show" : ""}>
+          <Details smalltext={smalltext} largetext={largetext} />
+
+          {/* <Description className={isHovered ? "show" : ""}>
               <p>{text}</p>
             </Description> */}
 
-            {isHovered && (
-        <ExploreContainer>
-          <ExploreLink href="#">Register</ExploreLink>
-          <ExploreLink href="#">Explore</ExploreLink>
-        </ExploreContainer>
-      )}
-        
+          {isHovered && (
+            <ExploreContainer>
+              <ExploreLink href="#">Register</ExploreLink>
+              <ExploreLink href="#">Explore</ExploreLink>
+            </ExploreContainer>
+          )}
         </BottomContainer>
-
-
-     </CardContainer>
-
-     
+      </CardContainer>
     </CardWrapper>
   );
 }
+//  Card4 = () => {
+//   return (
+//     <div className="grid w-full place-content-center bg-gradient-to-br from-indigo-500 to-violet-500 px-4 py-12 text-slate-900">
+//       <TiltCard />
+//     </div>
+//   );
+// };
+
+export const Card4 = ({ text, smalltext, largetext, image, circleColor }) => {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const mouseXSpring = useSpring(x);
+  const mouseYSpring = useSpring(y);
+
+  const rotateX = useTransform(
+    mouseYSpring,
+    [-0.5, 0.5],
+    ["17.5deg", "-17.5deg"]
+  );
+  const rotateY = useTransform(
+    mouseXSpring,
+    [-0.5, 0.5],
+    ["-17.5deg", "17.5deg"]
+  );
+
+  const handleMouseMove = (e) => {
+    const rect = e.target.getBoundingClientRect();
+
+    const width = rect.width;
+    const height = rect.height;
+
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+    const xPct = mouseX / width - 0.5;
+    const yPct = mouseY / height - 0.5;
+
+    x.set(xPct);
+    y.set(yPct);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  return (
+    <motion.div
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        rotateY,
+        rotateX,
+        transformStyle: "preserve-3d",
+      }}
+      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-violet-500 to-[#222233]"
+    >
+      <div
+        style={{
+          transform: "translateZ(75px)",
+          transformStyle: "preserve-3d",
+        }}
+        className="absolute  grid p-4 h-full  rounded-2xl border-white border-2 border-dashed  shadow-lg"
+      >
+        <img className="h-[90%] object-cover rounded-2xl" src={image} alt="Shoe" />
+        {/* <FiMousePointer
+          style={{
+            transform: "translateZ(75px)",
+          }}
+          className="mx-auto text-4xl"
+        /> */}
+        <p
+          style={{
+            transform: "translateZ(50px)",
+          }}
+          className="text-center mt-12 text-white  w-full text-2xl font-bold"
+        >
+          {text}
+        </p>
+        
+      </div>
+    </motion.div>
+  );
+};
+

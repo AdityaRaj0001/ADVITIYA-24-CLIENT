@@ -13,7 +13,7 @@ const Index = ({ maintext, subtext }) => {
       tl.current = gsap
         .timeline()
         .from(["#heromain"], {
-          delay: 1.5,
+          delay: 0.5,
           y: -100,
           opacity: 0,
           duration: 1,
@@ -46,7 +46,7 @@ const Index = ({ maintext, subtext }) => {
         opacity: 0,
         duration: 2,
       });
-    }, page1);
+    }, );
 
     return () => ctx.revert();
   }, []);
@@ -78,8 +78,8 @@ const Index = ({ maintext, subtext }) => {
         </div>
         <div className="relative   xl:flex xl:items-center xl:justify-center h-[70%] sm:h-[75%] md:h-[80%] xl:w-1/2 xl:h-[100%]">
           <img
-            src="./Arwork1.svg"
-            className=" z-30 opacity-70 xl:opacity-100  asset h-[100%] xl:h-[80%] "
+            src="./Arwork 1.png"
+            className=" z-30 object-contain opacity-70 xl:opacity-100  asset h-[100%] xl:h-[80%] "
           />
           <img
             src="./Vector Smart Object 1.svg"
@@ -96,9 +96,9 @@ const Index = ({ maintext, subtext }) => {
         </div>
       </div>
 
-      {/* <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
+      <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
         <FaAnglesDown />
-      </div> */}
+      </div>
       {/* <div
         id="scrolldown"
         className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-widest mt-20"

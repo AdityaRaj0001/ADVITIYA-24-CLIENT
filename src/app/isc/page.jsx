@@ -9,6 +9,7 @@ import RegistrationProcess from "@/components/inter/RegistrationProcess";
 import AboutUs from "@/components/inter/AboutUs";
 import OurPrize from "@/components/inter/OurPrize";
 import Conduction from "@/components/conduction/Conduction";
+import Testimonials from "@/components/testimonials/Testimonials";
 const ISC = () => {
   return (
     <>
@@ -28,13 +29,14 @@ const ISC = () => {
         <Hero maintext="TECHNO SCHOOL PROGRAM" subtext="" />
       </div>
 
-      {/* <AboutUs />
+      <AboutUs />
       <Conduction/>
       <RegistrationProcess />
+      <Testimonials/>
       <OurPrize />
       <Heighlight />
       <ContactUs />
-      <Footer /> */}
+      <Footer />
     </>
   );
 };

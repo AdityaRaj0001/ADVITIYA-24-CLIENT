@@ -59,7 +59,7 @@ const Compitition = () => {
         />
       </div>
       <div className=" max-w-[90%] mx-auto">
-        <Heading title="Competitions" heading="Competitions" />
+        <Heading title="events" heading="Competitions" />
 
         <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-[50px] gap-[30px] lg:my-[100px] my-[40px] ">
           {data?.map((item, i) => (

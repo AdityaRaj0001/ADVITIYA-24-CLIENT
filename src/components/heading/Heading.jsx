@@ -7,7 +7,7 @@ const Heading = ({ title, heading }) => {
       <div className="relative">
         <Image
           src={HeadingBg}
-          className="lg:w-[259px] w-[200px] h-[45px] object-contain"
+          className="w-[200px] lg:w-[250px] h-[45px] object-contain"
         />
         <h2
           className="absolute top-[50%] lg:left-[20px] left-[14px] lg:text-[18px] text-[14px]"
@@ -17,11 +17,11 @@ const Heading = ({ title, heading }) => {
         </h2>
       </div>
 
-      <div>
+      {/* <div>
         <h2 className=" lg:text-6xl text-3xl italic uppercase lg:mt-5 mt-3">
           {heading}
         </h2>
-      </div>
+      </div> */}
     </div>
   );
 };
