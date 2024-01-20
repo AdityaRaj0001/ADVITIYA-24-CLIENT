@@ -79,15 +79,11 @@ const Signup = () => {
     console.log(res);
 
     if (res?.status === 201) {
-      toast.success("User Registered Successfully");
-      // const loginData = {
-      // 	email: userData.email,
-      // 	password: userData.password,
-      // };
+      toast.success("User Registered Successfully")
 
       if (res.data?.token) {
         localStorage.setItem("userToken", res.data.token);
-        Router.push("/dashboard");
+        Router.push(`/dashboard?token=${res.data.token}`);
         setTimeout(() => {
           toast.info("Please check your email!");
         }, 4000);
@@ -182,7 +178,7 @@ const Signup = () => {
 
 						<CardFooter className="flex-col">
 							{nextclicked ? (
-								<Button className="w-full mb-2 bg-transparent relative " onClick={(e) => handleSubmit(e)} disabled={true}>
+								<Button className="w-full mb-2 bg-transparent relative " onClick={(e) => handleSubmit(e)} disabled={!userData || !userData.password}>
 									<img src="Rectangle 356.svg" className="absolute w-full  " alt="" />
 									<p className="z-10">Create Account</p>
 								</Button>
