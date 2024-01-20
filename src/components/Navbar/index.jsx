@@ -143,16 +143,17 @@ const Navbar = () => {
 					<span id="btn" className="relative h-[50px] w-[100px] flex justify-center items-center">
 						<img src="Vector.svg" className="absolute  w-[200px]" alt="" />
 						<DropdownMenu>
-							<DropdownMenuTrigger className="flex flex-row z-10 items-center gap-2 outline-none text-2xl">
-								{" "}
-								<CgProfile />
-								<FaBars className="hidden xl:block" />{" "}
-							</DropdownMenuTrigger>
+							<DropdownMenuTrigger className="flex flex-row z-10 items-center gap-2 outline-none text-2xl">{activeUser && activeUser.email ? <FaBars /> : <CgProfile />}</DropdownMenuTrigger>
 							<DropdownMenuContent className="text-white mt-2 mr-2 bg-[#12121c] ">
-								<DropdownMenuItem>Profile</DropdownMenuItem>
-								<Link href="/signup">
-									<DropdownMenuItem>Login/Register</DropdownMenuItem>
-								</Link>
+								{activeUser && activeUser.email ? (
+									<Link href="/dashboard">
+										<DropdownMenuItem>Profile</DropdownMenuItem>
+									</Link>
+								) : (
+									<Link href="/signin">
+										<DropdownMenuItem>Login/Register</DropdownMenuItem>
+									</Link>
+								)}
 							</DropdownMenuContent>
 						</DropdownMenu>
 					</span>
