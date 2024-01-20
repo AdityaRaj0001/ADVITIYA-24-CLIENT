@@ -71,7 +71,7 @@ const Dashboard = () => {
 
 	useEffect(() => {
 		getUser();
-	}, []);
+	}, [activeUser]);
 
 	const logoutUser = async () => {
 		try {
@@ -84,8 +84,9 @@ const Dashboard = () => {
 				// Remove the user token from localStorage
 				localStorage.removeItem("userToken");
 				router.push("/");
-				toast.success("User Logged Out Successfully");
 				dispatch(setActiveUser(null));
+				toast.success("User Logged Out Successfully");
+				window.location.reload();
 			}
 		} catch (error) {
 			console.error("Error during logout:", error);
