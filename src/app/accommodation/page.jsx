@@ -46,7 +46,7 @@ export default function Index() {
         <Hero maintext="Accommodation" subtext="" />
       </div>
 
-      {/* <div
+      <div
         id="page2"
         className="h-auto w-[100%] relative flex items-center justify-center bg-[#12121c]"
       >
@@ -253,7 +253,7 @@ export default function Index() {
           </div>
         )}
 
-        {step === 2 && (
+        {step === 1 && (
           <div className="flex h-[100vh] items-center justify-center text-white">
             <Card className="w-[90%] sm:w-[70%] md:w-[85%] max-w-xl bg-[#12121c]   text-white">
               <CardHeader className="space-y-1">
@@ -389,7 +389,8 @@ export default function Index() {
             </Card>
           </div>
         )}
-      </div> */}
+      </div>
     </>
   );
 }
+

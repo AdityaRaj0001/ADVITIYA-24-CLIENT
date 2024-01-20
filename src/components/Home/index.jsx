@@ -2,26 +2,26 @@
 import React from "react";
 import Navbar from "@/components/Navbar/index";
 import Hero from "@/components/Hero/index3";
-import OurVideos from "../our-videos/OurVideos";
+// import OurVideos from "../our-videos/OurVideos";
+import OurVideos2 from "../our-videos/OurVideos2";
 import Compitition from "../compitition/Compitition";
 import Heighlight from "../heighlight/Heighlight";
 import Footer from "../footer/Footer";
 
 export default function Index() {
-
   return (
     <>
-       <div
+      <div
         id="page1"
         className="bg-[#12121c] h-[100vh] w-[100%] relative text-white"
       >
         <img
           src="Layer_1.svg"
-          className="absolute pointer-events-none asset top-0  left-0 h-[200px] md:h-[280px]  xl:h-[340px]"
+          className="asset absolute pointer-events-none asset top-0  left-0 h-[200px] md:h-[280px]  xl:h-[340px]"
         />
         <img
           src="Ellipse 22.svg"
-          className="absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
+          className="asset absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
         />
         <Navbar />
         <Hero maintext="ADVITIYA'24" subtext="TechFest IIT ROPAR" />
@@ -29,6 +29,9 @@ export default function Index() {
 
       {/* <div id="page2" className="w-[100%]">
         <OurVideos />
+      </div> */}
+      <div>
+        <OurVideos2 />
       </div>
 
       <div id="page3" className=" w-[100%]">
@@ -41,9 +44,7 @@ export default function Index() {
 
       <div id="page5" className="w-[100%]">
         <Footer />
-
-      </div> */}
-
+      </div>
     </>
   );
 }

@@ -37,7 +37,6 @@ const Navbar = () => {
 	});
 
 	const { activeUser } = useSelector((state) => state);
-
 	useLayoutEffect(() => {
 		const isLargeLaptop = window.innerWidth >= 1280;
 		gsap.registerPlugin(ScrollTrigger);

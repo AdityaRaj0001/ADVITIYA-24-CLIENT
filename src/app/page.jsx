@@ -14,7 +14,7 @@ const Page = () => {
     })();
     
      // Check if the app has been opened before
-     const hasBeenOpenedBefore = localStorage.getItem("hasBeenOpenedBefore");
+     const hasBeenOpenedBefore = sessionStorage.getItem("hasBeenOpenedBefore");
      
      if (!hasBeenOpenedBefore) {
        // Run your one-time logic here
@@ -22,13 +22,24 @@ const Page = () => {
        // For example, setting loading to false after 3 seconds
        setTimeout(() => {
          setloading(false);
-         // Set the flag in localStorage to indicate that the app has been opened
-         localStorage.setItem("hasBeenOpenedBefore", "true");
+         // Set the flag in sessionStorage to indicate that the app has been opened
+         sessionStorage.setItem("hasBeenOpenedBefore", "true");
        }, 10000);
      } else {
        // If the app has been opened before, set loading to false immediately
        setloading(false);
      }
+
+      //  Add event listener for beforeunload
+    window.addEventListener("beforeunload", () => {
+      // Clear sessionStorage to reset the flag on hard reload
+      sessionStorage.removeItem("hasBeenOpenedBefore");
+    });
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("beforeunload", () => {});
+    };
 
   }, []);
 

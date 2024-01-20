@@ -1,17 +1,18 @@
 "use client";
 import React from "react";
 import styled from "styled-components";
-import { Card } from "../../../components/nCard";
+import { Card4  } from "../../../components/nCard";
 import Link from "next/link";
 import { HackathonsData, ExhibitionsData } from "../data";
 import Navbar from "@/components/Navbar/index";
 import Hero from "@/components/Hero/index1";
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 130px;
   padding: 20px;
-
+  justify-content: center;
+  place-items:center;
   @media screen and (max-width: 1024px) {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
@@ -57,13 +58,10 @@ const Main = ({ params }) => {
             href={`/events/${params.category}/[event]`}
             as={`/events/${params.category}/${event.text}`}
           >
-            <Card
-              text={event.text}
-              smalltext={event.smalltext}
+            <Card4  text={event.text}
+              // smalltext={events.smalltext}
               largetext={event.smalltext}
-              image={event.image}
-              circleColor={event.circleColor}
-            />
+              image={event.image}/>
           </Link>
         ))}
       </GridContainer>

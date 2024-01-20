@@ -1,13 +1,19 @@
-import React from "react";
+import React,{useState} from "react";
 import HeadingBg from "../../assets/images/headingBg.svg";
 import heighlightImage from "../../assets/images/heighlight.png";
 import hexagonal2 from "../../assets/images/hexagonal2.svg";
 import Image from "next/image";
 import { LeftArrow, RightArrow } from "@/assets/Icons";
+import HighlightsData from "./data";
 
 const Heighlight = () => {
+
+  const [highlightindex, sethighlightindex] = useState(0)
+  console.log(highlightindex)
+
+
   return (
-    <div className="relative h-[800px] lg:h-auto">
+    <div className="relative h-[700px] lg:h-auto">
       <div className="absolute right-0 w-[400px] opacity-25 hidden lg:block">
         <Image src={hexagonal2} className="w-full" />
       </div>
@@ -110,7 +116,7 @@ const Heighlight = () => {
               <div className="relative">
                 <Image
                   src={HeadingBg}
-                  className="lg:w-[259px] w-[200px] h-[45px] object-contain"
+                  className="lg:w-[279px] w-[200px] h-[50px] object-contain"
                 />
                 <h2
                   className="absolute top-[50%] lg:left-[20px] left-[10px] lg:text-[18px] text-[14px]"
@@ -120,41 +126,39 @@ const Heighlight = () => {
                 </h2>
               </div>
 
-              <h2 className="lg:text-[50px] text-3xl uppercase italic mt-2 lg:mt-5">Highlights</h2>
+              <h2 className="lg:text-[50px]  text-3xl uppercase italic mt-2 lg:mt-8">{HighlightsData[highlightindex].title}</h2>
 
-              <div className="w-full relative z-10 mt-8 lg:hidden">
-              <Image
-                src={heighlightImage}
+          
+
+              <div className="h-[30vh] flex items-center justify-center relative z-10 lg:mt-8 lg:hidden">
+              <img
+                src={HighlightsData[highlightindex].image}
                 alt="vgg"
-                className="w-[100%] object-contain"
+                className="h-[100%] object-contain"
               />
             </div>
 
-              <p className="mt-5 text-sm lg:text-base">
-                Welcome to Zeitgeist, the most anticipated and biggest
-                techno-cultural fest in North India that showcases myriad
-                events, workshops and talk series and is ornamented by the
-                presence of various big names from different industries such as-
-                Diljit Dosanjh, Anubhav Singh Bassi, the local Trian band,
-                vishal-shekhar, zakir khan, sonam bajwa etc.
+              <p className="lg:mt-8 p-2 text-sm lg:text-base">
+               {HighlightsData[highlightindex].desc}
               </p>
 
-              <div className="mt-5 flex justify-center lg:justify-start">
-                <button>
+              <div className="mt-5  flex justify-center gap-4 lg:justify-start lg:gap-8">
+                {highlightindex!=0 &&  <button onClick={()=>sethighlightindex((prev)=>prev-1)} disabled={highlightindex===0}>
                  <RightArrow />
-                </button>
-
-                <button>
+                </button>}
+               
+                {highlightindex!==HighlightsData.length-1 &&   <button  onClick={()=>sethighlightindex((prev)=>prev+1)} >
                   <LeftArrow />
-                </button>
+                </button>}
+              
               </div>
             </div>
 
-            <div className="h-full w-full relative z-10 hidden lg:block">
-              <Image
-                src={heighlightImage}
+            <div className="h-[400px] w-full relative items-center justify-center z-10 hidden lg:flex">
+              <img
+                src={HighlightsData[highlightindex].image}
                 alt="vgg"
-                className="w-[70%] ml-auto object-contain"
+                className=" lg:h-[60%]  object-contain"
               />
             </div>
 
