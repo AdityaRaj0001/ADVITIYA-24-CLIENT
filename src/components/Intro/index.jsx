@@ -2,7 +2,7 @@
 import { useRef, useLayoutEffect, useState } from "react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
-const TARGET_TEXT = "Advitiya 2024";
+const TARGET_TEXT = `Advitiya 2024`;
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 50;
 const CHARS = "!@#$%^&*():{};|,.<>/?";

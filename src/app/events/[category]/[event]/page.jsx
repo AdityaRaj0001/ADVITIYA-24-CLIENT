@@ -8,7 +8,8 @@ const CategoryPage = ({ params }) => {
   const [key, setKey] = useState("about");
   const [eventObj, setEventObj] = useState(null);
   const [unstopURL, setunstopURL] = useState(null);
-
+  const [rulebookURL, setrulebookURL] = useState(null);
+  const [img, setimg] = useState(null)
   useEffect(() => {
     const fetchData = () => {
       const foundEventObj = eventData.find((e) => e.text === params.event);
@@ -16,7 +17,11 @@ const CategoryPage = ({ params }) => {
         // Remove the 'text' property from the object
         const { text, ...rest } = foundEventObj;
         setunstopURL(rest.unstopURL);
+        setrulebookURL(rest.rulebookURL);
+        setimg(rest.img);
         delete rest.unstopURL;
+        delete rest.rulebookURL;
+        delete rest.img
         setEventObj(rest);
       } else {
         // Handle case where event is not found
@@ -47,7 +52,7 @@ const CategoryPage = ({ params }) => {
           className="absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
         />
 
-        <Hero maintext={params.event} subtext="page" />
+        <Hero maintext={params.event} imgsrc={img} subtext="page" />
       </div>
 
       <div
@@ -95,13 +100,41 @@ const CategoryPage = ({ params }) => {
                 </button>
               );
             })}
+            <Link href={rulebookURL} className="relative cursor-pointer flex items-center justify-center   w-[30%] md:w-[60%] ">
+            {key === "rulebookURL" ? (
+                <img
+                  src="../../Rectangle 6328.svg"
+                  alt=""
+                  className="absolute  "
+                />
+              ) : (
+                <img
+                  src="../../Rectangle 63282.svg"
+                  alt=""
+                  className="absolute  "
+                />
+              )}
+
+            <button
+              onClick={() => {
+                setKey("rulebookURL");
+              }}
+              className=""
+            >
+              <span className="  text-white text-[0.7rem] md:text-lg  z-10">
+                rulebook
+              </span>
+            </button>
+            </Link>
           </div>
           <div className="w-[100%]  md:w-[70%] h-[70%] md:h-[80%] relative flex flex-col justify-center gap-16 md:gap-20 items-center md:justify-center">
             {/* <img src="Vector2.svg" className="w-[90%] max-w-4xl absolute" alt="" /> */}
-            {key === "structure" || key==="timeline" || key === "rules" ? (
+            {key === "structure" || key === "timeline" || key === "rules" ? (
               <ul className="text-white w-[95%] md:w-[80%] text-left px-2 md:px-0 md:text-xl list-disc">
                 {eventObj[key].split(",").map((item, index) => (
-                  <li className="mb-4" key={index}>{item.trim()}</li>
+                  <li className="mb-4" key={index}>
+                    {item.trim()}
+                  </li>
                 ))}
               </ul>
             ) : (

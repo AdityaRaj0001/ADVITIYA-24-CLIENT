@@ -66,7 +66,7 @@ const Index = ({ maintext, subtext }) => {
           <h1
             className={`${
               maintext.length > 10
-                ? "text-4xl sm:text-5xl text-center md:text-6xl lg:text-6xl font-bold herotext"
+                ? "text-4xl sm:text-5xl text-center   font-bold herotext"
                 : "text-4xl sm:text-6xl text-center md:text-7xl lg:text-8xl xl:text-7xl font-bold herotext"
             }`}
           >
@@ -79,7 +79,7 @@ const Index = ({ maintext, subtext }) => {
         <div className="relative   xl:flex xl:items-center xl:justify-center h-[70%] sm:h-[75%] md:h-[80%] xl:w-1/2 xl:h-[100%]">
           <img
             src="./Arwork 1.png"
-            className=" z-30 opacity-70 xl:opacity-100  asset h-[100%] xl:h-[80%] "
+            className=" z-30 object-contain opacity-70 xl:opacity-100  asset h-[100%] xl:h-[80%] "
           />
           <img
             src="./Vector Smart Object 1.svg"

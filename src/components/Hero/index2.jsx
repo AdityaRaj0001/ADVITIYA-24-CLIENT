@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaAnglesDown } from "react-icons/fa6";
 
-const Index = ({maintext,subtext}) => {
+const Index = ({maintext,imgsrc,subtext}) => {
   const page1 = useRef();
   const tl = useRef();
   useLayoutEffect(() => {
@@ -69,10 +69,10 @@ const Index = ({maintext,subtext}) => {
             {subtext}
           </p>
         </div>
-        <div className="relative   xl:flex xl:items-center xl:justify-center h-[70%] sm:h-[75%] md:h-[80%] xl:w-1/2 xl:h-[100%]">
+        <div className="relative   flex items-center justify-center h-[70%] sm:h-[75%] md:h-[80%] xl:w-1/2 xl:h-[100%]">
           <img
-            src="../../Arwork 1.png"
-            className=" z-30 opacity-70 xl:opacity-100  asset h-[100%] xl:h-[80%] "
+            src={imgsrc}
+            className="z-30 object-contain opacity-70 xl:opacity-100  asset w-[100%] sm:w-[70%] xl:h-[80%] "
           />
           <img
             src="../../Vector Smart Object 1.svg"
@@ -82,10 +82,10 @@ const Index = ({maintext,subtext}) => {
             src="../../Asset 9@4x 1.svg"
             className="absolute asset z-10  h-[90px] bottom-44 -left-12 xl:bottom-64 xl:left-4 xl:h-[120px] "
           />
-          <img
+          {/* <img
             src="../../Asset 4@10x 1.svg"
             className="hidden xl:block xl:absolute asset z-10 h-[60px]  xl:top-32 xl:left-44 xl:h-[100px]"
-          />
+          /> */}
         </div>
       </div>
 

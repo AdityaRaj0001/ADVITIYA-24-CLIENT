@@ -376,7 +376,7 @@ export const Card4 = ({ text, smalltext, largetext, image, circleColor }) => {
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-violet-500 to-[#222233]"
+      className="relative h-96 w-72 rounded-2xl bg-gradient-to-br from-violet-500 to-[#222233]"
     >
       <div
         style={{

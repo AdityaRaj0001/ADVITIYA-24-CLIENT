@@ -5,7 +5,6 @@ import compitition1 from "../../assets/images/compitition1.jpg";
 import { BlueLight, CardBorder } from "@/assets/Icons";
 import compititionStructure1 from "../../assets/images/compititionStructure1.png";
 import hexagonal from "../../assets/images/hexagonal.svg";
-
 const Compitition = () => {
   const data = [
     {

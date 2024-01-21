@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Card4  } from "../../../components/nCard";
 import Link from "next/link";
 import { HackathonsData, ExhibitionsData } from "../data";
-import Navbar from "@/components/Navbar/index";
+import Navbar from "@/components/Navbar/index2";
 import Hero from "@/components/Hero/index1";
 const GridContainer = styled.div`
   display: grid;
