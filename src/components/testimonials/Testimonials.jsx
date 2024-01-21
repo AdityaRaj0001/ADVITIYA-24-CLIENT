@@ -17,14 +17,21 @@ const Testimonials = () => {
             avatar: Avatar,
             name: "Mohit Bhuriya",
             description: "Hello everyone. This is Ayush Saini and I would like to share my experience of Advitiya 2020. I got the opportunity to visit the technical fest of IIT Ropar, as an 11th grader in February 2020. This became possible through the Advitiya Open Olympiad. It was a great experience. I attended exhibitions by the Indian Army and ISRO. And I even got the opportunity of attending a lecture from a former ISRO chairman, Dr K Radhakrishnan and some other reputed authors, whose names I fail to recollect at the moment. Also, I was exposed to the world of robotics and drone competitions for the first time, despite being just a school student. Moreover, I got to know a lot about residential college life, and engineering as a whole. I am deeply grateful to IIT Ropar for having me as a guest and extending their warm hospitality to me. The learning experience here shall be remembered by me throughout my life.",
-            rating: <Stars3/>,
+            rating: <Stars5/>,
+        },
+        {
+            avatar: Avatar,
+            name: "Akhsit Singh",
+            description: "Hello everyone. This is Akshit Singh and I would like to share my experience of Advitiya 2020. I got the opportunity to visit the technical fest of IIT Ropar, as an 11th grader in February 2020. This became possible through the Advitiya Open Olympiad. It was a great experience. I attended exhibitions by the Indian Army and ISRO. And I even got the opportunity of attending a lecture from a former ISRO chairman, Dr K Radhakrishnan and some other reputed authors, whose names I fail to recollect at the moment. Also, I was exposed to the world of robotics and drone competitions for the first time, despite being just a school student. Moreover, I got to know a lot about residential college life, and engineering as a whole. I am deeply grateful to IIT Ropar for having me as a guest and extending their warm hospitality to me. The learning experience here shall be remembered by me throughout my life.",
+            rating: <Stars5/>,
         },
     ];
     return (
-        <div className="py-[2rem] lg:py-[8rem] mb-24">
+        <div className="py-[2rem] lg:py-[8rem] relative mb-24">
+            <img src="./Testimonialbg.svg" className="w-[600px] absolute bottom-[200px]  xl:-top-[520px] left-0"/>
             <div className="w-[90%] mx-auto">
                 <div>
-                    <Heading title={`OUR Testimonials`} heading={`Testimonials`} />
+                    <Heading title={`Testimonials`} heading={`Testimonials`} />
                 </div>
                 <div className="grid lg:grid-cols-[93%_7%] pt-6">
                     <div className="flex flex-col gap-[1rem]">

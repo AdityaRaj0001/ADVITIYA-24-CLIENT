@@ -19,8 +19,8 @@ const Footer = () => {
         <div className=" h-full text-white grid grid-cols-8 lg:gap-4 gap-2">
           <div className="h-full relative lg:col-span-2 col-span-8 items-center flex lg:block justify-center">
             <Image className="w-[200px] h-[200px]" src={logoBorder} />
-            <div className="absolute flex items-center  justify-center mx-auto w-[200px] h-[200px] top-0 lg:left-0 bottom-0 p-10">
-              <img src='./iitrpr_logo.jpg' className="w-[80%]" />
+            <div className="absolute flex items-center  justify-center mx-auto w-[200px] h-[200px] top-0 lg:left-0 bottom-0 p-4">
+              <img src='./logo.png' className="w-[100%]" />
             </div>
           </div>
 

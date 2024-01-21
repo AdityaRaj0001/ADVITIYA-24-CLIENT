@@ -6,7 +6,7 @@ import Heading from "../heading/Heading";
 const OurPrize = () => {
   return (
     <div className="w-[90%] mx-auto relative text-white my-[40px] lg:my-0 lg:top-[-80px]">
-      <Heading title={"OUR PRIZE"} />
+      {window.innerWidth <600 && <Heading title={"Our Prizes"} />}
       <Image className="hidden lg:block" src={ourprize} />
 
       <div className="lg:absolute top-[275px] bottom-10 lg:w-[57%] left-10 grid lg:grid-cols-2 gap-7 lg:gap-0 mt-7 lg:mt-0 ">

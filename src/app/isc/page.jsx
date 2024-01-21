@@ -26,7 +26,7 @@ const ISC = () => {
           className="absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
         />
         <Navbar />
-        <Hero maintext="TECHNO SCHOOL PROGRAM" subtext="" />
+        <Hero maintext="Inter School Conclave" subtext="" />
       </div>
 
       <AboutUs />

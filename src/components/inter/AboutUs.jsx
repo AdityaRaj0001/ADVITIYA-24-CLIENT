@@ -8,7 +8,7 @@ const AboutUs = () => {
   return (
     <div className="text-white">
       <div className="w-[90%] mx-auto ">
-        <Heading heading={"About Us"} title={"Our Abpot us"} />
+        <Heading heading={"About Us"} title={"About us"} />
         <div className="grid lg:grid-cols-2 grid-cols-1 lg:mt-[55px] mt-[25px] lg:gap-[50px] gap-[10px]">
           <div className="w-full relative">
             <Image
@@ -20,13 +20,13 @@ const AboutUs = () => {
 
             <div className="absolute z-10 top-0 right-0 left-0 bottom-0 lg:px-[50px] lg:py-[60px] px-5 py-7">
               <h2 className="lg:text-xl text-base uppercase italic">
-                What is TSP?
+                What is ISC?
               </h2>
               <p className="lg:text-sm text-xs lg:pt-4 pt-1">
                 <span className=" opacity-90">
                   <span className="lg:hidden">
                     {" "}
-                    Zeitgeist’23 presents the second edition of TSP,i.e, Techno
+                    Zeitgeist’23 presents the second edition of ISC,i.e, Techno
                     School Program, a school outreach program for 8th to
                     12th-grade students. It consists of an annual competition
                     wherein students compete in two phases of the Open Olympiad
@@ -34,7 +34,7 @@ const AboutUs = () => {
                   </span>
 
                   <span className="hidden lg:block">
-                    Zeitgeist’23 presents the second edition of TSP,i.e, Techno
+                    Zeitgeist’23 presents the second edition of ISC,i.e, Techno
                     School Program, a school outreach program for 8th to
                     12th-grade students. It consists of an annual competition
                     wherein students compete in two phases of the Open Olympiad
@@ -60,19 +60,19 @@ const AboutUs = () => {
 
             <div className="absolute z-10 top-0 right-0 left-0 bottom-0 lg:px-[50px] lg:py-[60px] px-5 py-7">
               <h2 className="lg:text-xl text-base uppercase italic">
-                Why TSP?
+                Why ISC?
               </h2>
               <p className="lg:text-sm text-xs lg:pt-4 pt-1">
                 <span className=" opacity-90">
                   <span className="lg:hidden">
-                    TSP aims to bring together the best young minds from all
+                    ISC aims to bring together the best young minds from all
                     over the country under one roof and to expose the students
                     to the technical culture of IIT Ropar. The main objective of
                     which is developing and{" "}
                   </span>
 
                   <span className="hidden lg:block">
-                    TSP aims to bring together the best young minds from all
+                    ISC aims to bring together the best young minds from all
                     over the country under one roof and to expose the students
                     to the technical culture of IIT Ropar. The main objective of
                     which is developing and nurturing younger minds of the

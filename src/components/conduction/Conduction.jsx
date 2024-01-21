@@ -2,9 +2,9 @@ import React from 'react'
 import Heading from '../heading/Heading'
 import Line1 from '../../assets/images/Line1.svg'
 import Border1 from '../../assets/images/border.svg'
-import RegisterImage from '../../assets/images/register-image.svg'
-import ScientistImage from '../../assets/images/scientist-image.svg'
-import TechWalkImage from '../../assets/images/techwalk-image.svg'
+import RegisterImage from '../../assets/images/register-image.png'
+import ScientistImage from '../../assets/images/scientist-image.png'
+import TechWalkImage from '../../assets/images/techwalk-image.png'
 import Image from 'next/image'
 
 const Conduction = () => {
@@ -17,12 +17,13 @@ const Conduction = () => {
             description: "Category-1: 8th to 10th",
         },
         {
-            description: "classNameCategory-2: 11th and 12th className",
+            description: "Category-2: 11th and 12th className",
         },
     ]
 
   return (
     <div className='lg:py-[8rem] py-[2.5rem] relative w-full overflow-x-hidden'>
+        <img src='./conductionbg.svg'  className="-z-10 absolute top-[13%] right-0 xl:top-[30%] xl:right-0 opacity-50 h-[200px] xl:h-[500px]"/>
         <div className='w-[90%] mx-auto'>
             <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between'>
                 <Heading title="Conduction" heading="Conduction" />
@@ -38,7 +39,7 @@ const Conduction = () => {
                         {Data.map(({description}, ind) => (
                             <p 
                                 key={ind}
-                                className='text-[#fff] font-archivo lg:text-[1.25rem] text-[0.725rem] not-italic font-[400] lg:leading-[2.125rem] leading-1' 
+                                className='text-[#fff]  lg:text-[1.25rem] text-[0.725rem] not-italic font-[400] lg:leading-[2.125rem] leading-1' 
                             >{description}</p>
                         ))}
                     </div>
@@ -153,7 +154,7 @@ const Card1 = ({
                 {description.length === 0 ? (
                     <div>{children}</div>
                 ) : (
-                    <p className='text-[#FFF] font-archivo lg:text-[1.25rem] text-[0.925rem] not-italic font-[400] lg:leading-[2.125rem] leading-4'>{description}</p>
+                    <p className='text-[#FFF]  lg:text-[1.25rem] text-[0.925rem] not-italic font-[400] lg:leading-[2.125rem] leading-4'>{description}</p>
                 )}
             </div>
         </div>

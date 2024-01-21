@@ -9,7 +9,8 @@ import hexagonal from "../../assets/images/hexagonal.svg";
 
 const RegistrationProcess = () => {
   return (
-    <div className="relative w-full overflow-x-hidden text-white">
+    <div className="relative w-full overflow-hidden text-white">
+      <img src="./Registrationdesign.svg" className="-z-10 absolute right-0 -bottom-12 xl:bottom-12 w-[300px]"/>
     
       
       <div className="w-[90%] mx-auto lg:my-[130px] my-[40px] relative z-10">
