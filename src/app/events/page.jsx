@@ -25,13 +25,6 @@ const Hovercard = () => {
       <GridContainer className="bg-[#12121c]">
         {eventsData.map((events, index) => (
           <Link key={index} href="/events/[category]" as={`/events/${events.text}`}>
-            {/* <Card
-              text={events.text}
-              // smalltext={events.smalltext}
-              largetext={events.smalltext}
-              image={events.image}
-              // circleColor={events.circleColor}
-            /> */}
             <Card4  text={events.text}
               // smalltext={events.smalltext}
               largetext={events.smalltext}

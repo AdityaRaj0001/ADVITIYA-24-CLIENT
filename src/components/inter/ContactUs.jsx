@@ -13,6 +13,8 @@ const ContactUs = () => {
         <Card />
         <Card />
         <Card />
+        <Card />
+        <Card />
       </div>
     </div>
   );

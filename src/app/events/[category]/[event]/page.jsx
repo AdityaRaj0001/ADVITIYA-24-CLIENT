@@ -100,7 +100,7 @@ const CategoryPage = ({ params }) => {
                 </button>
               );
             })}
-            <Link href={rulebookURL} className="relative cursor-pointer flex items-center justify-center   w-[30%] md:w-[60%] ">
+            <Link href={rulebookURL} target="_blank" className="relative cursor-pointer flex items-center justify-center   w-[30%] md:w-[60%] ">
             {key === "rulebookURL" ? (
                 <img
                   src="../../Rectangle 6328.svg"
@@ -143,7 +143,7 @@ const CategoryPage = ({ params }) => {
               </p>
             )}
 
-            <Link href={unstopURL}>
+            <Link href={unstopURL} target="_blank">
               <button className="relative flex items-center cursor-pointer justify-center h-[60px] w-[200px]">
                 <img
                   src="../../Rectangle 6328.svg"

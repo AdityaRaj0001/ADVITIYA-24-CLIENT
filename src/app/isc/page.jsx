@@ -10,6 +10,7 @@ import AboutUs from "@/components/inter/AboutUs";
 import OurPrize from "@/components/inter/OurPrize";
 import Conduction from "@/components/conduction/Conduction";
 import Testimonials from "@/components/testimonials/Testimonials";
+import ISCFAQs from "@/components/FAQs/ISC_FAQs"
 const ISC = () => {
   return (
     <>
@@ -35,6 +36,7 @@ const ISC = () => {
       <Testimonials/>
       <OurPrize />
       <Heighlight />
+      <ISCFAQs/>
       <ContactUs />
       <Footer />
     </>

@@ -2,12 +2,48 @@
 import React from "react";
 import Navbar from "@/components/Navbar/index";
 import Hero from "@/components/Hero";
-// import {
-//   Accordion,
-//   AccordionContent,
-//   AccordionItem,
-//   AccordionTrigger,
-// } from "@/components/ui/accordion"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
+const data = [
+  {
+    Q: "Question 1",
+    A: "Here is the answer for Question 1",
+  },
+  {
+    Q: "Question 2",
+    A: "Here is the answer for Question 2",
+  },
+  {
+    Q: "Question 3",
+    A: "Here is the answer for Question 3",
+  },
+  {
+    Q: "Question 4",
+    A: "Here is the answer for Question 4",
+  },
+  {
+    Q: "Question 5",
+    A: "Here is the answer for Question 5",
+  },
+  {
+    Q: "Question 6",
+    A: "Here is the answer for Question 5",
+  },
+  {
+    Q: "Question 7",
+    A: "Here is the answer for Question 5",
+  },
+  {
+    Q: "Question 8",
+    A: "Here is the answer for Question 5",
+  },
+];
+
 const FAQs = () => {
   return (
     <>
@@ -24,36 +60,51 @@ const FAQs = () => {
         className="absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
       />
       <Navbar />
-      <Hero maintext="FAQs  Page" subtext="" />
-      {/* <div className="flex flex-col justify-center h-screen relative lg:w-7/12 lg:mt-7 w-full my-auto mx-auto px-4 text-xl">
-      <Accordion type="single" collapsible className="w-full">
-      <AccordionItem value="item-1">
-        <AccordionTrigger>1. Why Should I Participate in Datamatics Hackathon?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
+      <Hero  maintext="FAQs  Page" subtext="" />
+    </div>
+    <div className="h-[100vh] mt-12 text-white relative z-20 flex  justify-center  w-full">
+      <img src="./Registrationdesign.svg" className="absolute -z-10 w-[300px] hidden lg:block lg:w-[400px]  lg:-top-[20%] lg:right-0" />
+      <img src="./Testimonialbg.svg" className="absolute -z-10 w-[500px] block lg:hidden left-0 bottom-0 opacity-70" />
+
+    <Accordion type="single" collapsible className="w-[90%] max-w-4xl">
+      {data.map((obj,i)=>{
+        return (
+          <AccordionItem value={`item-${i}`} className="border-b-0 mb-4">
+          <AccordionTrigger className="bg-gray-900 hover:no-underline h-14  border-b-2 border-violet-500 rounded-lg px-2">{obj.Q}</AccordionTrigger>
+          <AccordionContent className="bg-transparent px-4 py-4">
+            {obj.A}
+          </AccordionContent>
+        </AccordionItem>
+        )
+      })}
+     
+      {/* <AccordionItem value="item-1" className="border-b-0">
+        <AccordionTrigger className="bg-gray-700 hover:no-underline  border-b-2 border-violet-500 rounded-lg px-2">1. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet.?</AccordionTrigger>
+        <AccordionContent className="bg-[#12121c] px-4 py-4">
+          Yes. It adheres to the WAI-ARIA design pattern,Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, esse.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-1" >
+        <AccordionTrigger className="bg-gray-700 hover:no-underline  border-b-2 border-violet-500 rounded-lg px-2">1. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet.?</AccordionTrigger>
+        <AccordionContent className="bg-[#12121c] px-4 py-4">
+          Yes. It adheres to the WAI-ARIA design pattern,Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, esse.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger>2. How many stages does the competition have?</AccordionTrigger>
+        <AccordionTrigger>Is it styled?</AccordionTrigger>
         <AccordionContent>
           Yes. It comes with default styles that matches the other
           components&apos; aesthetic.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger>3. How to Register?</AccordionTrigger>
+        <AccordionTrigger>Is it animated?</AccordionTrigger>
         <AccordionContent>
-          Yes. It's animated by default, but you can disable it if you prefer.
+          Yes. It&apos;s animated by default, but you can disable it if you
+          prefer.
         </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-4">
-        <AccordionTrigger>4. What is the registered mail ID of a person?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It's animated by default, but you can disable it if you prefer.
-        </AccordionContent>
-      </AccordionItem>
+      </AccordionItem> */}
     </Accordion>
-      </div> */}
     </div>
 
     </>

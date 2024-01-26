@@ -53,7 +53,7 @@ const Index = ({ maintext, subtext }) => {
   return (
     <div
       ref={page1}
-      className="h-[calc(100%-65px)] relative hero flex flex-col gap-10 justify-center items-center overflow-hidden w-[100%] "
+      className="pointer-events-none h-[calc(100%-65px)] relative hero flex flex-col gap-10 justify-center items-center overflow-hidden w-[100%] "
     >
       <div
         id="hero"

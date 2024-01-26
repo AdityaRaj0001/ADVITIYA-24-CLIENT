@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { Card4  } from "../../../components/nCard";
 import Link from "next/link";
-import { HackathonsData, ExhibitionsData } from "../data";
+import {progeventsData, mechaeventsData,esportsData,depteventsData,fintecheventsData,digitalarteventsData,zenitheventsData} from "../data";
 import Navbar from "@/components/Navbar/index2";
 import Hero from "@/components/Hero/index1";
 const GridContainer = styled.div`
@@ -19,12 +19,24 @@ const GridContainer = styled.div`
 `;
 
 const Main = ({ params }) => {
+  
   const getDataArray = (category) => {
+    console.log(category)
     switch (category) {
-      case "Hackathons":
-        return HackathonsData;
-      case "Exhibitions":
-        return ExhibitionsData;
+      case "Coding-Events":
+        return progeventsData;
+      case "MechaTronics":
+        return mechaeventsData;
+      case "ESportZ":
+        return esportsData;
+      case "Department-Specific":
+        return depteventsData;
+      case "FinTech":
+        return fintecheventsData;
+      case "Digi-Art":
+        return digitalarteventsData;
+      case "Space-Tech":
+        return zenitheventsData;
       // Add more cases if you have additional categories
       default:
         return [];
@@ -48,7 +60,7 @@ const Main = ({ params }) => {
           className="absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
         />
         <Navbar />
-        <Hero maintext={params.category} subtext="page" />
+        <Hero maintext={params.category} subtext="" />
       </div>
 
       <GridContainer className="bg-[#12121c]">
