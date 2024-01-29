@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import eventData from "./data";
-import Hero from "@/components/Hero/index2";
+import Hero from "@/components/Hero/index";
 import Link from "next/link";
 
 const CategoryPage = ({ params }) => {
@@ -52,7 +52,7 @@ const CategoryPage = ({ params }) => {
           className="absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
         />
 
-        <Hero maintext={params.event} imgsrc={img} subtext="page" />
+        <Hero maintext={params.event} imgsrc={img} order={2} subtext="" />
       </div>
 
       <div

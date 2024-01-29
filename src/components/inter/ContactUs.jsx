@@ -9,7 +9,7 @@ const ContactUs = () => {
     <div className="w-[90%] mx-auto lg:my-[130px] my-[40px] text-white">
       <Heading title="Contact Us" heading="Contact Us" />
 
-      <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-[50px] gap-[30px] lg:mt-[78px] mt-[40px]">
+      <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-[50px] place-content-center place-items-center gap-[30px] lg:mt-[78px] mt-[40px]">
         <Card />
         <Card />
         <Card />
@@ -24,7 +24,7 @@ export default ContactUs;
 
 const Card = () => (
   <div
-    className="w-full aspect-square bg-white p-1 relative"
+    className="w-[80%] aspect-square bg-white p-1 relative"
     style={{
       clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0 100%, 0 21%)",
     }}

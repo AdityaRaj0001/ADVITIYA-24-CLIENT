@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { Card4  } from "../../../components/nCard";
 import Link from "next/link";
 import {progeventsData, mechaeventsData,esportsData,depteventsData,fintecheventsData,digitalarteventsData,zenitheventsData} from "../data";
-import Navbar from "@/components/Navbar/index2";
-import Hero from "@/components/Hero/index1";
+import Navbar from "@/components/Navbar/index";
+import Hero from "@/components/Hero/index";
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -44,6 +44,7 @@ const Main = ({ params }) => {
   };
 
   const eventsdataToMap = getDataArray(params.category);
+  console.log(eventsdataToMap.text)
 
   return (
     <>
@@ -59,20 +60,22 @@ const Main = ({ params }) => {
           src="../Ellipse 22.svg"
           className="absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
         />
-        <Navbar />
-        <Hero maintext={params.category} subtext="" />
+        <Navbar order={1} />
+        <Hero maintext={params.category} subtext="" order={1}/>
       </div>
 
       <GridContainer className="bg-[#12121c]">
         {eventsdataToMap.map((event, index) => (
           <Link
             key={index}
-            href={`/events/${params.category}/[event]`}
-            as={`/events/${params.category}/${event.text}`}
+            href={event.redirectURL}
+            target="_blank"
+            // href={`/competitions/${params.category}/[event]`}
+            // as={`/competitions/${params.category}/${event.text}`}
           >
             <Card4  text={event.text}
               // smalltext={events.smalltext}
-              largetext={event.smalltext}
+              // largetext={event.smalltext}
               image={event.image}/>
           </Link>
         ))}

@@ -34,19 +34,9 @@ const AboutUs = () => {
                   </span>
 
                   <span className="hidden lg:block">
-                    Zeitgeist’23 presents the second edition of ISC,i.e, Techno
-                    School Program, a school outreach program for 8th to
-                    12th-grade students. It consists of an annual competition
-                    wherein students compete in two phases of the Open Olympiad
-                    and flex their skills through the Junior Scientist
-                    Competition. Phase 1 of the Olympiad will be conducted in
-                    schools if the school is participating and if students are
-                    directly registering then it will be conducted online on
-                    16th march from 6.00 pm to 7.30 pm. Phase 2 will be
-                    conducted during Zeitgeist’23 on 23rd March Lead More.
+                  Advitya’24 presents the First edition of ISC,i.e, INTER SCHOOL CONCLAVE, a school outreach program for 6th to 12th-grade students. It consists of an annual competition wherein students compete in two phases of the Open Olympiad and second phase consist of Quiz and Science and Art Competition on our theme India@2047 . Phase 1 of the Olympiad will be conducted in schools if the school is participating .On 17th February for the phase 2 students will be arriving on campus for theQuiz Competition, Campus tour,IAS/IPS and defence panel talks and Competition .
                   </span>
                 </span>{" "}
-                <button className="underline"> Read More.</button>
               </p>
             </div>
           </div>
@@ -72,14 +62,7 @@ const AboutUs = () => {
                   </span>
 
                   <span className="hidden lg:block">
-                    ISC aims to bring together the best young minds from all
-                    over the country under one roof and to expose the students
-                    to the technical culture of IIT Ropar. The main objective of
-                    which is developing and nurturing younger minds of the
-                    country at the grassroots level. It provides a platform for
-                    school kids to learn core experience and knowledge, exercise
-                    coordination abilities, to think outside the box while
-                    proposing solutions.
+                    ISC aims to bring together the best young minds from all over the Punjab and Tricity under one roof and to expose the students to the technical culture of IIT Ropar. The main objective of which is developing and nurturing younger minds of the country at the grassroots level. It provides a platform for school kids to learn core experience and knowledge, exercise coordination abilities, to think outside the box while proposing solutions. It also give them a exposure that they need at this age.
                   </span>
                 </span>{" "}
                 <button className="underline lg:hidden"> Read More.</button>

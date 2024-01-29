@@ -10,16 +10,15 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { MdOutlineArrowDropDownCircle } from "react-icons/md";
-import { FaAnglesDown } from "react-icons/fa6";
 import { CgProfile } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { FaRegWindowClose } from "react-icons/fa";
 import { useRef, useLayoutEffect } from "react";
 import Link from "next/link";
 import { useSelector } from "react-redux";
+import { FaAngleDown } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ order }) => {
   const page1 = useRef();
   const { contextSafe } = useGSAP({ scope: page1 });
   const tl = useRef();
@@ -72,9 +71,48 @@ const Navbar = () => {
           <Link id="btn" href="/" className="z-10">
             <Button variant="ghost">Home</Button>
           </Link>
-          <Link id="btn" href="/events" className="z-10">
-            <Button variant="ghost">Events</Button>
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              id="btn"
+              className="z-10 focus:outline-none focus:ring-0 focus:border-transparent"
+            >
+              <Button variant="ghost">
+                Events <FaAngleDown className="ml-2 text-lg" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="text-white  bg-[#12121c] flex flex-col gap-2 items-center justify-center mt-2 px-2 mr-2">
+              <Link
+                href="/zones"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Zones
+              </Link>
+              <Link
+                href="/competitions"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Competitions
+              </Link>
+              <Link
+                href="/workshops"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Workshops
+              </Link>
+              <Link
+                href="/exhibitions"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Exhibitions
+              </Link>
+              <Link
+                href="/talkshows"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Talk Shows
+              </Link>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Link id="btn" href="/schedule" className="z-10">
             <Button variant="ghost">Schedule</Button>
           </Link>
@@ -101,19 +139,24 @@ const Navbar = () => {
             id="btn"
             className="relative h-[50px] w-[100px] flex justify-center items-center"
           >
-            <img src="Vector.svg" className="absolute  w-[200px]" alt="" />
+            <img
+              src={order === 1 ? "../Vector.svg" : "./Vector.svg"}
+              className="absolute  w-[80px]"
+              alt=""
+            />
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex z-10 flex-row items-center gap-2 outline-none text-2xl">
+              <DropdownMenuTrigger className="flex z-10 flex-row items-center gap-2 outline-none h-full  text-2xl">
                 {activeUser && activeUser.email ? <FaBars /> : <CgProfile />}
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white bg-[#12121c] mt-2 mr-2">
+              <DropdownMenuContent className="text-white  bg-[#12121c] flex flex-col gap-2 items-center justify-center mt-2  mr-2">
                 {activeUser && activeUser.email ? (
-                  <Link href="/dashboard">
-                    <DropdownMenuItem>Profile</DropdownMenuItem>
-                  </Link>
+                  <Link href="/dashboard" className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2">Profile</Link>
                 ) : (
-                  <Link href="/signin">
-                    <DropdownMenuItem>Login/Register</DropdownMenuItem>
+                  <Link
+                    href="/signin"
+                    className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+                  >
+                    Login/Register
                   </Link>
                 )}
               </DropdownMenuContent>
@@ -130,9 +173,48 @@ const Navbar = () => {
           <Link id="btn" href="/">
             <Button variant="ghost">Home</Button>
           </Link>
-          <Link id="btn" href="/events" className="z-10">
-            <Button variant="ghost">Events</Button>
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              id="btn"
+              className="z-10 focus:outline-none focus:ring-0 focus:border-transparent"
+            >
+              <Button variant="ghost">
+                Events <FaAngleDown className="ml-2 text-lg" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="text-white  bg-[#12121c] flex flex-col gap-2 items-center justify-center mt-2 px-2 mr-2">
+              <Link
+                href="/zones"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Zones
+              </Link>
+              <Link
+                href="/competitions"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Competitions
+              </Link>
+              <Link
+                href="/workshops"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Workshops
+              </Link>
+              <Link
+                href="/exhibitions"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Exhibitions
+              </Link>
+              <Link
+                href="/talkshows"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Talk Shows
+              </Link>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Link id="btn" href="/schedule">
             <Button variant="ghost">Schedule</Button>
           </Link>
@@ -161,14 +243,15 @@ const Navbar = () => {
               <DropdownMenuTrigger className="flex flex-row z-10 items-center gap-2 outline-none text-2xl">
                 {activeUser && activeUser.email ? <FaBars /> : <CgProfile />}
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white mt-2 mr-2 bg-[#12121c] ">
-                {activeUser && activeUser.email ? (
-                  <Link href="/dashboard">
-                    <DropdownMenuItem>Profile</DropdownMenuItem>
-                  </Link>
+              <DropdownMenuContent className="text-white  bg-[#12121c] flex flex-col gap-2 items-center justify-center mt-2 px-2 mr-2">
+              {activeUser && activeUser.email ? (
+                  <Link href="/dashboard" className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2">Profile</Link>
                 ) : (
-                  <Link href="/signin">
-                    <DropdownMenuItem>Login/Register</DropdownMenuItem>
+                  <Link
+                    href="/signin"
+                    className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+                  >
+                    Login/Register
                   </Link>
                 )}
               </DropdownMenuContent>

@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/accordion"
 const data = [
   {
-    Q: "Question 1 for ISC",
+    Q: "Question 1 for Accommodation",
     A: "Here is the answer for Question 1",
   },
   {
@@ -23,19 +23,15 @@ const data = [
     Q: "Question 4",
     A: "Here is the answer for Question 4",
   },
-  {
-    Q: "Question 5",
-    A: "Here is the answer for Question 5",
-  },
 ];
 
 const FAQs = () => {
   return (
     <>
     <div className="h-[100vh] -mt-12 text-white relative z-20 flex flex-col items-center justify-center  w-full">
-      <img src="./Registrationdesign.svg" className="absolute -z-10 w-[300px] hidden lg:block lg:w-[400px]  lg:-top-[20%] lg:right-0" />
-      <img src="./Testimonialbg.svg" className="absolute -z-10 w-[500px] block lg:hidden left-0 bottom-0 opacity-70" />
-    <h1 className="text-2xl text-center w-full mb-12">FAQs</h1>
+      {/* <img src="./Registrationdesign.svg" className="absolute -z-10 w-[300px] hidden lg:block lg:w-[400px]  lg:-top-[20%] lg:right-0" />
+      <img src="./Testimonialbg.svg" className="absolute -z-10 w-[500px] block lg:hidden left-0 bottom-0 opacity-70" /> */}
+    {/* <h1 className="text-2xl text-center w-full mb-12">FAQs</h1> */}
     <Accordion type="single" collapsible className="w-[90%] max-w-4xl">
       {data.map((obj,i)=>{
         return (

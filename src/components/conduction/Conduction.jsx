@@ -6,6 +6,7 @@ import RegisterImage from '../../assets/images/register-image.png'
 import ScientistImage from '../../assets/images/scientist-image.png'
 import TechWalkImage from '../../assets/images/techwalk-image.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Conduction = () => {
 
@@ -14,10 +15,10 @@ const Conduction = () => {
             description: "The event will be organized in two categories.",
         },
         {
-            description: "Category-1: 8th to 10th",
+            description: "Category-1: 6th to 8th",
         },
         {
-            description: "Category-2: 11th and 12th className",
+            description: "Category-2: 9th to 12th ",
         },
     ]
 
@@ -31,7 +32,7 @@ const Conduction = () => {
                     <div className='pt-2 hidden lg:block'>
                         <Image 
                             src={Line1}
-                            className="h-full w-full hidden lg:block"
+                            className="h-full pointer-events-none w-full hidden lg:block"
                             alt="line1-image"
                         />
                     </div>
@@ -51,7 +52,7 @@ const Conduction = () => {
                 <div className='hidden lg:block'>
                     <Image
                         src={Border1}
-                        className=' absolute -left-[1rem]'
+                        className='pointer-events-none absolute -left-[1rem]'
                         alt='border-line'
                     />
                 </div>
@@ -64,11 +65,12 @@ const Conduction = () => {
                                 <div className='flex flex-col gap-2'>
                                     <Card1 
                                         heading='Registration through school' 
-                                        description='conducted on the school level and it can be either online or offline as per the preference of the school. The pattern of the exam will be objective type consisting of three sections with a time limit of 90 mins For detailed syllabus look into the attachment. The top 5% of participants from each school will qualify for Phase 2. All the participants who participate in stage-1 will also get an opportunity for Techwalk.'
+                                        description='Olympiad which is totally FREE-of-cost, will be conducted at the school level and will be conducted in offline mode. Schools will be provided the question paper and they need to conduct it as per their convenience within 29th Jan - 3rd Feb 2024 interval. The pattern of the exam will be objective type consisting of four sections with a time limit of 60 mins. The top 5 participants from each school will qualify for Quiz Competition from both divisions i.e. DIV 1(6th-8th std)  and DIV 2(9th-12th std). All the participants who participate in Phase-1 will also get an opportunities to take part in ongoing Fest Events, Talks & Panel Discussions, Campus Visits and Science and Art Competitions. For detailed syllabus look into the attachment below'
                                     />
+                                    <a  href="https://www.google.com/" className="underline text-[#9c78e4] text-[1.8rem] hover:cursor-pointer ">Syllabus</a>
                                     <Card1 
-                                        heading='Direct registration of participants' 
-                                        description='It will be conducted in online mode on 16th march from 6.00 pm to 7.30 pm. The pattern of will be objective type consisting of three sections with a time limit of 90 mins For detailed syllabus look into the attachment. Top 10% of participants will qualify for Phase-2 and they will be eligible for Techwalk'
+                                        heading='Direct registration of student' 
+                                        description='Students whose schools are not taking part in the Conclave can also Register for the event. They will get opportunities to take part in ongoing Fest Events, Talks & Panel Discussions, Campus Visits and Science and Art Competitions.'
                                     />
                                 </div>
                             </Card1>
@@ -82,27 +84,17 @@ const Conduction = () => {
                         css={``}
                         card1={
                             <div className=' flex flex-col gap-2'>
-                                <Card1
+                                <Card12
                                     heading='Phase-2'   
-                                    description={"This phase will be conducted in IIT Ropar during Zeitgeist’23. The pattern of the exam will be objective type consisting of three sections with a time limit of 90 mins syllabus will be the same as Phase-1. Phase 2 will be conducted during Zeitgeist’23 on 23rd March The winners will be awarded."}
+                                    description={"This phase will be conducted at IIT Ropar. Quiz-Competition : Students who have taken the olympiad in their repsective schools and secured rank within TOP 5 in the olympiad will be taking part in the quiz. Science & Art Competition : Students can bring their Sceince Models. For Art competition Students can bring their Art Model based on theme India@2047. Art can be any painting or craft.Campus Visits : Studets will be given campus visit to all the iconic labs and building that IIT Ropar have.  -   TECHWALKIAS/IPS panel talk : Students will be able to communicate and ask their doubts regarding famous topics like Government policies or career options.Defence Panel  talk : Defence Officials of BRigadier or Admiral level will be giving a talk on how india is advancing its capabilities in defence sector."}
                                 />
-                                <Card1
+                                {/* <Card1
                                     heading='Junior Scientist Competition'   
                                     description={`In this competition, a maximum of three projects are allowed for display by individual schools in each category. The projects will be presented at IIT Ropar during Zeitgeist’23. Project should be working based on any scientific technology. Exciting prizes for winners and certificates of participation for all the participants. All the participants will also get an opportunity for Techwalk.`}
-                                />
+                                /> */}
                             </div>
                         }
                         card2={<Card2 image={ScientistImage}/>}
-                    />
-
-                    <CardWrapper
-                        card1={
-                            <Card1
-                                heading='Techwalk'
-                                description={`During Zeitgeist 2023, all of our institute's participating labs will be open to school students. Various departments will demonstrate cutting-edge technologies in their respective areas. Aside from the labs, there will be an exhibition of projects created by students and faculty. There will be exhibitors from across the globe displaying emerging technologies. For the visitors, this will be a great opportunity to learn, experience, and interact with experts from distinct scientific fields and witness the recent advancements in the field of science. Students will experience the culture of IIT Ropar, student life, and the responsibilities of students here. They gain a lot of valuable information about cracking the JEE exam.`}
-                            />
-                        }
-                        card2={<Card2 image={TechWalkImage} />}
                     />
                 </div>
             </div>
@@ -141,6 +133,34 @@ const CardWrapper1 = ({
 }
 
 // Title description card
+const Card12 = ({
+    heading = "", 
+    description = "", 
+    children
+}) => {
+
+    return (
+        <div className={`text-[#FFF] font-superbrigade lg:text-[1.25rem] text-[0.925rem]  not-italic font-[400] lg:leading-normal leading-2`}>
+            <div className='flex flex-col gap-2'>
+                <h1 className='text-lg font-bold'>{heading}</h1>
+                {description.length === 0 ? (
+                    <div>{children}</div>
+                ) : (
+                    <>
+                    <p className='text-[#84828afd]   lg:text-[1.25rem] text-[0.925rem] not-italic font-[700] lg:leading-[2.125rem] leading-4'>This phase will be conducted at IIT Ropar. There will be Quiz competition for the students who have qualified the olympiad from respective schools from each category.</p>
+                    <p className='text-[#84828afd]   lg:text-[1.25rem] text-[0.925rem] not-italic font-[700] lg:leading-[2.125rem] leading-4'>For any registered student, they have access to the following things:</p>
+                    <li>Science & Art Competition</li>
+                    <li>IAS/IPS Panel Talk</li>
+                    <li>Defence Forces Panel Talk</li>
+                    <li>Experience Zones</li>
+                    <li>Robo-Show event</li>
+                    </>
+                    
+                )}
+            </div>
+        </div>
+    );
+}
 const Card1 = ({
     heading = "", 
     description = "", 
@@ -169,7 +189,7 @@ const Card2 = ({image = RegisterImage}) => {
             <div className=''>
                 <Image
                     src={image}
-                    className='w-[30rem] object-center '
+                    className='w-[30rem] pointer-events-none object-center '
                     alt='image-logo'
                 />
             </div>

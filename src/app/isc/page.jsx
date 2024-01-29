@@ -33,7 +33,7 @@ const ISC = () => {
       <AboutUs />
       <Conduction/>
       <RegistrationProcess />
-      <Testimonials/>
+      {/* <Testimonials/> */}
       <OurPrize />
       <Heighlight />
       <ISCFAQs/>

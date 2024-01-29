@@ -1,32 +1,39 @@
 "use client";
 import React, { useState } from "react";
-import tabData from "./accommodationData";
 import Navbar from "@/components/Navbar/index";
 import Hero from "@/components/Hero";
-import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+// import { Button } from "@/components/ui/button";
+// import {
+//   Select,
+//   SelectContent,
+//   SelectGroup,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from "@/components/ui/select";
+// import {
+//   Card,
+//   CardContent,
+//   CardDescription,
+//   CardFooter,
+//   CardHeader,
+//   CardTitle,
+// } from "@/components/ui/card";
+// import { Input } from "@/components/ui/input";
+// import { Label } from "@/components/ui/label";
+import FAQs from "@/components/FAQs/AccommodationFAQs";
+const btns = [
+  "About Us",
+  "Guidelines",
+  "FAQs",
+  "Reaching IIT Ropar",
+  "Contact Us",
+];
 
 export default function Index() {
   const [index, setindex] = useState(0);
   const [step, setstep] = useState(0);
-  const [nextclicked, setnextclicked] = useState(false);
+  // const [nextclicked, setnextclicked] = useState(false);
 
   return (
     <>
@@ -64,40 +71,78 @@ export default function Index() {
               alt=""
             />
             <div className="flex h-[25%]  w-[100%] md:gap-24 flex-wrap items-center justify-between  md:flex-col md:w-[30%] md:h-[100%]   md:justify-center md:items-center">
-              {tabData.map((data, i) => {
+              {btns.map((btn, i) => {
                 return (
                   <button
                     key={i}
                     onClick={() => {
                       setindex(i);
                     }}
-                    className="relative cursor-pointer flex items-center justify-center   w-[30%] md:w-[60%] "
+                    className="relative cursor-pointer flex items-center justify-center w-[30%] md:w-[60%]"
                   >
                     {index === i ? (
                       <img
                         src="Rectangle 6328.svg"
                         alt=""
-                        className="absolute  "
+                        className="absolute"
                       />
                     ) : (
                       <img
                         src="Rectangle 63282.svg"
                         alt=""
-                        className="absolute  "
+                        className="absolute"
                       />
                     )}
 
-                    <span className="absolute  text-white text-[0.7rem] md:text-lg  z-10">
-                      {data.btn}
+                    <span className="absolute text-white text-[0.7rem] md:text-lg z-10">
+                      {btn}
                     </span>
                   </button>
                 );
               })}
             </div>
             <div className="w-[100%]  md:w-[70%] h-[70%] md:h-[80%] relative flex flex-col justify-center gap-16 md:gap-20 items-center md:justify-center">
-              <p className="text-white w-[95%] md:w-[80%] text-left px-2 md:px-0 md:text-xl">
-                {tabData[index].desc}
-              </p>
+              {/* <p className="text-white w-[95%] md:w-[80%] text-left px-2 md:px-0 md:text-xl">
+                {index}
+              </p> */}
+              {index == 0 && (
+                <p className="text-white w-[95%] md:w-[80%] text-left px-2 md:px-0 md:text-xl">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laudantium cupiditate ullam voluptatum quas illo quasi commodi
+                  eius error iste? Aliquam esse similique, animi, iure accusamus
+                  ad architecto exercitationem veritatis delectus dolor
+                  explicabo ipsam cumque nesciunt rerum voluptates voluptatum.
+                  Repellendus, enim.
+                </p>
+              )}
+              {index == 1 && (
+                <p className="text-white w-[95%] md:w-[80%] text-left px-2 md:px-0 md:text-xl">
+                  <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                  </ul>
+                </p>
+              )}
+              {index == 2 && <FAQs />}
+              {index == 3 && (
+                <p className="text-white w-[95%] md:w-[80%] text-left px-2 md:px-0 md:text-xl">
+                  <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                  </ul>
+                </p>
+              )}
+              {index == 4 && (
+                <p className="text-white w-[95%] md:w-[80%] text-left px-2 md:px-0 md:text-xl">
+                  <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                  </ul>
+                </p>
+              )}
 
               <button
                 className="relative flex items-center cursor-pointer justify-center h-[60px] w-[200px]"
@@ -110,7 +155,7 @@ export default function Index() {
           </div>
         )}
 
-        {step === 1 && (
+        {/* {step === 1 && (
           <div className="h-[100vh] z-30  w-full gap-12 flex-col relative overflow-hidden flex items-center justify-center">
             <div className="flex flex-col md:flex-row  gap-6 w-[80%] h-[50%] md:h-[30%]">
               <div className="w-full flex-col h-[40%] items-center justify-center   relative flex ">
@@ -251,9 +296,9 @@ export default function Index() {
               <span className="text-white z-20">back</span>
             </div>
           </div>
-        )}
+        )} */}
 
-        {step === 1 && (
+        {/* {step === 1 && (
           <div className="flex h-[100vh] items-center justify-center text-white">
             <Card className="w-[90%] sm:w-[70%] md:w-[85%] max-w-xl bg-[#12121c]   text-white">
               <CardHeader className="space-y-1">
@@ -388,9 +433,8 @@ export default function Index() {
               </CardFooter>
             </Card>
           </div>
-        )}
+        )} */}
       </div>
     </>
   );
 }
-

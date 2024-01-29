@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import Navbar from "@/components/Navbar/index";
-import Hero from "@/components/Hero";
+import Hero from "@/components/Hero/index";
 import styled from "styled-components";
-import { Card,Card4 } from "../../components/nCard";
+import { Card4 } from "../../components/nCard";
 import { eventsData } from "./data";
 import Link from "next/link";
 
@@ -24,7 +24,7 @@ const Hovercard = () => {
     <>
       <GridContainer className="bg-[#12121c]">
         {eventsData.map((events, index) => (
-          <Link key={index} href="/events/[category]" as={`/events/${events.text}`}>
+          <Link key={index} href="/competitions/[category]" as={`/competitions/${events.text}`}>
             <Card4  text={events.text}
               // smalltext={events.smalltext}
               largetext={events.smalltext}
@@ -56,7 +56,7 @@ const Main = () => {
         className="absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
       />
       <Navbar />
-      <Hero maintext="Events" subtext="Page" />
+      <Hero maintext="Competitions" subtext="Page" order={0}/>
     </div>
 
       <Hovercard />

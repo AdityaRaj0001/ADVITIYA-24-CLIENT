@@ -38,134 +38,141 @@ export const eventsData = [
 ];
 
 // data.js
-export const progeventsData= [
+export const progeventsData = [
   {
     text: "AlgoUnlock",
-    largetext: "lorem13",
+    redirectURL: "https://www.hover.dev/components/buttons",
     image: "../eventcardbg.png",
   },
   {
     text: "CC-Rated",
-    largetext: "lorem14",
+    redirectURL: "https://www.example.com/cc-rated",
     image: "../eventcardbg.png",
   },
   {
     text: "CodeHunt",
-    largetext: "lorem15",
+    redirectURL: "https://www.example.com/codehunt",
     image: "../eventcardbg.png",
   },
   {
     text: "CODCOM",
-    largetext: "lorem16",
+    redirectURL: "https://www.example.com/codcom",
     image: "../eventcardbg.png",
   },
   {
     text: "Hackathon",
-    largetext: "lorem17",
+    redirectURL: "https://www.example.com/hackathon",
     image: "../eventcardbg.png",
   },
 ];
+
 export const mechaeventsData = [
   {
     text: "SKY-MASTERS",
-    largetext: "lorem13",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/sky-masters",
   },
   {
     text: "CyberForge",
-    largetext: "lorem13",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/cyber-forge",
   },
   {
     text: "Full-Throttle",
-    largetext: "lorem14",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/full-throttle",
   },
   {
     text: "RoboSoccer",
-    largetext: "lorem15",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/robo-soccer",
   },
 ];
+
 export const esportsData = [
   {
     text: "COD",
-    largetext: "lorem13",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/cod",
   },
   {
     text: "BGMI",
-    largetext: "lorem14",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/bgmi",
   },
   {
     text: "CLASH-ROYALE",
-    largetext: "lorem15",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/clash-royale",
   },
 ];
+
 export const depteventsData = [
   {
     text: "AI-Fusion",
-    largetext: "lorem13",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/ai-fusion",
   },
   {
     text: "Catalyzing-Concepts",
-    largetext: "lorem14",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/catalyzing-concepts",
   },
   {
     text: "Sky-Scrapper",
-    largetext: "lorem15",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/sky-scrapper",
   },
   {
     text: "Circuit-Chase",
-    largetext: "lorem15",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/circuit-chase",
   },
   {
-    text: "Laser-Shot",
-    largetext: "lorem15",
+    text: "LASER-SHOT",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/laser-shot",
   },
   {
     text: "Maths-Arena",
-    largetext: "lorem15",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/maths-arena",
   },
 ];
+
 export const fintecheventsData = [
   {
     text: "Pitch-Or-Ditch",
-    largetext: "lorem13",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/pitch-or-ditch",
   },
   {
     text: "Traders-Arena",
-    largetext: "lorem14",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/traders-arena",
   },
 ];
+
 export const digitalarteventsData = [
   {
-    text: "Color-Pallete",
-    largetext: "lorem13",
+    text: "COLOR-PALLETE",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/color-palette",
   },
   {
-    text: "Cover-Page",
-    largetext: "lorem14",
+    text: "COVER-PAGE",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/cover-page",
   },
 ];
+
 export const zenitheventsData = [
   {
     text: "AstroQuest",
-    largetext: "lorem13",
     image: "../eventcardbg.png",
+    redirectURL: "https://www.example.com/astro-quest",
   },
 ];
+
 
 
