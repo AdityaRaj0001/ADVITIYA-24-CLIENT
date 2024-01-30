@@ -53,7 +53,7 @@ export default function Index() {
         <Hero maintext="Accommodation" subtext="" />
       </div>
 
-      <div
+      {/* <div
         id="page2"
         className="h-auto w-[100%] relative flex items-center justify-center bg-[#12121c]"
       >
@@ -61,9 +61,9 @@ export default function Index() {
           src="Group 1000003971.svg"
           alt=""
           className="pointer-events-none absolute h-[500px] opacity-60 right-0 top-0 md:h-[650px]   md:right-0 md:-top-20"
-        />
+        /> */}
 
-        {step === 0 && (
+        {/* {step === 0 && (
           <div className="h-[100vh]  w-[100%] flex flex-col md:flex-row  gap-4  items-center justify-start  relative">
             <img
               src="Rectangle 306.svg"
@@ -102,9 +102,6 @@ export default function Index() {
               })}
             </div>
             <div className="w-[100%]  md:w-[70%] h-[70%] md:h-[80%] relative flex flex-col justify-center gap-16 md:gap-20 items-center md:justify-center">
-              {/* <p className="text-white w-[95%] md:w-[80%] text-left px-2 md:px-0 md:text-xl">
-                {index}
-              </p> */}
               {index == 0 && (
                 <p className="text-white w-[95%] md:w-[80%] text-left px-2 md:px-0 md:text-xl">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -153,7 +150,7 @@ export default function Index() {
               </button>
             </div>
           </div>
-        )}
+        )} */}
 
         {/* {step === 1 && (
           <div className="h-[100vh] z-30  w-full gap-12 flex-col relative overflow-hidden flex items-center justify-center">
@@ -434,7 +431,7 @@ export default function Index() {
             </Card>
           </div>
         )} */}
-      </div>
+      {/* </div> */}
     </>
   );
 }

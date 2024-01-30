@@ -19,11 +19,6 @@ const OurPrize = () => {
           <p className="text-xs opacity-90 pt-4">
           Participants earn certificates of participation, recognizing their engagement. 
           </p> 
-           {/* <p className="text-xs opacity-90 pt-4">
-            For schools with participation of 50+ students per category, a
-            school winner shall be declared and awarded with goodies and
-            participation.
-          </p> */}
         </div>
 
         <div className="lg:px-4">
@@ -38,7 +33,7 @@ const OurPrize = () => {
             awarded a certificate of participation.
           </p>
         </div>
-        <p className="text-white text-sm text-left px-4 w-[200%] mt-4">In addition to these every registered student will be getting certificate of participation</p>
+        <p className="text-white text-sm text-left px-4 w-[100%] lg:w-[200%] mt-4">In addition to these every registered student will be getting certificate of participation</p>
       </div>
     </div>
   );

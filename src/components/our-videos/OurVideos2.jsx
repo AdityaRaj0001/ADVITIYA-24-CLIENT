@@ -9,7 +9,7 @@ const OurVideos2 = () => {
       </div>
       <div className="h-[70vh]  flex flex-col gap-12   sm:flex-row-reverse w-[100%] sm:h-[50vh]">
         <div className=" border-black videodiv relative flex items-center justify-center w-[100%] h-[50%] sm:h-[100%]">
-          <a href="https://www.instagram.com/p/C2e45pgRqy0/" target="_blank" className="h-full w-full"><img  src="./advitiya_insta.png" className="h-[100%] sm:w-[80%] "></img></a>
+          <a href="https://www.instagram.com/p/C2e45pgRqy0/" target="_blank" className="h-full w-full flex items-center justify-center"><img  src="./advitiya_insta.png" className="h-[100%] sm:w-[80%] "></img></a>
           
         </div>
         <div className="relative flex items-start sm:items-center justify-center w-[100%] h-[30%] sm:h-[100%] ">

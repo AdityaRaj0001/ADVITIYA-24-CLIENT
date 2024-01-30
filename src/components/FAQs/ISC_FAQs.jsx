@@ -33,7 +33,7 @@ const data = [
 const FAQs = () => {
   return (
     <>
-    <div className="h-[100vh] -mt-12 text-white relative z-20 flex flex-col items-center justify-center  w-full">
+    <div className="h-[100vh] mt-12 text-white relative z-20 flex flex-col items-center justify-center  w-full">
       <img src="./Registrationdesign.svg" className="absolute -z-10 w-[300px] hidden lg:block lg:w-[400px]  lg:-top-[20%] lg:right-0" />
       <img src="./Testimonialbg.svg" className="absolute -z-10 w-[500px] block lg:hidden left-0 bottom-0 opacity-70" />
     <h1 className="text-2xl text-center w-full mb-12">FAQs</h1>
@@ -41,7 +41,7 @@ const FAQs = () => {
       {data.map((obj,i)=>{
         return (
           <AccordionItem key={i} value={`item-${i}`} className="border-b-0 mb-4">
-          <AccordionTrigger className="bg-gray-900 hover:no-underline h-14  border-b-2 border-violet-500 rounded-lg px-2 text-left">{obj.Q}</AccordionTrigger>
+          <AccordionTrigger className="bg-gray-900 hover:no-underline h-24 lg:h-16  border-b-2 border-violet-500 rounded-lg px-2 text-sm  text-left">{obj.Q}</AccordionTrigger>
           <AccordionContent className="bg-transparent px-4 py-4">
             {obj.A}
           </AccordionContent>

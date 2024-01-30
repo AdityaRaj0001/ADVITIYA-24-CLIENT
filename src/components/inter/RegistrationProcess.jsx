@@ -41,6 +41,12 @@ const RegistrationProcess = () => {
                       and register them through the google form.
                     </span>
                   </li>
+                  <li className="flex gap-3 lg:text-base text-sm ">
+                    <span>•</span>
+                    <span>
+                     A total Fee of Rs.150 will be charged per student.
+                    </span>
+                  </li>
                     <a href="https://forms.gle/aZMNnWg1FPxjVf278" target="_blank" className="underline text-md ml-4 uppercase text-gray-100 tracking-wider">Link</a>
                 </ul>
               </div>
@@ -124,6 +130,12 @@ const RegistrationProcess = () => {
                     <span>•</span>
                     <span>
                     Entry Pass will be provided on-spot at the main gate after successful verification. Please carry your entry pass and one ID along with you throughout the fest activities.
+                    </span>
+                  </li>
+                  <li className="flex gap-3 lg:text-base text-sm ">
+                    <span>•</span>
+                    <span>
+                     A total Fee of Rs.150 will be charged per student.
                     </span>
                   </li>
                   <a href="https://forms.gle/xopvcxra9YnBig1h8" target="_blank" className="underline text-md ml-4 uppercase text-gray-100 tracking-wider">Link</a>

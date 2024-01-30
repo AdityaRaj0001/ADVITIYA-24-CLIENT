@@ -17,8 +17,10 @@ import { useRef, useLayoutEffect } from "react";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import { FaAngleDown } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 const Navbar = ({ order }) => {
+  const Router=useRouter()
   const page1 = useRef();
   const { contextSafe } = useGSAP({ scope: page1 });
   const tl = useRef();
@@ -262,7 +264,7 @@ const Navbar = ({ order }) => {
           id="mobile-nav"
           className="flex z-10 h-[30px] xl:hidden px-4 py-8 justify-between items-center"
         >
-          <img className="w-[200px] absolute -left-4 mt-6 " src="./logo.png" />
+          <img onClick={()=>Router.push("/")} className="w-[200px] absolute -left-4 mt-6 " src="./logo.png" />
           <div
             id="left"
             className="h-full relative w-[20%] flex items-center justify-center"

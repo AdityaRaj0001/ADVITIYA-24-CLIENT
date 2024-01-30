@@ -170,11 +170,11 @@ const Card1 = ({
     return (
         <div className={`text-[#FFF] font-superbrigade lg:text-[1.875rem] text-[1.225rem]  not-italic font-[400] lg:leading-normal leading-2`}>
             <div className='flex flex-col gap-2'>
-                <h1 className='text-lg font-bold'>{heading}</h1>
+                <h1 className='text-lg font-bold tracking-widest'>{heading}</h1>
                 {description.length === 0 ? (
                     <div>{children}</div>
                 ) : (
-                    <p className='text-[#84828afd]   lg:text-[1.25rem] text-[0.925rem] not-italic font-[700] lg:leading-[2.125rem] leading-4'>{description}</p>
+                    <p className='text-[#84828afd]   lg:text-[1.25rem] text-[0.925rem] not-italic font-[700]  lg:leading-[2.125rem] leading-4'>{description}</p>
                 )}
             </div>
         </div>
