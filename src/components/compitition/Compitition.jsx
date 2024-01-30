@@ -9,27 +9,27 @@ import Link from "next/link";
 const Compitition = () => {
   const data = [
     {
-      image: "./eventcardbg.png",
+      image: "./zones.jpeg",
       title: "Zones",
       redirectURL: "/zones",
     },
     {
-      image: "./eventcardbg.png",
+      image: "./talk-show.jpeg",
       title: "Talk-Shows",
       redirectURL: "/talkshows",
     },
     {
-      image: "./eventcardbg.png",
+      image: "./competitions.jpeg",
       title: "Competitions",
       redirectURL: "/competitions",
     },
     {
-      image: "./eventcardbg.png",
+      image: "./exhibitions.jpeg",
       title: "Exhibitions",
       redirectURL: "/exhibitions",
     },
     {
-      image: "./eventcardbg.png",
+      image: "./workshops.jpeg",
       title: "Workshops",
       redirectURL: "/workshops",
     },
@@ -70,8 +70,8 @@ const Compitition = () => {
 export default Compitition;
 
 const Card = ({ data }) => (
-  <div className="relative aspect-square">
-    <div className="absolute bottom-0 right-0 left-0 top-0">
+  <div className="relative aspect-square ">
+    <div className="absolute  bottom-0 right-0 left-0 top-0">
       <CardBorder />
     </div>
 
@@ -82,15 +82,15 @@ const Card = ({ data }) => (
       <div className="lg:h-[80%] h-[76%]">
         <img
           style={{
-            clipPath: "polygon(63% 0%, 100% 36%, 100% 100%, 0 100%, 0 0)",
+            clipPath: "polygon(58% 0%, 100% 36%, 100% 100%, 0 100%, 0 0)",
           }}
-          className="h-[100%]  object-cover"
+          className="h-[100%] ml-8 mt-4  object-cover"
           src={data?.image}
         />
       </div>
 
       <div className="lg:mt-[25px] mt-5">
-        <h3 className=" text-[28px] lg:text-[25px]  text-center  sm:text-left font-bold text-[#d8c5ff]">
+        <h3 className=" text-[28px] lg:text-[25px]  text-center   font-bold text-[#d8c5ff]">
           {data?.title}
         </h3>
       </div>

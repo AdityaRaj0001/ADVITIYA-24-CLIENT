@@ -135,7 +135,7 @@ const Navbar = ({ order }) => {
             <Button variant="ghost">FAQs</Button>
           </Link>
 
-          <span
+          {/* <span
             id="btn"
             className="relative h-[50px] w-[100px] flex justify-center items-center"
           >
@@ -161,7 +161,7 @@ const Navbar = ({ order }) => {
                 )}
               </DropdownMenuContent>
             </DropdownMenu>
-          </span>
+          </span> */}
         </nav>
         <nav
           id="sidebar"
@@ -234,7 +234,7 @@ const Navbar = ({ order }) => {
             <Button variant="ghost">FAQs</Button>
           </Link>
 
-          <span
+          {/* <span
             id="btn"
             className="relative h-[50px] w-[100px] flex justify-center items-center"
           >
@@ -256,7 +256,7 @@ const Navbar = ({ order }) => {
                 )}
               </DropdownMenuContent>
             </DropdownMenu>
-          </span>
+          </span> */}
         </nav>
         <div
           id="mobile-nav"

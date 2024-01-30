@@ -3,7 +3,7 @@ import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaAnglesDown } from "react-icons/fa6";
-const Index = ({ maintext, subtext, imgsrc , order }) => {
+const Index = ({ maintext, subtext, imgsrc, order }) => {
   const page1 = useRef();
   const tl = useRef();
   useLayoutEffect(() => {
@@ -77,22 +77,48 @@ const Index = ({ maintext, subtext, imgsrc , order }) => {
           </p>
         </div>
         <div className="relative   xl:flex xl:items-center xl:justify-center h-[70%] sm:h-[75%] md:h-[80%] xl:w-1/2 xl:h-[100%]">
-         <img
-            src={order === 2 ? imgsrc : (order === 1 ? '../Arwork 1.png' : './Arwork 1.png')}
-            className="z-30 object-contain  xl:mt-0 opacity-70 xl:opacity-100  asset w-[100%] sm:w-[70%] xl:h-[80%] "
-          /> 
           <img
-            src={`${order===2?'../../Vector Smart Object 1.svg':(order === 1 ? '../Vector Smart Object 1.svg' : './Vector Smart Object 1.svg')}`}
+            src={
+              order === 2
+                ? imgsrc
+                : order === 1
+                ? "../Arwork 1.png"
+                : "./Arwork 1.png"
+            }
+            className="z-30 object-contain mt-16  xl:mt-0 opacity-70 xl:opacity-100  asset w-[100%] sm:w-[70%] xl:h-[80%] "
+          />
+          <img
+            src={`${
+              order === 2
+                ? "../../Vector Smart Object 1.svg"
+                : order === 1
+                ? "../Vector Smart Object 1.svg"
+                : "./Vector Smart Object 1.svg"
+            }`}
             className="absolute asset blur-sm z-10  h-[90px] top-24 -right-12 xl:top-44 xl:right-8"
           />
           <img
-            src={`${order===2?'../../Asset 9@4x 1.svg':(order === 1 ? '../Asset 9@4x 1.svg' : './Asset 9@4x 1.svg')}`}
+            src={`${
+              order === 2
+                ? "../../Asset 9@4x 1.svg"
+                : order === 1
+                ? "../Asset 9@4x 1.svg"
+                : "./Asset 9@4x 1.svg"
+            }`}
             className="absolute asset z-10  h-[90px] bottom-44 -left-12 xl:bottom-64 xl:left-4 xl:h-[120px] "
           />
-          {/* <img
-            src="./Asset 4@10x 1.svg"
-            className="hidden xl:block xl:absolute asset z-10 h-[60px]  xl:top-32 xl:left-44 xl:h-[100px]"
-          /> */}
+          <img
+            src={`${
+              order === 2
+                ? ""
+                : order === 1
+                ? "../Asset 4@10x 1.svg"
+                : "./Asset 4@10x 1.svg"
+            }`}
+            className={`xl:block xl:absolute asset z-10 h-[60px] xl:top-32 xl:left-44 xl:h-[100px] ${
+              order === 1 || order === 0 ? "block" : "hidden"
+            }`}
+          />
         </div>
       </div>
 

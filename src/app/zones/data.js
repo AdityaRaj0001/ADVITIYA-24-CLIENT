@@ -1,23 +1,22 @@
 export const zonesData = [
-    {
-      text: "Zone 1",
-      image: "./eventcardbg.png",
-      redirectURL: "/zone1",
-    },
-    {
-      text: "Zone 2",
-      image: "./eventcardbg.png",
-      redirectURL: "/zone2",
-    },
-    {
-      text: "Zone 3",
-      image: "./eventcardbg.png",
-      redirectURL: "/zone3",
-    },
-    {
-      text: "Zone 4",
-      image: "./eventcardbg.png",
-      redirectURL: "/zone4",
-    },
-  ];
-  
+  {
+    text: "Food Zone",
+    image: "./food-zone.jpeg",
+    redirectURL: "",
+  },
+  {
+    text: "Esports & Gaming Zone",
+    image: "./gaming-zone.jpeg",
+    redirectURL: "",
+  },
+  {
+    text: "Sports & Challenge Zone",
+    image: "./sports-zone.jpeg",
+    redirectURL: "",
+  },
+  {
+    text: "DJ & Performance Zone",
+    image: "./dj-zone.jpeg",
+    redirectURL: "",
+  },
+];

@@ -123,27 +123,28 @@ const Merchandise = () => {
               </div>
 
               <h2 className="lg:text-[30px]  text-3xl uppercase italic mt-2 lg:mt-8">
-                Merchandise Title
+                Into The Future
               </h2>
 
               <div className="h-[30vh] flex items-center justify-center relative z-10 lg:mt-8 lg:hidden">
                 <img
-                  src='../eventcardbg.png'
+                  src='../FEST T SHIRT.jpeg'
                   alt="vgg"
                   className="h-[100%] object-contain"
                 />
               </div>
 
               <p className="lg:mt-8 p-2 text-sm lg:text-base">
-                Merch desc Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Asperiores veritatis rem accusantium neque architecto
-                expedita voluptatum, ratione sint. Mollitia, quibusdam.
+              Elevate your style with ADVITIYA's exclusive merchandise – a fusion of innovation and sophistication, capturing the essence of IIT Ropar's dynamic tech fest.
+              
+              <a className="block mt-4 underline text-[#cd71f1] text-md" target="_blank" href="https://drive.google.com/file/d/1W3yQQ5LJyf1-BCFqHI_8k7zM0l4yqZZG/view?usp=sharing
+Form Link - https://forms.gle/4UHWXV5SRPHMAADaA">Click to view details</a>
               </p>
             </div>
 
             <div className="h-[400px] w-full relative items-center justify-center z-10 hidden lg:flex">
               <img
-                src='../eventcardbg.png'
+                src='../FEST T SHIRT.jpeg'
                 alt="merchimage"
                 className=" lg:h-[60%]  object-contain"
               />

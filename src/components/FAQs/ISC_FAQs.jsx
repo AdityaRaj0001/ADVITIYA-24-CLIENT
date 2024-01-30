@@ -8,24 +8,25 @@ import {
 } from "@/components/ui/accordion"
 const data = [
   {
-    Q: "Question 1 for ISC",
-    A: "Here is the answer for Question 1",
+    Q: "Is it mandatory to attend olympiad for participating in events on 17th february?",
+    A: "No, It's not important to attend Olympiad.",
   },
   {
-    Q: "Question 2",
-    A: "Here is the answer for Question 2",
+    Q: "How many students from a school can participate on ISC Day?",
+    A: "There is no limit on number of students."
+    
   },
   {
-    Q: "Question 3",
-    A: "Here is the answer for Question 3",
+    Q: "If my school is not participating in the event, Can I still attend the event?",
+    A: "Yes a student can attend the event even if his/her school is not participating in the event.",
   },
   {
-    Q: "Question 4",
-    A: "Here is the answer for Question 4",
+    Q: "Is olympiad free of cost to attend?",
+    A: "Yes Olympiad is free of cost. The Charges is just for registration to visit the campus.",
   },
   {
-    Q: "Question 5",
-    A: "Here is the answer for Question 5",
+    Q: "How to register for the ISC?",
+    A: "Just fill the form along with the proof ",
   },
 ];
 
@@ -40,7 +41,7 @@ const FAQs = () => {
       {data.map((obj,i)=>{
         return (
           <AccordionItem value={`item-${i}`} className="border-b-0 mb-4">
-          <AccordionTrigger className="bg-gray-900 hover:no-underline h-14  border-b-2 border-violet-500 rounded-lg px-2">{obj.Q}</AccordionTrigger>
+          <AccordionTrigger className="bg-gray-900 hover:no-underline h-14  border-b-2 border-violet-500 rounded-lg px-2 text-left">{obj.Q}</AccordionTrigger>
           <AccordionContent className="bg-transparent px-4 py-4">
             {obj.A}
           </AccordionContent>

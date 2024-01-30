@@ -1,178 +1,179 @@
-// data.js
 export const eventsData = [
   {
     text: "Coding-Events",
     largetext: "lorem01",
-    image: "./eventcardbg.png",
+    image: "./Coding-Events.png",
   },
   {
     text: "MechaTronics",
     largetext: "lorem05",
-    image: "./eventcardbg.png",
+    image: "./MechaTronics.png",
   },
   {
     text: "ESportZ",
     largetext: "lorem02",
-    image: "./eventcardbg.png",
+    image: "./esports.jpeg",
   },
   {
     text: "Department-Specific",
     largetext: "lorem03",
-    image: "./eventcardbg.png",
+    image: "./Department-Specific.png",
   },
   {
     text: "FinTech",
     largetext: "lorem04",
-    image: "./eventcardbg.png",
+    image: "./FinTech.png",
   },
   {
     text: "Digi-Art",
     largetext: "lorem06",
-    image: "./eventcardbg.png",
+    image: "./Digi-Art.png",
   },
   {
     text: "Space-Tech",
     largetext: "lorem06",
-    image: "./eventcardbg.png",
+    image: "./Space-Tech.png",
   },
 ];
 
-// data.js
+
 export const progeventsData = [
   {
     text: "AlgoUnlock",
-    redirectURL: "https://www.hover.dev/components/buttons",
-    image: "../eventcardbg.png",
+    redirectURL: "https://unstop.com/o/J3zpOro?lb=35RzefP",
+    image: "../AlgoUnlock.jpeg",
   },
-  {
-    text: "CC-Rated",
-    redirectURL: "https://www.example.com/cc-rated",
-    image: "../eventcardbg.png",
-  },
+  // {
+  //   text: "CC-Rated",
+  //   redirectURL: "https://www.example.com/cc-rated",
+  //   image: "../CC-Rated.jpg",
+  // },
   {
     text: "CodeHunt",
-    redirectURL: "https://www.example.com/codehunt",
-    image: "../eventcardbg.png",
+    redirectURL: "https://unstop.com/o/e9AZkOv?lb=35RzefP",
+    image: "../CodeHunt.jpeg",
   },
   {
     text: "CODCOM",
-    redirectURL: "https://www.example.com/codcom",
-    image: "../eventcardbg.png",
+    redirectURL: "https://unstop.com/o/4QvI0j8?lb=35RzefP",
+    image: "../CODCOM.jpeg",
   },
   {
     text: "Hackathon",
-    redirectURL: "https://www.example.com/hackathon",
-    image: "../eventcardbg.png",
+    redirectURL: "https://unstop.com/o/TsGuihV?lb=35RzefP",
+    image: "../Hackathon.jpeg",
   },
 ];
 
 export const mechaeventsData = [
   {
     text: "SKY-MASTERS",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/sky-masters",
+    redirectURL: "https://unstop.com/o/kbf90Vo?lb=35RzefP",
+    image: "../SKY-MASTERS.jpeg",
   },
   {
     text: "CyberForge",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/cyber-forge",
+    redirectURL: "https://unstop.com/o/rQH6oOc?lb=35RzefP",
+    image: "../CyberForge.jpeg",
   },
   {
     text: "Full-Throttle",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/full-throttle",
+    redirectURL: "https://unstop.com/o/20RIZsK?lb=35RzefP",
+    image: "../Full-Throttle.jpeg",
   },
   {
     text: "RoboSoccer",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/robo-soccer",
+    redirectURL: "https://unstop.com/o/c1jJT0O?lb=35RzefP",
+    image: "../RoboSoccer.jpeg",
   },
 ];
 
 export const esportsData = [
   {
     text: "COD",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/cod",
+    redirectURL: "https://unstop.com/o/Rt1hWVL?lb=35RzefP",
+    image: "../codm.jpg",
   },
   {
     text: "BGMI",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/bgmi",
+    redirectURL: "https://unstop.com/o/ByqFruk?lb=35RzefP",
+      image: "../bgmi.jpg",
   },
   {
     text: "CLASH-ROYALE",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/clash-royale",
+    redirectURL: "https://unstop.com/o/Ljvbsy1?lb=35RzefP",
+    image: "../clashroyale.jpeg",
   },
 ];
 
 export const depteventsData = [
   {
     text: "AI-Fusion",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/ai-fusion",
+    redirectURL: "https://unstop.com/o/4z8ejuw?lb=35RzefP",
+    image: "../AI-Fusion.jpg",
   },
   {
     text: "Catalyzing-Concepts",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/catalyzing-concepts",
+    redirectURL: "https://unstop.com/o/eXx60Kk?lb=35RzefP",
+    image: "../Catalyzing-Concepts.jpeg",
   },
   {
     text: "Sky-Scrapper",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/sky-scrapper",
+    redirectURL: "https://unstop.com/o/nj74Qu6?lb=35RzefP",
+    image: "../Sky-Scrapper.jpeg",
   },
   {
     text: "Circuit-Chase",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/circuit-chase",
+    redirectURL: "https://unstop.com/o/GWmDglc?lb=35RzefP",
+    image: "../Circuit-Chase.jpeg",
   },
   {
     text: "LASER-SHOT",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/laser-shot",
+    redirectURL: "https://unstop.com/o/nH2wf4p?lb=35RzefP",
+    image: "../LASER-SHOT.jpeg",
   },
   {
     text: "Maths-Arena",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/maths-arena",
+    redirectURL: "https://unstop.com/o/hImLMAT?lb=35RzefP",
+    image: "../Maths-Arena.jpeg",
   },
 ];
 
 export const fintecheventsData = [
   {
     text: "Pitch-Or-Ditch",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/pitch-or-ditch",
+    redirectURL: "https://unstop.com/o/y8XjQ7O?lb=35RzefP",
+    image: "../Pitch-Or-Ditch.jpeg",
   },
   {
     text: "Traders-Arena",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/traders-arena",
+    redirectURL: "https://unstop.com/o/ioNuvqw?lb=35RzefP",
+    image: "../Traders-Arena.jpeg",
   },
 ];
 
 export const digitalarteventsData = [
   {
     text: "COLOR-PALLETE",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/color-palette",
+    redirectURL: "https://unstop.com/o/Hz69toq?lb=35RzefP",
+    image: "../COLOUR-PALLETE.jpeg",
   },
   {
     text: "COVER-PAGE",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/cover-page",
+    redirectURL: "https://unstop.com/o/Zk51UfX?lb=35RzefP",
+    image: "../COVER-PAGE.jpeg",
   },
 ];
 
 export const zenitheventsData = [
   {
     text: "AstroQuest",
-    image: "../eventcardbg.png",
-    redirectURL: "https://www.example.com/astro-quest",
+    redirectURL: "https://unstop.com/o/cve965H?lb=35RzefP",
+    image: "../AstroQuest.jpeg",
   },
 ];
+
+
 
 
 

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar/index";
-import Hero from "@/components/Hero";
+import Hero from "@/components/Hero/index 2";
 // import { Button } from "@/components/ui/button";
 // import {
 //   Select,

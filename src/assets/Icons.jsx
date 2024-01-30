@@ -34,7 +34,7 @@ export const CardBorder = () => (
     height="100%"
     className=" object-fill"
     viewBox="0 0 540 567"
-    fill=""
+    fill="#000"
   >
     <path
       d="M1.22285 1.2231H270H355.422L538.777 152.874V272.66V517.868L472.163 565.777H270H135H1.22262L1.22285 417.75V278.5V1.2231Z"

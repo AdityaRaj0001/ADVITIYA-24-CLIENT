@@ -1,22 +1,22 @@
 export const talkshowsData = [
   {
-    text: "Talkshow 1",
-    image: "./eventcardbg.png",
-    redirectURL: "/talkshow1",
+    text: "IAS/IPS Panel",
+    image: "./IAS-IPS-talks.jpeg",
+    redirectURL: "",
   },
   {
-    text: "Talkshow 2",
-    image: "./eventcardbg.png",
-    redirectURL: "/talkshow2",
+    text: "Industrial Panel",
+    image: "./industry-talks.jpeg",
+    redirectURL: "",
   },
   {
-    text: "Talkshow 3",
-    image: "./eventcardbg.png",
-    redirectURL: "/talkshow3",
+    text: "Defence Panel",
+    image: "./defence-talks.jpeg",
+    redirectURL: "",
   },
   {
-    text: "Talkshow 4",
-    image: "./eventcardbg.png",
-    redirectURL: "/talkshow4",
+    text: "Content Creator Panel",
+    image: "./content-talks.jpeg",
+    redirectURL: "",
   },
 ];

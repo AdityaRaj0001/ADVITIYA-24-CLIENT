@@ -1,22 +1,22 @@
 export const workshopsData = [
   {
-    text: "Workshop 1",
-    image: "./eventcardbg.png",
-    redirectURL: "/workshop1",
+    text: "ML & AI",
+    image: "ml-ai-workshop.jpeg",
+    redirectURL: "",
   },
   {
-    text: "Workshop 2",
-    image: "./eventcardbg.png",
-    redirectURL: "/workshop2",
+    text: "Robotics Workshop",
+    image: "robotics-workshop.jpeg",
+    redirectURL: "",
   },
   {
-    text: "Workshop 3",
-    image: "./eventcardbg.png",
-    redirectURL: "/workshop3",
+    text: "Drone Training",
+    image: "drone-workshop.jpeg",
+    redirectURL: "",
   },
   {
-    text: "Workshop 4",
-    image: "./eventcardbg.png",
-    redirectURL: "/workshop4",
+    text: "Rocket Building",
+    image: "rocket-building-workshop.jpeg",
+    redirectURL: "",
   },
 ];

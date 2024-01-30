@@ -376,14 +376,14 @@ export const Card4 = ({ text, smalltext, largetext, image, circleColor }) => {
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-96 w-72 rounded-2xl bg-gradient-to-br from-violet-600 from-40%  via-violet-400 via-60% to-[#222233]"
+      className="relative h-96 w-72 rounded-2xl bg-[#12121c]"
     >
       <div
         style={{
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
         }}
-        className="absolute  grid p-4 h-full  rounded-2xl border-white border-2 border-dashed   shadow-lg"
+        className="absolute  grid h-full place-items-center  place-content-center  rounded-2xl border-purple-300 border-2 border-dashed   shadow-lg"
       >
         <img className="h-[90%] object-cover rounded-2xl" src={image} alt="Shoe" />
         {/* <FiMousePointer
@@ -396,7 +396,7 @@ export const Card4 = ({ text, smalltext, largetext, image, circleColor }) => {
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center mt-12 text-white  w-full text-xl font-bold"
+          className="text-center mt-8 text-white  w-full text-xl font-bold"
         >
           {text}
         </p>

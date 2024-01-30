@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Navbar from "@/components/Navbar/index";
-import Hero from "@/components/Hero";
+import Hero from "@/components/Hero/index 2";
 import { TeamDetails } from "./data";
 
 const Card = ({ Designation, Name, Image }) => {
@@ -34,7 +34,7 @@ const Aboutus = () => {
         <Navbar />
         <Hero maintext="ABOUT US" subtext="The Team Behind the fest" />
       </div>
-      <div className="mt-[10vh] w-full flex flex-wrap items-center justify-center gap-8">
+      {/* <div className="mt-[10vh] w-full flex flex-wrap items-center justify-center gap-8">
         {TeamDetails.map((elem, i) => {
           return (
             <Card
@@ -45,7 +45,7 @@ const Aboutus = () => {
             />
           );
         })}
-      </div>
+      </div> */}
     </>
   );
 };

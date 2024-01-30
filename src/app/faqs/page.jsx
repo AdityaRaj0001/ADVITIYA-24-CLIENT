@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Navbar from "@/components/Navbar/index";
-import Hero from "@/components/Hero";
+import Hero from "@/components/Hero/index 2";
 import {
   Accordion,
   AccordionContent,
@@ -62,7 +62,7 @@ const FAQs = () => {
       <Navbar />
       <Hero  maintext="FAQs  Page" subtext="" />
     </div>
-    <div className="h-[100vh] mt-12 text-white relative z-20 flex  justify-center  w-full">
+    {/* <div className="h-[100vh] mt-12 text-white relative z-20 flex  justify-center  w-full">
       <img src="./Registrationdesign.svg" className="absolute -z-10 w-[300px] hidden lg:block lg:w-[400px]  lg:-top-[20%] lg:right-0" />
       <img src="./Testimonialbg.svg" className="absolute -z-10 w-[500px] block lg:hidden left-0 bottom-0 opacity-70" />
 
@@ -77,35 +77,8 @@ const FAQs = () => {
         </AccordionItem>
         )
       })}
-     
-      {/* <AccordionItem value="item-1" className="border-b-0">
-        <AccordionTrigger className="bg-gray-700 hover:no-underline  border-b-2 border-violet-500 rounded-lg px-2">1. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet.?</AccordionTrigger>
-        <AccordionContent className="bg-[#12121c] px-4 py-4">
-          Yes. It adheres to the WAI-ARIA design pattern,Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, esse.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-1" >
-        <AccordionTrigger className="bg-gray-700 hover:no-underline  border-b-2 border-violet-500 rounded-lg px-2">1. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet.?</AccordionTrigger>
-        <AccordionContent className="bg-[#12121c] px-4 py-4">
-          Yes. It adheres to the WAI-ARIA design pattern,Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, esse.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger>Is it styled?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It comes with default styles that matches the other
-          components&apos; aesthetic.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3">
-        <AccordionTrigger>Is it animated?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It&apos;s animated by default, but you can disable it if you
-          prefer.
-        </AccordionContent>
-      </AccordionItem> */}
     </Accordion>
-    </div>
+    </div> */}
 
     </>
   );
