@@ -10,6 +10,7 @@ import AboutUs from "@/components/inter/AboutUs";
 import OurPrize from "@/components/inter/OurPrize";
 import Conduction from "@/components/conduction/Conduction";
 import Testimonials from "@/components/testimonials/Testimonials";
+import ISCFAQs from "@/components/FAQs/ISC_FAQs"
 const ISC = () => {
   return (
     <>
@@ -26,17 +27,18 @@ const ISC = () => {
           className="absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
         />
         <Navbar />
-        <Hero maintext="TECHNO SCHOOL PROGRAM" subtext="" />
+        <Hero maintext="Inter School Conclave" subtext="" />
       </div>
 
-      {/* <AboutUs />
+      <AboutUs />
       <Conduction/>
       <RegistrationProcess />
-      <Testimonials/>
+      {/* <Testimonials/> */}
       <OurPrize />
       <Heighlight />
+      <ISCFAQs/>
       <ContactUs />
-      <Footer /> */}
+      <Footer />
     </>
   );
 };

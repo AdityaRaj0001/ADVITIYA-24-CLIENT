@@ -10,15 +10,15 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { MdOutlineArrowDropDownCircle } from "react-icons/md";
-import { FaAnglesDown } from "react-icons/fa6";
 import { CgProfile } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { FaRegWindowClose } from "react-icons/fa";
 import { useRef, useLayoutEffect } from "react";
 import Link from "next/link";
+import { useSelector } from "react-redux";
+import { FaAngleDown } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ order }) => {
   const page1 = useRef();
   const { contextSafe } = useGSAP({ scope: page1 });
   const tl = useRef();
@@ -40,6 +40,7 @@ const Navbar = () => {
     document.querySelector("#sidebar").style.display = "none";
   });
 
+  const { activeUser } = useSelector((state) => state);
   useLayoutEffect(() => {
     const isLargeLaptop = window.innerWidth >= 1280;
     gsap.registerPlugin(ScrollTrigger);
@@ -47,19 +48,18 @@ const Navbar = () => {
     let ctx = gsap.context(() => {
       if (isLargeLaptop) {
         tl.current = gsap.timeline().from("nav #btn", {
-          y:-60,
+          y: -60,
           opacity: 0,
           duration: 0.5,
           ease: "power1.out",
         });
       } else {
-        tl.current = gsap.timeline().from(["#mobile-nav div","#mobile-nav img"], {
-            y:-60,
-            opacity: 0,
-            duration: 0.5,
+        tl.current = gsap.timeline().from(["#mobile-nav div"], {
+          y: -60,
+          opacity: 0,
+          duration: 0.5,
         });
       }
-     
     }, page1);
 
     return () => ctx.revert();
@@ -68,16 +68,57 @@ const Navbar = () => {
     <>
       <div ref={page1}>
         <nav className="hidden h-[65px] z-10 xl:flex items-center justify-between px-[2vw] py-[4vh]">
-        <Link id="btn" href="/" className="z-10">
+          <Link id="btn" href="/" className="z-10">
             <Button variant="ghost">Home</Button>
           </Link>
-          <Link id="btn" href="/events" className="z-10">
-            <Button variant="ghost">Events</Button>
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              id="btn"
+              className="z-10 focus:outline-none focus:ring-0 focus:border-transparent"
+            >
+              <Button variant="ghost">
+                Events <FaAngleDown className="ml-2 text-lg" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="text-white  bg-[#12121c] flex flex-col gap-2 items-center justify-center mt-2 px-2 mr-2">
+              <Link
+                href="/zones"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Zones
+              </Link>
+              <Link
+                href="/competitions"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Competitions
+              </Link>
+              <Link
+                href="/workshops"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Workshops
+              </Link>
+              <Link
+                href="/exhibitions"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Exhibitions
+              </Link>
+              <Link
+                href="/talkshows"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Talk Shows
+              </Link>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Link id="btn" href="/schedule" className="z-10">
             <Button variant="ghost">Schedule</Button>
           </Link>
-          
+          {/* <Link id="btn" href="/sponsors" className="z-10">
+						<Button variant="ghost">Sponsors</Button>
+					</Link> */}
           <Link id="btn" href="/accommodation">
             <Button variant="ghost">Accommodation</Button>
           </Link>
@@ -94,25 +135,33 @@ const Navbar = () => {
             <Button variant="ghost">FAQs</Button>
           </Link>
 
-          <span
+          {/* <span
             id="btn"
             className="relative h-[50px] w-[100px] flex justify-center items-center"
           >
-            <img src="Vector.svg" className="absolute  w-[200px]" alt="" />
+            <img
+              src={order === 1 ? "../Vector.svg" : "./Vector.svg"}
+              className="absolute  w-[80px]"
+              alt=""
+            />
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex z-10 flex-row items-center gap-2 outline-none text-2xl">
-                {" "}
-                <CgProfile />
-                <FaBars />{" "}
+              <DropdownMenuTrigger className="flex z-10 flex-row items-center gap-2 outline-none h-full  text-2xl">
+                {activeUser && activeUser.email ? <FaBars /> : <CgProfile />}
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white bg-[#12121c] mt-2 mr-2">
-                <DropdownMenuItem>Profile</DropdownMenuItem>
-                <Link href="/signup">
-                  <DropdownMenuItem>Login/Register</DropdownMenuItem>
-                </Link>
+              <DropdownMenuContent className="text-white  bg-[#12121c] flex flex-col gap-2 items-center justify-center mt-2  mr-2">
+                {activeUser && activeUser.email ? (
+                  <Link href="/dashboard" className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2">Profile</Link>
+                ) : (
+                  <Link
+                    href="/signin"
+                    className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+                  >
+                    Login/Register
+                  </Link>
+                )}
               </DropdownMenuContent>
             </DropdownMenu>
-          </span>
+          </span> */}
         </nav>
         <nav
           id="sidebar"
@@ -124,13 +173,51 @@ const Navbar = () => {
           <Link id="btn" href="/">
             <Button variant="ghost">Home</Button>
           </Link>
-          <Link id="btn" href="/events" className="z-10">
-            <Button variant="ghost">Events</Button>
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              id="btn"
+              className="z-10 focus:outline-none focus:ring-0 focus:border-transparent"
+            >
+              <Button variant="ghost">
+                Events <FaAngleDown className="ml-2 text-lg" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="text-white  bg-[#12121c] flex flex-col gap-2 items-center justify-center mt-2 px-2 mr-2">
+              <Link
+                href="/zones"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Zones
+              </Link>
+              <Link
+                href="/competitions"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Competitions
+              </Link>
+              <Link
+                href="/workshops"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Workshops
+              </Link>
+              <Link
+                href="/exhibitions"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Exhibitions
+              </Link>
+              <Link
+                href="/talkshows"
+                className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+              >
+                Talk Shows
+              </Link>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Link id="btn" href="/schedule">
             <Button variant="ghost">Schedule</Button>
           </Link>
-          
           <Link id="btn" href="/accommodation">
             <Button variant="ghost">Accommodation</Button>
           </Link>
@@ -147,32 +234,39 @@ const Navbar = () => {
             <Button variant="ghost">FAQs</Button>
           </Link>
 
-          <span
+          {/* <span
             id="btn"
             className="relative h-[50px] w-[100px] flex justify-center items-center"
           >
             <img src="Vector.svg" className="absolute  w-[200px]" alt="" />
             <DropdownMenu>
               <DropdownMenuTrigger className="flex flex-row z-10 items-center gap-2 outline-none text-2xl">
-                {" "}
-                <CgProfile />
-                <FaBars className="hidden xl:block" />{" "}
+                {activeUser && activeUser.email ? <FaBars /> : <CgProfile />}
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-white mt-2 mr-2 bg-[#12121c] ">
-                <DropdownMenuItem>Profile</DropdownMenuItem>
-                <Link href="/signup">
-                  <DropdownMenuItem>Login/Register</DropdownMenuItem>
-                </Link>
+              <DropdownMenuContent className="text-white  bg-[#12121c] flex flex-col gap-2 items-center justify-center mt-2 px-2 mr-2">
+              {activeUser && activeUser.email ? (
+                  <Link href="/dashboard" className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2">Profile</Link>
+                ) : (
+                  <Link
+                    href="/signin"
+                    className="pt-2 rounded-sm hover:text-[#9c78e4] w-full text-center px-2"
+                  >
+                    Login/Register
+                  </Link>
+                )}
               </DropdownMenuContent>
             </DropdownMenu>
-          </span>
+          </span> */}
         </nav>
         <div
           id="mobile-nav"
-          className="flex  relative z-10 h-[30px] xl:hidden px-4 py-8 justify-between items-center"
+          className="flex z-10 h-[30px] xl:hidden px-4 py-8 justify-between items-center"
         >
-            <img className="w-[200px] absolute -left-4 mt-6 " src="./logo.png"/>
-          <div id="left" className="h-full relative w-[20%] flex items-center justify-center">
+          <img className="w-[200px] absolute -left-4 mt-6 " src="./logo.png" />
+          <div
+            id="left"
+            className="h-full relative w-[20%] flex items-center justify-center"
+          >
             {/* <img className="w-[300px] absolute top-0 left-0 " src="./logo.png"/> */}
           </div>
           <div id="right" className="text-2xl" onClick={openSidebar}>

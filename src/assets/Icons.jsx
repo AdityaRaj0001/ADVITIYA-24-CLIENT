@@ -34,12 +34,13 @@ export const CardBorder = () => (
     height="100%"
     className=" object-fill"
     viewBox="0 0 540 567"
-    fill="none"
+    fill="#000"
   >
     <path
       d="M1.22285 1.2231H270H355.422L538.777 152.874V272.66V517.868L472.163 565.777H270H135H1.22262L1.22285 417.75V278.5V1.2231Z"
       stroke="#797979"
       stroke-width="2.44571"
+      
     />
   </svg>
 );
@@ -58,7 +59,7 @@ export const BlueLight = () => (
         cy="336.895"
         rx="91.4551"
         ry="91.4261"
-        fill="#03B9BB"
+        fill="#9c78e4"
       />
     </g>
     <defs>

@@ -60,10 +60,6 @@ const SpacedHorizontalContainer = styled.div`
 `;
 
 
-
-
-
-
 export function Details({smalltext,largetext}){
 
     return <DetailsContainer>

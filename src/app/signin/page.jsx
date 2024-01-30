@@ -10,6 +10,9 @@ import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa6";
 import { userLogin } from "@/apis/api";
 import { toast } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux";
+import { setActiveUser } from "@/redux/userSlice";
+
 
 const defaultUser = {
 	email: "",
@@ -18,9 +21,10 @@ const defaultUser = {
 
 const SignIn = () => {
 	const Router = useRouter();
-
 	const [userData, setUserData] = React.useState(defaultUser);
 	const [passShow, setPassShow] = useState(false);
+	const dispatch = useDispatch();
+	const { activeUser } = useSelector((state) => state);
 
 	const handleValueChange = (e) => {
 		const { name, value } = e.target;
@@ -43,21 +47,24 @@ const SignIn = () => {
 			return toast.warn("Please enter a valid email!");
 		}
 
-		console.log(userData);
 
 		const res = await userLogin(userData);
-		console.log(res);
 
 		if (res?.status === 200) {
 			toast.success("User Logged in Successfully");
-			// const loginData = {
-			// 	email: userData.email,
-			// 	password: userData.password,
-			// };
+			const user = {
+				id: res.data?.thisUser?._id,
+				email: res.data?.thisUser?.email,
+				mobile: res.data?.thisUser?.mobile,
+				name: res.data?.thisUser?.name,
+				college: res.data?.thisUser?.college_name,
+			};
+
+			dispatch(setActiveUser(user));
 
 			if (res.data?.token) {
 				localStorage.setItem("userToken", res.data.token);
-				Router.push("/dashboard");
+				Router.push(`/dashboard?token=${res.data.token}`);
 			} else {
 				toast.error("Something went wrong, please try again later");
 			}
@@ -79,7 +86,7 @@ const SignIn = () => {
 							<CardDescription>Nice to have you here again</CardDescription>
 						</CardHeader>
 						<CardContent className="grid gap-4">
-							{/* <div className="flex items-center ">
+							<div className="flex items-center ">
 								<Button className="bg-transparent" onClick={handleGoogleLogin}>
 									<img src="grommet-icons_google.svg" className="mr-2" />
 									Continue with Google
@@ -92,7 +99,7 @@ const SignIn = () => {
 								<div className="relative flex justify-center text-xs uppercase">
 									<span className="bg-background px-2 text-muted-foreground bg-[#12121c]">Or continue with</span>
 								</div>
-							</div> */}
+							</div>
 							<div className="grid gap-2 ">
 								<Label htmlFor="email">Email Address</Label>
 								<Input type="email" name="email" id="email" className="text-xs lg:text-sm text-black" placeholder="Enter your email address" onChange={(e) => handleValueChange(e)} required />
@@ -108,12 +115,15 @@ const SignIn = () => {
 							</div>
 						</CardContent>
 						<CardFooter className="flex-col">
-							<Button disabled={true} className="w-full mb-2 bg-transparent relative " onClick={(e) => handleSubmit(e)}>
-								<img src="Rectangle 356.svg" className="absolute w-full  " alt="" />
+							<Button disabled={!userData || !userData.email} className="w-full mb-2 bg-transparent relative" onClick={(e) => handleSubmit(e)}>
+								<img src="Rectangle 356.svg" className="absolute w-full" alt="" />
 								<p className="z-10">Login</p>
 							</Button>
 							<Button className="w-full text-[10px] sm:text-[12px]" variant={"secondary"} onClick={() => Router.push("/signup")}>
-								Not a Registered User ? SignUp.
+								Not a Registered User? SignUp.
+							</Button>
+							<Button className="w-full text-[10px] sm:text-[12px] mt-2" variant={"secondary"} onClick={() => Router.push("/forgot-password")}>
+								Forgot Password
 							</Button>
 						</CardFooter>
 					</Card>

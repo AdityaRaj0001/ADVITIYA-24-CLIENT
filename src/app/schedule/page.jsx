@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "@/components/footer/Footer";
 import ScheduleComponet from "@/components/schedule/Schedule";
 import Navbar from "@/components/Navbar/index";
-import Hero from "@/components/Hero";
+import Hero from "@/components/Hero/index 2";
 const Schedule = () => {
   return (
     <>
@@ -22,8 +22,8 @@ const Schedule = () => {
         <Navbar />
         <Hero maintext="Schedule" subtext="" />
       </div>
-{/* 
-      <ScheduleComponet />
+
+      {/* <ScheduleComponet />
       <Footer /> */}
     </>
   );

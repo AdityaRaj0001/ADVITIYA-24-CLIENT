@@ -79,15 +79,11 @@ const Signup = () => {
     console.log(res);
 
     if (res?.status === 201) {
-      toast.success("User Registered Successfully");
-      // const loginData = {
-      // 	email: userData.email,
-      // 	password: userData.password,
-      // };
+      toast.success("User Registered Successfully")
 
       if (res.data?.token) {
         localStorage.setItem("userToken", res.data.token);
-        Router.push("/dashboard");
+        Router.push(`/dashboard?token=${res.data.token}`);
         setTimeout(() => {
           toast.info("Please check your email!");
         }, 4000);
@@ -112,7 +108,7 @@ const Signup = () => {
 						</CardHeader>
 						{nextclicked ? (
 							<CardContent className="grid gap-4 ">
-								{/* <div className="flex items-center">
+								<div className="flex items-center">
 									<Button className="bg-transparent" onClick={handleGoogleLogin}>
 										<img src="grommet-icons_google.svg" className="mr-2" />
 										Continue with Google
@@ -125,7 +121,7 @@ const Signup = () => {
 									<div className="relative flex justify-center z-0 text-s uppercase">
 										<span className="bg-background px-2 text-muted-foreground bg-[#12121c]">Or continue with</span>
 									</div>
-								</div> */}
+								</div>
 								<div className="grid gap-2 ">
 									<Label htmlFor="email">Email Address</Label>
 									<Input type="email" name="email" id="email" className="text-xs lg:text-sm text-black" placeholder="Enter your email address" onChange={(e) => handleValueChange(e)} required />
@@ -151,7 +147,7 @@ const Signup = () => {
 							</CardContent>
 						) : (
 							<CardContent className="grid gap-4 ">
-								{/* <div className="flex items-center">
+								<div className="flex items-center">
 									<Button className="bg-transparent" onClick={handleGoogleLogin}>
 										<img src="grommet-icons_google.svg" className="mr-2" />
 										Continue with Google
@@ -164,7 +160,7 @@ const Signup = () => {
 									<div className="relative flex justify-center z-0 text-s uppercase">
 										<span className="bg-background px-2 text-muted-foreground bg-[#12121c]">Or continue with</span>
 									</div>
-								</div> */}
+								</div>
 								<div className="grid gap-2 ">
 									<Label htmlFor="name">Full Name</Label>
 									<Input type="text" name="name" id="name" className="text-xs lg:text-sm text-black" placeholder="Enter your full name" onChange={(e) => handleValueChange(e)} required />
@@ -182,7 +178,7 @@ const Signup = () => {
 
 						<CardFooter className="flex-col">
 							{nextclicked ? (
-								<Button className="w-full mb-2 bg-transparent relative " onClick={(e) => handleSubmit(e)} disabled={true}>
+								<Button className="w-full mb-2 bg-transparent relative " onClick={(e) => handleSubmit(e)} disabled={!userData || !userData.password}>
 									<img src="Rectangle 356.svg" className="absolute w-full  " alt="" />
 									<p className="z-10">Create Account</p>
 								</Button>

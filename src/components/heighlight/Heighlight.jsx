@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import HeadingBg from "../../assets/images/headingBg.svg";
 import heighlightImage from "../../assets/images/heighlight.png";
 import hexagonal2 from "../../assets/images/hexagonal2.svg";
@@ -7,10 +7,7 @@ import { LeftArrow, RightArrow } from "@/assets/Icons";
 import HighlightsData from "./data";
 
 const Heighlight = () => {
-
-  const [highlightindex, sethighlightindex] = useState(0)
-  console.log(highlightindex)
-
+  const [highlightindex, sethighlightindex] = useState(0);
 
   return (
     <div className="relative h-[700px] lg:h-auto">
@@ -126,31 +123,43 @@ const Heighlight = () => {
                 </h2>
               </div>
 
-              <h2 className="lg:text-[50px]  text-3xl uppercase italic mt-2 lg:mt-8">{HighlightsData[highlightindex].title}</h2>
+              <h2 className="lg:text-[30px] text-center  text-3xl uppercase italic mt-8 lg:mt-8 lg:text-left px-2">
+                {HighlightsData[highlightindex].title}
+              </h2>
 
-          
+              <div className="h-[30vh] mt-8 mb-8 flex items-center justify-center relative z-10 lg:mt-8 lg:hidden">
+                <img
+                  src={HighlightsData[highlightindex].image}
+                  alt="vgg"
+                  className="h-[100%] object-contain"
+                />
+              </div>
 
-              <div className="h-[30vh] flex items-center justify-center relative z-10 lg:mt-8 lg:hidden">
-              <img
-                src={HighlightsData[highlightindex].image}
-                alt="vgg"
-                className="h-[100%] object-contain"
-              />
-            </div>
-
-              <p className="lg:mt-8 p-2 text-sm lg:text-base">
-               {HighlightsData[highlightindex].desc}
+              <p
+                className={`lg:mt-8 p-2 ${
+                  HighlightsData[highlightindex].desc.length > 250
+                    ? "text-sm"
+                    : "text-md"
+                }`}
+              >
+                {HighlightsData[highlightindex].desc}
               </p>
 
-              <div className="mt-5  flex justify-center gap-4 lg:justify-start lg:gap-8">
-                {highlightindex!=0 &&  <button onClick={()=>sethighlightindex((prev)=>prev-1)} disabled={highlightindex===0}>
-                 <RightArrow />
-                </button>}
-               
-                {highlightindex!==HighlightsData.length-1 &&   <button  onClick={()=>sethighlightindex((prev)=>prev+1)} >
-                  <LeftArrow />
-                </button>}
-              
+              <div className="mt-5  z-50 flex justify-center gap-4 lg:justify-start lg:gap-8">
+                {highlightindex != 0 && (
+                  <button
+                    onClick={() => sethighlightindex((prev) => prev - 1)}
+                    disabled={highlightindex === 0}
+                  >
+                    <RightArrow />
+                  </button>
+                )}
+
+                {highlightindex !== HighlightsData.length - 1 && (
+                  <button onClick={() => sethighlightindex((prev) => prev + 1)}>
+                    <LeftArrow />
+                  </button>
+                )}
               </div>
             </div>
 
@@ -158,12 +167,12 @@ const Heighlight = () => {
               <img
                 src={HighlightsData[highlightindex].image}
                 alt="vgg"
-                className=" lg:h-[60%]  object-contain"
+                className=" lg:h-[80%] lg:mb-8 object-contain"
               />
             </div>
 
             <div
-              className=" absolute hidden lg:block text-center uppercase italic w-full text-[100px] opacity-25 text-transparent"
+              className="absolute hidden lg:block text-center uppercase italic w-full text-[100px] opacity-25 text-transparent"
               style={{ bottom: -60, WebkitTextStroke: "3px white " }}
             >
               Highlights

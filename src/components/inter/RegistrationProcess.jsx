@@ -9,7 +9,8 @@ import hexagonal from "../../assets/images/hexagonal.svg";
 
 const RegistrationProcess = () => {
   return (
-    <div className="relative w-full overflow-x-hidden text-white">
+    <div className="relative w-full overflow-hidden text-white">
+      <img src="./Registrationdesign.svg" className="-z-10 absolute right-0 -bottom-12 xl:bottom-12 w-[300px]"/>
     
       
       <div className="w-[90%] mx-auto lg:my-[130px] my-[40px] relative z-10">
@@ -22,42 +23,31 @@ const RegistrationProcess = () => {
 
               <div className="absolute top-0 right-0 left-0 bottom-0 lg:px-[45px] lg:py-[41px] p-5">
                 <h2 className="lg:mb-4 mb-2 lg:text-[25px] text-[22px] italic uppercase">
-                  Open Olympiad
+                  From Schools Side:
                 </h2>
 
                 <ul className="flex flex-col gap-3">
                   <li className="flex gap-3 text-sm lg:text-base">
                     <span>•</span>
                     <span>
-                      The participation fees for Open Olympiad are INR 50 per
-                      participant for category-1(8th, 9th and 10th class)
-                      students and INR 100 per participant for category-2(11th
-                      and 12th class) students.
+                    Schools will provide us the details of the students and the competitions in which the students will be participating
                     </span>
                   </li>
-                  <li className="flex gap-3 text-sm lg:text-base">
+                  <li className="flex  gap-3 text-sm lg:text-base">
                     <span>•</span>{" "}
                     <span>
                       {" "}
-                      Schools are requested to collect money from the students
-                      and register them through the Google Form
+                      Schools are requested to collect the registration fee from the students
+                      and register them through the google form.
                     </span>
                   </li>
-                  <li className="flex gap-3 text-sm lg:text-base">
-                    <span>•</span>{" "}
-                    <span>
-                      {" "}
-                      If a student is registering directly then he/she needs to
-                      register through this form This form will be open till
-                      15th march 11:59 pm.
-                    </span>
-                  </li>
+                    <a href="https://forms.gle/aZMNnWg1FPxjVf278" target="_blank" className="underline text-md ml-4 uppercase text-gray-100 tracking-wider">Link</a>
                 </ul>
               </div>
             </div>
           </div>
 
-          <div className="lg:mt-[130px]">
+          {/* <div className="lg:mt-[130px]">
             <div className="h-full relative">
               <Image src={cardBg2} className="w-full " />
 
@@ -113,7 +103,7 @@ const RegistrationProcess = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="">
             <div className="h-full relative">
@@ -121,24 +111,23 @@ const RegistrationProcess = () => {
 
               <div className="absolute top-0 right-0 left-0 bottom-0 lg:px-[45px] lg:py-[41px] p-5">
                 <h2 className="lg:mb-4 mb-3 lg:text-[25px] text-[22px] italic uppercase">
-                  Techwalk
+                  Individual Student:
                 </h2>
 
                 <ul className="flex flex-col gap-3">
                   <li className="flex gap-3 lg:text-base text-sm ">
                     <span>•</span>
-                    <span>
-                      The participation fees for Junior Scientist Competition
-                      are INR 150 per team
+                    <span>Student can register for ISC from the registration link given below.
                     </span>
                   </li>
-                  <li className="flex gap-3 lg:text-base text-sm">
+                  <li className="flex gap-3 lg:text-base text-sm ">
                     <span>•</span>
                     <span>
-                      Individual registration by each team is required.
+                    Entry Pass will be provided on-spot at the main gate after successful verification. Please carry your entry pass and one ID along with you throughout the fest activities.
                     </span>
                   </li>
-                  <li className="flex gap-3 lg:text-base text-sm">
+                  <a href="https://forms.gle/xopvcxra9YnBig1h8" target="_blank" className="underline text-md ml-4 uppercase text-gray-100 tracking-wider">Link</a>
+                  {/* <li className="flex gap-3 lg:text-base text-sm">
                     <span>•</span>
                     <span>
                       Only one member from a team are requested to do the same
@@ -151,7 +140,7 @@ const RegistrationProcess = () => {
                         Google Form
                       </a>
                     </span>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

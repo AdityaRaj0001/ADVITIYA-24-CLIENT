@@ -30,7 +30,7 @@ const Page = () => {
        setloading(false);
      }
 
-      //  Add event listener for beforeunload
+    //   //  Add event listener for beforeunload
     window.addEventListener("beforeunload", () => {
       // Clear sessionStorage to reset the flag on hard reload
       sessionStorage.removeItem("hasBeenOpenedBefore");

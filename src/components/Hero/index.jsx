@@ -3,7 +3,7 @@ import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaAnglesDown } from "react-icons/fa6";
-const Index = ({ maintext, subtext }) => {
+const Index = ({ maintext, subtext, imgsrc, order }) => {
   const page1 = useRef();
   const tl = useRef();
   useLayoutEffect(() => {
@@ -12,19 +12,19 @@ const Index = ({ maintext, subtext }) => {
     let ctx = gsap.context(() => {
       tl.current = gsap
         .timeline()
-        // .from(["#heromain"], {
-        //   delay: 1.5,
-        //   y: -100,
-        //   opacity: 0,
-        //   duration: 1,
-        //   ease: "back.out(1.7)",
-        // })
-        // .from([".asset"], {
-        //   opacity: 0,
-        //   duration: 0.5,
-        //   stagger: 0.3,
-        //   // ease: "back.out(1.7)",
-        // })
+        .from(["#heromain"], {
+          delay: 1.5,
+          y: -100,
+          opacity: 0,
+          duration: 1,
+          ease: "back.out(1.7)",
+        })
+        .from([".asset"], {
+          opacity: 0,
+          duration: 0.5,
+          stagger: 0.3,
+          // ease: "back.out(1.7)",
+        })
         .from("#scrolldown", {
           y: -80,
           opacity: 0,
@@ -53,9 +53,9 @@ const Index = ({ maintext, subtext }) => {
   return (
     <div
       ref={page1}
-      className="h-[calc(100%-65px)] relative hero flex flex-col gap-10 justify-center items-center overflow-hidden w-[100%] "
+      className="pointer-events-none h-[calc(100%-65px)] relative hero flex flex-col gap-10 justify-center items-center overflow-hidden w-[100%] "
     >
-      {/* <div
+      <div
         id="hero"
         className="relative flex items-center justify-center xl:w-[100vw] h-[100%]"
       >
@@ -66,7 +66,7 @@ const Index = ({ maintext, subtext }) => {
           <h1
             className={`${
               maintext.length > 10
-                ? "text-4xl sm:text-5xl text-center md:text-6xl lg:text-6xl font-bold herotext"
+                ? "text-4xl sm:text-5xl lg:text-6xl text-center   font-bold herotext"
                 : "text-4xl sm:text-6xl text-center md:text-7xl lg:text-8xl xl:text-7xl font-bold herotext"
             }`}
           >
@@ -78,33 +78,59 @@ const Index = ({ maintext, subtext }) => {
         </div>
         <div className="relative   xl:flex xl:items-center xl:justify-center h-[70%] sm:h-[75%] md:h-[80%] xl:w-1/2 xl:h-[100%]">
           <img
-            src="./Arwork1.svg"
-            className=" z-30 opacity-70 xl:opacity-100  asset h-[100%] xl:h-[80%] "
+            src={
+              order === 2
+                ? imgsrc
+                : order === 1
+                ? "../Arwork 1.png"
+                : "./Arwork 1.png"
+            }
+            className="z-30 object-contain mt-16  xl:mt-0 opacity-70 xl:opacity-100  asset w-[100%] sm:w-[70%] xl:h-[80%] "
           />
           <img
-            src="./Vector Smart Object 1.svg"
+            src={`${
+              order === 2
+                ? "../../Vector Smart Object 1.svg"
+                : order === 1
+                ? "../Vector Smart Object 1.svg"
+                : "./Vector Smart Object 1.svg"
+            }`}
             className="absolute asset blur-sm z-10  h-[90px] top-24 -right-12 xl:top-44 xl:right-8"
           />
           <img
-            src="./Asset 9@4x 1.svg"
+            src={`${
+              order === 2
+                ? "../../Asset 9@4x 1.svg"
+                : order === 1
+                ? "../Asset 9@4x 1.svg"
+                : "./Asset 9@4x 1.svg"
+            }`}
             className="absolute asset z-10  h-[90px] bottom-44 -left-12 xl:bottom-64 xl:left-4 xl:h-[120px] "
           />
           <img
-            src="./Asset 4@10x 1.svg"
-            className="hidden xl:block xl:absolute asset z-10 h-[60px]  xl:top-32 xl:left-44 xl:h-[100px]"
+            src={`${
+              order === 2
+                ? ""
+                : order === 1
+                ? "../Asset 4@10x 1.svg"
+                : "./Asset 4@10x 1.svg"
+            }`}
+            className={`xl:block xl:absolute asset z-10 h-[60px] xl:top-32 xl:left-44 xl:h-[100px] ${
+              order === 1 || order === 0 ? "block" : "hidden"
+            }`}
           />
         </div>
-      </div> */}
+      </div>
 
-      {/* <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
+      <div id="scrolldown" className=" absolute bottom-10 text-5xl mt-20">
         <FaAnglesDown />
-      </div> */}
-      <div
+      </div>
+      {/* <div
         id="scrolldown"
         className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-widest mt-20"
       >
         <h1>Coming Soon</h1>
-      </div>
+      </div> */}
     </div>
   );
 };
