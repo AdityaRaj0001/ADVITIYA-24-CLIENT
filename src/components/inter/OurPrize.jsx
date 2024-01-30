@@ -31,7 +31,7 @@ const OurPrize = () => {
             Science & Art Competition
           </h2>
           <p className="text-xs opacity-90 pt-4">
-          Advitiya 2024's Inter School Conclave's Science and Art competition offers top three teams trophies, certificates, and medals.
+          Advitiya 2024&apos;s Inter School Conclave&apos;s Science and Art competition offers top three teams trophies, certificates, and medals.
           </p>
           <p className="text-xs opacity-90 pt-4">
             All the participants of Science and Art competition shall be
