@@ -35,7 +35,7 @@ const FAQs = () => {
     <Accordion type="single" collapsible className="w-[90%] max-w-4xl">
       {data.map((obj,i)=>{
         return (
-          <AccordionItem value={`item-${i}`} className="border-b-0 mb-4">
+          <AccordionItem key={i} value={`item-${i}`} className="border-b-0 mb-4">
           <AccordionTrigger className="bg-gray-900 hover:no-underline h-14  border-b-2 border-violet-500 rounded-lg px-2">{obj.Q}</AccordionTrigger>
           <AccordionContent className="bg-transparent px-4 py-4">
             {obj.A}

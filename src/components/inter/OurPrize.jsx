@@ -14,7 +14,7 @@ const OurPrize = () => {
         <div className="lg:px-4">
           <h2 className="text-xl uppercase italic">Quiz Competition</h2>
           <p className="text-xs opacity-90 pt-4 ">
-          Advitiya 2024's Inter School Conclave's quiz competition offers top three teams trophies, certificates, and medals.
+          Advitiya 2024&apos;s Inter School Conclave&apos;s quiz competition offers top three teams trophies, certificates, and medals.
           </p>
           <p className="text-xs opacity-90 pt-4">
           Participants earn certificates of participation, recognizing their engagement. 

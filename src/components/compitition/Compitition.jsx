@@ -59,7 +59,7 @@ const Compitition = () => {
 
         <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-[50px] gap-[30px] lg:my-[100px] my-[40px] ">
           {data?.map((item, i) => {
-            return <Link href={item.redirectURL}><Card data={item} key={i} /></Link>;
+            return <Link href={item.redirectURL} key={i}><Card data={item}  /></Link>;
           })}
         </div>
       </div>
