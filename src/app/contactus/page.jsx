@@ -141,6 +141,24 @@ const Data = [
     Email: "2021CSB1061@iitrpr.ac.in",
   },
   {
+    Designation: "Workshop/Talks & Exhibitions Head",
+    Name: "POOJA GOYAL",
+    Contact: "7986901782",
+    Email: "2020CSB1108@iitrpr.ac.in",
+  },
+  {
+    Designation: "Workshop/Talks & Exhibitions Head",
+    Name: "SAKSHAM BANSAL",
+    Contact: "7082882902",
+    Email: "2021MCB1243@iitrpr.ac.in",
+  },
+  {
+    Designation: "Workshop/Talks & Exhibitions Head",
+    Name: "ANKUR AGGARWAL",
+    Contact: "9718916355",
+    Email: "2021MEB1268@iitrpr.ac.in",
+  },
+  {
     Designation: "Finance / Budget Head",
     Name: "HARSHIT GUPTA",
     Contact: "7007507732",
@@ -217,24 +235,6 @@ const Data = [
     Name: "MANAN DANGWAL",
     Contact: "9711575933",
     Email: "2021EEB1186@iitrpr.ac.in",
-  },
-  {
-    Designation: "Workshop/Talks & Exhibitions Head",
-    Name: "POOJA GOYAL",
-    Contact: "7986901782",
-    Email: "2020CSB1108@iitrpr.ac.in",
-  },
-  {
-    Designation: "Workshop/Talks & Exhibitions Head",
-    Name: "SAKSHAM BANSAL",
-    Contact: "7082882902",
-    Email: "2021MCB1243@iitrpr.ac.in",
-  },
-  {
-    Designation: "Workshop/Talks & Exhibitions Head",
-    Name: "ANKUR AGGARWAL",
-    Contact: "9718916355",
-    Email: "2021MEB1268@iitrpr.ac.in",
   },
 ];
 const Contactus = () => {

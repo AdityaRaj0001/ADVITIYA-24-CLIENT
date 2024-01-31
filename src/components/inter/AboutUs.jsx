@@ -16,7 +16,7 @@ const AboutUs = () => {
               style={{ bottom: -50, left: -100 }}
               src={aboutUsCyclone}
             />
-            <Image src={aboutUsCard1} className="relative z-10" />
+            <Image src={aboutUsCard1} className="relative  z-10" />
 
             <div className="absolute z-10 top-0 right-0 left-0 bottom-0 lg:px-[50px] lg:py-[60px] px-5 py-7">
               <h2 className="lg:text-xl text-base uppercase italic">
@@ -26,15 +26,11 @@ const AboutUs = () => {
                 <span className=" opacity-90">
                   <span className="lg:hidden">
                     {" "}
-                    Zeitgeist’23 presents the second edition of ISC,i.e, Techno
-                    School Program, a school outreach program for 8th to
-                    12th-grade students. It consists of an annual competition
-                    wherein students compete in two phases of the Open Olympiad
-                    and
+                    Advitya&apos;24 hosts ISC, an outreach for 6th to 12th-grade students. The event features an annual competition with Open Olympiad and Quiz & Science/Art phases on the theme India@2047. Phase 1 is in schools, and on February 17th, phase 2 includes the Quiz Competition, Campus Tour, IAS/IPS and Defense Panel talks, and the competition itself.
                   </span>
 
                   <span className="hidden lg:block">
-                  Advitya’24 presents the First edition of ISC,i.e, INTER SCHOOL CONCLAVE, a school outreach program for 6th to 12th-grade students. It consists of an annual competition wherein students compete in two phases of the Open Olympiad and second phase consist of Quiz and Science and Art Competition on our theme India@2047 . Phase 1 of the Olympiad will be conducted in schools if the school is participating .On 17th February for the phase 2 students will be arriving on campus for theQuiz Competition, Campus tour,IAS/IPS and defence panel talks and Competition .
+                  Advitya&apos;24 presents the First edition of ISC,i.e, INTER SCHOOL CONCLAVE, a school outreach program for 6th to 12th-grade students. It consists of an annual competition wherein students compete in two phases of the Open Olympiad and second phase consist of Quiz and Science and Art Competition on our theme India@2047 . Phase 1 of the Olympiad will be conducted in schools if the school is participating .On 17th February for the phase 2 students will be arriving on campus for theQuiz Competition, Campus tour,IAS/IPS and defence panel talks and Competition .
                   </span>
                 </span>{" "}
               </p>

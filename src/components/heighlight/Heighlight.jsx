@@ -10,7 +10,7 @@ const Heighlight = () => {
   const [highlightindex, sethighlightindex] = useState(0);
 
   return (
-    <div className="relative h-[700px] lg:h-auto">
+    <div className="relative h-[700px] lg:h-auto z-50">
       <div className="absolute right-0 w-[400px] opacity-25 hidden lg:block">
         <Image src={hexagonal2} className="w-full" />
       </div>
@@ -113,10 +113,10 @@ const Heighlight = () => {
               <div className="relative">
                 <Image
                   src={HeadingBg}
-                  className="lg:w-[279px] w-[200px] h-[50px] object-contain"
+                  className="lg:w-[279px] w-[270px] h-[50px] object-contain"
                 />
                 <h2
-                  className="absolute top-[50%] lg:left-[20px] left-[10px] lg:text-[18px] text-[14px]"
+                  className="absolute top-[50%] lg:left-[20px] left-[10px] lg:text-[18px] text-[18px]"
                   style={{ transform: "translateY(-50%)" }}
                 >
                   Our Highlights

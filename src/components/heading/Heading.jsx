@@ -7,10 +7,10 @@ const Heading = ({ title, heading }) => {
       <div className="relative">
         <Image
           src={HeadingBg}
-          className="w-[200px] lg:w-[250px] h-[45px] object-contain"
+          className="w-[240px] lg:w-[270px] h-[45px] object-contain"
         />
         <h2
-          className="absolute top-[50%] lg:left-[20px] left-[14px] lg:text-[18px] text-[14px]"
+          className="absolute top-[50%] lg:left-[28px] left-[18px] lg:text-[22px] text-[20px]"
           style={{ transform: "translateY(-50%)" }}
         >
           {title}

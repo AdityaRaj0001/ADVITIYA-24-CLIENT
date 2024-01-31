@@ -112,7 +112,7 @@ const Merchandise = () => {
               <div className="relative">
                 <Image
                   src={HeadingBg}
-                  className="lg:w-[309px] w-[200px] h-[60px] object-contain"
+                  className="lg:w-[329px] w-[230px] h-[60px] object-contain"
                 />
                 <h2
                   className="absolute top-[50%] lg:left-[20px] left-[10px] lg:text-[18px] text-[14px]"
@@ -142,11 +142,11 @@ Form Link - https://forms.gle/4UHWXV5SRPHMAADaA">Click to view details</a>
               </p>
             </div>
 
-            <div className="h-[400px] w-full relative items-center justify-center z-10 hidden lg:flex">
+            <div className="h-[400px] w-full text-center relative items-center justify-center z-10 hidden lg:flex">
               <img
                 src='../FEST T SHIRT.jpeg'
                 alt="merchimage"
-                className=" lg:h-[60%]  object-contain"
+                className=" lg:h-[60%]   object-contain"
               />
             </div>
 

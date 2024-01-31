@@ -115,9 +115,9 @@ const Index = ({ maintext, subtext, imgsrc, order }) => {
                 ? "../Asset 4@10x 1.svg"
                 : "./Asset 4@10x 1.svg"
             }`}
-            className={`xl:block xl:absolute asset z-10 h-[60px] xl:top-32 xl:left-44 xl:h-[100px] ${
+            className={` xl:block xl:absolute asset z-10 h-[60px] xl:top-32 xl:left-44 xl:h-[100px] ${
               order === 1 || order === 0 ? "block" : "hidden"
-            }`}
+            } hidden`}
           />
         </div>
       </div>

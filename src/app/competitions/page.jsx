@@ -56,7 +56,7 @@ const Main = () => {
         className="absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
       />
       <Navbar />
-      <Hero maintext="Competitions" subtext="Page" order={0}/>
+      <Hero maintext="Competitions" subtext="" order={0}/>
     </div>
 
       <Hovercard />
