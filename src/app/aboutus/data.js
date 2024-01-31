@@ -29,6 +29,33 @@ export const TeamDetails = [
     Name: "Pritam Das",
     Image: "./pritam.jpeg",
   },
+  
+  {
+    Designation: "ISC Head",
+    Name: "Shashank Kumar",
+    Image: "./shashank.jpeg",
+  },
+  {
+    Designation: "ISC Head",
+    Name: "Akshit Singh",
+    Image: "./akshit.jpeg",
+  },
+  {
+    Designation: "ISC Executive",
+    Name: "Subham",
+    Image: "./subham.jpeg",
+  },
+  {
+    Designation: "ISC Executive",
+    Name: "Devanshu Dhawan",
+    Image: "./devanshu.jpeg",
+  },
+  
+  {
+    Designation: "ISC Executive",
+    Name: "Alankrit Kadian",
+    Image: "./Alankrit.jpeg",
+  },
   {
     Designation: "Sponsorship (Marketing) Executive",
     Name: "Aabhas Agarwal",
@@ -68,32 +95,6 @@ export const TeamDetails = [
     Designation: "Event Management Competitions Head",
     Name: "Kartik Tiwari",
     Image: "./Arwork 1.jpeg",
-  },
- 
-  {
-    Designation: "Inter-School Conclave Head",
-    Name: "Akshit Singh",
-    Image: "./akhsit.jpeg",
-  },
-  {
-    Designation: "Inter-School Conclave Head",
-    Name: "Shashank Kumar",
-    Image: "./Arwork 1.jpeg",
-  },
-  {
-    Designation: "Executive",
-    Name: "Devanshu Dhawan",
-    Image: "./devansh.jpg",
-  },
-  {
-    Designation: "Executive",
-    Name: "Subham",
-    Image: "./subham.jpeg",
-  },
-  {
-    Designation: "Executive",
-    Name: "Alankrit Kadian",
-    Image: "./Alankrit.jpeg",
   },
   {
     Designation: "Finance/Budget Head",
