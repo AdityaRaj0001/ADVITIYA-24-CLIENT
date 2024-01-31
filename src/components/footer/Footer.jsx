@@ -154,6 +154,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
+          {/* <div className="flex flex-col w-[100vw] h-[20vh]"></div>
+          <div className="text-bold text-sm w-[100vw] mt-4 h-[10vh]"> | In Collaboration with Vermillion TECH |</div>
+          <div className="text-bold text-sm w-[100vw] mt-4 h-[10vh]"> | ADVITIYA&apos;24| All rights reserved |</div> */}
         </div>
       </div>
     </div>
