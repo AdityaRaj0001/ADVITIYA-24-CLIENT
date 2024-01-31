@@ -17,13 +17,13 @@ const Data = [
   {
     Designation: "Overall Coordinator",
     Name: "ADITYA KUMAR SAHU",
-    Contact: "", 
+    Contact: "7222999725", 
     Email: "2021MCB1228@iitrpr.ac.in",
   },
   {
     Designation: "Sponsorship Head",
     Name: "NAVIKET MANKOO",
-    Contact: "",
+    Contact: "6283504891",
     Email: "2021MCB1239@iitrpr.ac.in",
   },
   {
