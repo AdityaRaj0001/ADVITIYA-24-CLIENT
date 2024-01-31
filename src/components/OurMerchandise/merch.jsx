@@ -126,7 +126,7 @@ const Merchandise = () => {
                 Into The Future
               </h2>
 
-              <div className="h-[30vh] flex items-center justify-center relative z-10 lg:mt-8 lg:hidden">
+              <div className="h-[30vh] flex items-center justify-center relative z-10 mt-4 mb-4 lg:mt-8 lg:hidden">
                 <img
                   src='../FEST T SHIRT.jpeg'
                   alt="vgg"
@@ -137,8 +137,7 @@ const Merchandise = () => {
               <p className="lg:mt-8 p-2 text-sm lg:text-base">
               Elevate your style with ADVITIYA&apos;s exclusive merchandise – a fusion of innovation and sophistication, capturing the essence of IIT Ropar&apos;s dynamic tech fest.
               
-              <a className="block mt-4 underline text-[#cd71f1] text-md" target="_blank" href="https://drive.google.com/file/d/1W3yQQ5LJyf1-BCFqHI_8k7zM0l4yqZZG/view?usp=sharing
-Form Link - https://forms.gle/4UHWXV5SRPHMAADaA">Click to view details</a>
+              <a className="block mt-4 underline text-[#cd71f1] text-md" target="_blank" href="https://forms.gle/4UHWXV5SRPHMAADaA">Click to open</a>
               </p>
             </div>
 

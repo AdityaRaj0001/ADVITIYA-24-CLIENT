@@ -264,7 +264,7 @@ const Navbar = ({ order }) => {
           id="mobile-nav"
           className="flex z-10 h-[30px] xl:hidden px-4 py-8 justify-between items-center"
         >
-          <img onClick={()=>Router.push("/")} className="w-[200px] absolute -left-4 mt-6 " src="./logo.png" />
+          <img onClick={()=>Router.push("/")} className="w-[200px] cursor-pointer absolute -left-4 mt-6 " src="./logo.png" />
           <div
             id="left"
             className="h-full relative w-[20%] flex items-center justify-center"

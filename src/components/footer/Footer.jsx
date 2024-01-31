@@ -4,6 +4,7 @@ import footerborder from "../../assets/images/footerborder.svg";
 import logoBorder from "../../assets/images/logoBorder.png";
 import logo from "../../assets/images/logo.png";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import {
   FaFacebook,
   FaYoutubeSquare,
@@ -12,6 +13,7 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  const Router=useRouter()
   return (
     <div className="lg:h-[500px] mt-36 lg:mt-24 relative">
       <div className="absolute bottom-0 hidden lg:block">
@@ -26,7 +28,7 @@ const Footer = () => {
           <div className="h-full relative lg:col-span-2 col-span-8 items-center flex lg:block justify-center">
             <Image className="w-[200px] h-[200px]" src={logoBorder} />
             <div className="absolute flex items-center  justify-center mx-auto w-[200px] h-[200px] top-0 lg:left-0 bottom-0 p-4">
-              <img src="./logo.png" className="w-[100%]" />
+              <img src="./logo.png" onClick={()=>Router.push("/")} className="w-[100%] cursor-pointer" />
             </div>
           </div>
 
