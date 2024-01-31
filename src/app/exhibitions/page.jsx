@@ -24,10 +24,14 @@ const Hovercard = () => {
     <>
       <GridContainer className="bg-[#12121c]">
         {exhibitionsData.map((exhibition, index) => (
-          <Link key={index} href={exhibition.redirectURL}>
-            <Card4  text={exhibition.text} 
+          // <Link key={index} href={exhibition.redirectURL}>
+          //   <Card4  text={exhibition.text} 
+          //     image={exhibition.image}/>
+          // </Link>
+          
+            <Card4 key={index} text={exhibition.text} 
               image={exhibition.image}/>
-          </Link>
+          
         ))}
 
       </GridContainer>

@@ -62,7 +62,7 @@ const FAQs = () => {
       <Navbar />
       <Hero  maintext="FAQs  Page" subtext="" />
     </div>
-    {/* <div className="h-[100vh] mt-12 text-white relative z-20 flex  justify-center  w-full">
+    <div className="h-[100vh] mt-12 text-white relative z-20 flex  justify-center  w-full">
       <img src="./Registrationdesign.svg" className="absolute -z-10 w-[300px] hidden lg:block lg:w-[400px]  lg:-top-[20%] lg:right-0" />
       <img src="./Testimonialbg.svg" className="absolute -z-10 w-[500px] block lg:hidden left-0 bottom-0 opacity-70" />
 
@@ -70,15 +70,15 @@ const FAQs = () => {
       {data.map((obj,i)=>{
         return (
           <AccordionItem value={`item-${i}`} className="border-b-0 mb-4">
-          <AccordionTrigger className="bg-gray-900 hover:no-underline h-14  border-b-2 border-violet-500 rounded-lg px-2">{obj.Q}</AccordionTrigger>
+          <AccordionTrigger className="bg-gray-900 hover:no-underline h-14  border-b-2 border-violet-500 rounded-lg px-2">{obj.q}</AccordionTrigger>
           <AccordionContent className="bg-transparent px-4 py-4">
-            {obj.A}
+            {obj.a}
           </AccordionContent>
         </AccordionItem>
         )
       })}
     </Accordion>
-    </div> */}
+    </div>
 
     </>
   );

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Navbar from "@/components/Navbar/index";
-import Hero from "@/components/Hero/index";
+import Hero from "@/components/Hero/index3";
 import styled from "styled-components";
 import { Card4 } from "../../components/nCard";
 import { eventsData } from "./data";
@@ -56,7 +56,7 @@ const Main = () => {
         className="absolute  pointer-events-none asset top-0 left-0 h-[260px] md:h-[340px] xl:h-[420px]"
       />
       <Navbar />
-      <Hero maintext="Competitions" subtext="" order={0}/>
+      <Hero maintext="Competitions" subtext="" order={0} imgsrc2={"./model.png"}/>
     </div>
 
       <Hovercard />

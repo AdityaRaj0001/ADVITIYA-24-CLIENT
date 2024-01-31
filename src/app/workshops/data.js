@@ -1,6 +1,6 @@
 export const workshopsData = [
   {
-    text: "ML & AI",
+    text: "ML/AI",
     image: "ml-ai-workshop.jpeg",
     redirectURL: "https://www.edufabrica.net/workshop?eid=MTU1",
   },

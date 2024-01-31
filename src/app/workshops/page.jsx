@@ -24,10 +24,21 @@ const Hovercard = () => {
     <>
       <GridContainer className="bg-[#12121c]">
         {workshopsData.map((workshop, index) => (
-          <Link key={index} target="_blank" href={workshop.redirectURL}>
+          <>
+          {workshop.text ==="Biological Workshop" && <Link key={index} target="_blank" href={workshop.redirectURL}>
             <Card4  text={workshop.text} 
               image={workshop.image}/>
-          </Link>
+          </Link> }
+          {workshop.text==="ML/AI" && <Link key={index} target="_blank" href={workshop.redirectURL}>
+            <Card4  text={workshop.text} 
+              image={workshop.image}/>
+          </Link> }
+          {workshop.text!=="ML/AI" && workshop.text !=="Biological Workshop" && 
+            <Card4 key={index}  text={workshop.text} 
+              image={workshop.image}/>
+          }
+          
+          </>
         ))}
 
       </GridContainer>
