@@ -100,7 +100,7 @@ export default function Index() {
           <div className="w-[100%]   md:w-[70%] h-[70%] md:h-[80%] relative flex flex-col justify-center gap-16 md:gap-20 items-center md:justify-center">
             {index == 0 && (
               <p className="text-white w-[95%] tracking-wider md:w-[80%] text-left px-2 md:px-0 md:text-xl">
-                ADVITIYA, IIT Ropar's Tech Fest, stands out with its inclusive
+                ADVITIYA, IIT Ropar&apos;s Tech Fest, stands out with its inclusive
                 approach,{" "}
                 <span className="text-[#cd71f1]">
                   providing free accommodation to all participants
@@ -144,9 +144,9 @@ export default function Index() {
                   <li className="mb-4 lg:mb-2">
                     <span className="mr-4">•</span>
                     Security measures, lost and found protocols, and emergency
-                    contacts underscore ADVITIYA's commitment to participant
-                    safety.Organizers' discretion allows for adjustments, fostering a
-                    secure and enjoyable experience.Participants' cooperation in adhering to these guidelines is
+                    contacts underscore ADVITIYA&apos;s commitment to participant
+                    safety.Organizers&apos; discretion allows for adjustments, fostering a
+                    secure and enjoyable experience.Participants&apos; cooperation in adhering to these guidelines is
                     vital for the overall success of the event.
                   </li>
                   {/* <li className="mb-4 lg:mb-2"><span className="mr-4">•</span>
@@ -190,7 +190,7 @@ export default function Index() {
                       <li className="mt-2 ml-6">
                         To reach IIT Ropar campus by train, you have two
                         options. Firstly, if available, you can take a direct
-                        train to Ropar. Alternatively, if there's no direct
+                        train to Ropar. Alternatively, if there&apos;s no direct
                         train, you can travel to Chandigarh first and then catch
                         a bus from ISBT-43 to Ropar. Upon reaching the Ropar
                         railway station, simply take an auto to reach the

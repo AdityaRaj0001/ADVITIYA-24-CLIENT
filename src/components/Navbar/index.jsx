@@ -133,9 +133,9 @@ const Navbar = ({ order }) => {
           <Link id="btn" href="/aboutus">
             <Button variant="ghost">About Us</Button>
           </Link>
-          {/* <Link id="btn" href="/faqs">
+          <Link id="btn" href="/faqs">
             <Button variant="ghost">FAQs</Button>
-          </Link> */}
+          </Link>
 
           {/* <span
             id="btn"
@@ -232,9 +232,9 @@ const Navbar = ({ order }) => {
           <Link id="btn" href="/aboutus">
             <Button variant="ghost">About Us</Button>
           </Link>
-          {/* <Link id="btn" href="/faqs">
+          <Link id="btn" href="/faqs">
             <Button variant="ghost">FAQs</Button>
-          </Link> */}
+          </Link>
 
           {/* <span
             id="btn"
