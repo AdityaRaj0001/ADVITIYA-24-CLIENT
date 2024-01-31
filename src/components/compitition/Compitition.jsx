@@ -9,6 +9,16 @@ import Link from "next/link";
 const Compitition = () => {
   const data = [
     {
+      image: "./competitions.jpeg",
+      title: "Competitions",
+      redirectURL: "/competitions",
+    },
+    {
+      image: "./workshops.jpeg",
+      title: "Workshops",
+      redirectURL: "/workshops",
+    },
+    {
       image: "./zones.jpeg",
       title: "Zones",
       redirectURL: "/zones",
@@ -19,20 +29,11 @@ const Compitition = () => {
       redirectURL: "/talkshows",
     },
     {
-      image: "./competitions.jpeg",
-      title: "Competitions",
-      redirectURL: "/competitions",
-    },
-    {
       image: "./exhibitions.jpeg",
       title: "Exhibitions",
       redirectURL: "/exhibitions",
     },
-    {
-      image: "./workshops.jpeg",
-      title: "Workshops",
-      redirectURL: "/workshops",
-    },
+   
   ];
 
   return (

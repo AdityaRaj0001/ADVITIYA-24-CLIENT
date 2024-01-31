@@ -8,10 +8,10 @@ const Page = () => {
   const [loading, setloading] = useState(true)
 
   useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
+    // (async () => {
+    //   const LocomotiveScroll = (await import("locomotive-scroll")).default;
+    //   const locomotiveScroll = new LocomotiveScroll();
+    // })();
     
      // Check if the app has been opened before
      const hasBeenOpenedBefore = sessionStorage.getItem("hasBeenOpenedBefore");

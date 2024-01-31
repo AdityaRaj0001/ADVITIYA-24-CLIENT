@@ -14,9 +14,9 @@ export const talkshowsData = [
     image: "./defence-talks.jpeg",
     redirectURL: "",
   },
-  {
-    text: "Content Creator Panel",
-    image: "./content-talks.jpeg",
-    redirectURL: "",
-  },
+  // {
+  //   text: "Content Creator Panel",
+  //   image: "./content-talks.jpeg",
+  //   redirectURL: "",
+  // },
 ];

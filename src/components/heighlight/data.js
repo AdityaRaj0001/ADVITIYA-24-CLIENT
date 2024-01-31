@@ -1,7 +1,7 @@
 const HighlightsData=[
     {
         title:"Zones",
-        image:"./performanceshighlights.jpeg",
+        image:"./zones.jpeg",
         desc: "ADVITIYA at IIT Ropar: Classical dance, compelling stage plays, and cutting-edge Robo Shows. Get ready for laughter with stand-up comedy, cultural richness with Qawwali and singing performances, and end the night on a high with EDM beats. Don't miss the cultural spectrum in a nutshell!"
     },
     {

@@ -22,12 +22,16 @@ const GridContainer = styled.div`
 const Hovercard = () => {
   return (
     <>
-      <GridContainer className="bg-[#12121c]">
+      <GridContainer className="bg-[#12121c] ">
         {talkshowsData.map((talk, index) => (
-          <Link key={index} href={talk.redirectURL}>
-            <Card4  text={talk.text} 
+          // <Link key={index} href={talk.redirectURL}>
+          //   <Card4  text={talk.text} 
+          //     image={talk.image}/>
+          // </Link>
+         
+            <Card4 key={index} text={talk.text} 
               image={talk.image}/>
-          </Link>
+         
         ))}
 
       </GridContainer>
