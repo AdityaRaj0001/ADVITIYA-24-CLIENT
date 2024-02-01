@@ -54,7 +54,7 @@ export const TeamDetails = [
   {
     Designation: "ISC Executive",
     Name: "Alankrit Kadian",
-    Image: "./Alankrit.jpeg",
+    Image: "./alankrit.jpeg",
   },
   {
     Designation: "Sponsorship (Marketing) Executive",
@@ -134,7 +134,7 @@ export const TeamDetails = [
   {
     Designation: "Graphic Designing",
     Name: "Ajaybeer Singh",
-    Image: "./.jpeg",
+    Image: "./ajay.jpeg",
   },
   {
     Designation: "Graphic Designing",
