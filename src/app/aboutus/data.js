@@ -48,7 +48,7 @@ export const TeamDetails = [
   {
     Designation: "ISC Executive",
     Name: "Devanshu Dhawan",
-    Image: "./devanshu.jpeg",
+    Image: "./devanshudp.jpeg",
   },
   
   {
@@ -79,7 +79,7 @@ export const TeamDetails = [
   {
     Designation: "Event Management Head (Zones)",
     Name: "Abhishek Jaiswal",
-    Image: "./Arwork 1.jpeg",
+    Image: "./abhishek.jpeg",
   },
   {
     Designation: "Event Management Competitions Head",
@@ -124,7 +124,7 @@ export const TeamDetails = [
   {
     Designation: "Video Editing",
     Name: "Anupam Krishna",
-    Image: "./anupam.jpg",
+    Image: "./anupam.jpeg",
   },
   {
     Designation: "Video Editing",
@@ -134,7 +134,7 @@ export const TeamDetails = [
   {
     Designation: "Graphic Designing",
     Name: "Ajaybeer Singh",
-    Image: "./Arwork 1.jpeg",
+    Image: "./.jpeg",
   },
   {
     Designation: "Graphic Designing",
@@ -144,7 +144,7 @@ export const TeamDetails = [
   {
     Designation: "Graphic Designing",
     Name: "Arpit Vats",
-    Image: "./Arwork 1.jpeg",
+    Image: "./arpitvats.jpeg",
   },
 
   {
@@ -155,7 +155,7 @@ export const TeamDetails = [
   {
     Designation: "Executive",
     Name: "Devansh Garg",
-    Image: "./Arwork 1.jpeg",
+    Image: "./devansh.jpeg",
   },
   {
     Designation: "Executive",
