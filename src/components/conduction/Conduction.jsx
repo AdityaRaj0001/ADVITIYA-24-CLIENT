@@ -174,11 +174,7 @@ const Card1 = ({
                 {description.length === 0 ? (
                     <div>{children}</div>
                 ) : (
-                    <>
-                    <p className='text-[#84828afd] tracking-wider   lg:text-[1.25rem] text-[0.925rem] not-italic font-[700]  lg:leading-[2.125rem] leading-4'>Olympiad which is totally FREE-of-cost, will be conducted at the school level and will be conducted in offline mode. Schools will be provided the question paper and they need to conduct it as per their convenience within 29th Jan - 3rd Feb 2024 interval. The pattern of the exam will be objective type consisting of four sections with a time limit of 60 mins.</p>
-                    <p className='text-[#84828afd] tracking-wider  lg:text-[1.25rem] text-[0.925rem] not-italic font-[700]  lg:leading-[2.125rem] leading-4'>The top 5 participants from each school will qualify for Quiz Competition from both divisions i.e. DIV 1(6th-8th std) and DIV 2(9th-12th std). All the participants who participate in Phase-1 will also get an opportunity to take part in ongoing Fest Events, Talks & Panel Discussions, Campus Visits and Science and Art Competitions.</p>
-                    <p className='text-[#84828afd] tracking-wider   lg:text-[1.25rem] text-[0.925rem] not-italic font-[700]  lg:leading-[2.125rem] leading-4'>For detailed syllabus look into the attachment below.</p>
-                    </>
+                    <p className='text-[#84828afd] tracking-wider   lg:text-[1.25rem] text-[0.925rem] not-italic font-[700]  lg:leading-[2.125rem] leading-4'>{description}</p>
                 )}
             </div>
         </div>
