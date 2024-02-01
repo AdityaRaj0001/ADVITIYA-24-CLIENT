@@ -15,7 +15,7 @@ const ContactUs = () => {
         <Card img={"./Subham.jpg"} name={"Subham"} mobile={9350087395} />
         <Card img={"./Shashank.jpg"} name={"Shashank"} mobile={7764833505}/>
         <Card img={"./alankrit.jpeg"} name={"Alankrit Kadian"} mobile={9915095220}/>
-        <Card img={"./DevanshuDhawan.jpeg"} name={"Devanshu Dhawan"} mobile={7087573382}/>
+        <Card img={"./Devanshu.jpeg"} name={"Devanshu Dhawan"} mobile={7087573382}/>
       </div>
     </div>
   );
