@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Heading = ({ title, heading }) => {
   return (
-    <div className="text-[#fff]">
+    <div className="text-[#fff] mt-8 lg:mt-0">
       <div className="relative">
         <Image
           src={HeadingBg}

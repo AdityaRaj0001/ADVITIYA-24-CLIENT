@@ -91,7 +91,7 @@ const Card = ({ data }) => (
       </div>
 
       <div className="lg:mt-[25px] mt-5">
-        <h3 className=" text-[28px] lg:text-[25px]  text-center   font-bold text-[#d8c5ff]">
+        <h3 className=" text-[20px] lg:text-[25px]  text-center   font-bold text-[#d8c5ff]">
           {data?.title}
         </h3>
       </div>
