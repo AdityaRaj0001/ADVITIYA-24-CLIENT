@@ -66,7 +66,7 @@ const Index = ({ maintext, subtext, imgsrc, order }) => {
           <h1
             className={`${
               maintext.length > 10
-                ? "text-4xl sm:text-5xl lg:text-6xl text-center   font-bold herotext"
+                ? "text-3xl sm:text-5xl lg:text-6xl text-center   font-bold herotext"
                 : "text-4xl sm:text-6xl text-center md:text-7xl lg:text-8xl xl:text-7xl font-bold herotext"
             }`}
           >

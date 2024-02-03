@@ -10,7 +10,7 @@ const Card = ({ Designation, Name, Image }) => {
       <div className="w-full h-[70%] relative flex justify-center items-center"><img src={Image} className="absolute object-contain h-full"/></div>
       <div className="w-full h-[30%]">
         <div className="w-full h-[40%] mt-4 text-center lg:text-xl text-md tracking-wide">{Name}</div>
-        <div className="w-full h-[40%] text-center text-sm lg:text-lg"><span>{Designation}</span></div>
+        <div className="w-full h-[40%] text-center text-sm lg:text-lg text-purple-300 tracking-wider"><span>{Designation}</span></div>
       </div>
     </div>
   );
