@@ -59,7 +59,7 @@ export const TeamDetails = [
   {
     Designation: "Sponsorship (Marketing) Executive",
     Name: "Aabhas Agarwal",
-    Image: "./Arwork 1.jpeg",
+    Image: "./aabhas.jpeg",
   },
   {
     Designation: "Sponsorship (Marketing) Executive",
@@ -81,20 +81,20 @@ export const TeamDetails = [
     Name: "Abhishek Jaiswal",
     Image: "./abhishek.jpeg",
   },
-  {
-    Designation: "Event Management Competitions Head",
-    Name: "Mehul Gupta",
-    Image: "./Arwork 1.jpeg",
-  },
-  {
-    Designation: "Event Management Competitions Head",
-    Name: "Pranav Bali",
-    Image: "./Arwork 1.jpeg",
-  },
+  // {
+  //   Designation: "Event Management Competitions Head",
+  //   Name: "Mehul Gupta",
+  //   Image: "./Arwork 1.jpeg",
+  // },
+  // {
+  //   Designation: "Event Management Competitions Head",
+  //   Name: "Pranav Bali",
+  //   Image: "./Arwork 1.jpeg",
+  // },
   {
     Designation: "Event Management Competitions Head",
     Name: "Kartik Tiwari",
-    Image: "./Arwork 1.jpeg",
+    Image: "./kartik.jpeg",
   },
   {
     Designation: "Finance/Budget Head",
@@ -104,7 +104,7 @@ export const TeamDetails = [
   {
     Designation: "Media & Publicity Head",
     Name: "Kartik",
-    Image: "./kartik.jpeg",
+    Image: "./nishu.jpeg",
   },
   {
     Designation: "Media & Publicity Head",
@@ -119,17 +119,12 @@ export const TeamDetails = [
   {
     Designation: "Design & Creativity Decoration",
     Name: "Anmol Chauhan",
-    Image: "./Arwork 1.jpeg",
+    Image: "./anmol.jpeg",
   },
   {
     Designation: "Video Editing",
     Name: "Anupam Krishna",
     Image: "./anupam.jpeg",
-  },
-  {
-    Designation: "Video Editing",
-    Name: "Ashish Rana",
-    Image: "./Arwork 1.jpeg",
   },
   {
     Designation: "Graphic Designing",
@@ -157,11 +152,11 @@ export const TeamDetails = [
     Name: "Devansh Garg",
     Image: "./devansh.jpeg",
   },
-  {
-    Designation: "Executive",
-    Name: "Rudra Kumar Chourasia",
-    Image: "./Arwork 1.jpeg",
-  },
+  // {
+  //   Designation: "Executive",
+  //   Name: "Rudra Kumar Chourasia",
+  //   Image: "./Arwork 1.jpeg",
+  // },
   {
     Designation: "Content Writing Head",
     Name: "Rohan Nijhawan",
@@ -170,13 +165,13 @@ export const TeamDetails = [
   {
     Designation: "Content Writing Head",
     Name: "Manan Dangwal",
-    Image: "./Arwork 1.jpeg",
+    Image: "./manan.jpeg",
   },
-  {
-    Designation: "Workshop/Talks & Exhibitions Head",
-    Name: "Pooja Goyal",
-    Image: "./Arwork 1.jpeg",
-  },
+  // {
+  //   Designation: "Workshop/Talks & Exhibitions Head",
+  //   Name: "Pooja Goyal",
+  //   Image: "./Arwork 1.jpeg",
+  // },
   {
     Designation: "Workshop/Talks & Exhibitions Head",
     Name: "Saksham Bansal",

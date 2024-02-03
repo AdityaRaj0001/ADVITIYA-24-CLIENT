@@ -391,7 +391,7 @@ export const Card4 = ({ text, smalltext, largetext, image, circleColor }) => {
           style={{
             transform: "translateZ(50px)",
           }}
-          className={`text-center mt-8 text-white  w-full ${text.length>10?'text-lg':'text-xl'} font-bold`}
+          className={`text-center mt-8 text-white  tracking-widest w-full ${text.length>10?'text-lg':'text-xl'} font-bold`}
         >
           {text}
         </p>
