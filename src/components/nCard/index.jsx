@@ -386,17 +386,12 @@ export const Card4 = ({ text, smalltext, largetext, image, circleColor }) => {
         className="absolute  grid h-full place-items-center  place-content-center  rounded-2xl border-purple-300 border-2 border-dashed   shadow-lg"
       >
         <img className="h-[90%] object-cover rounded-2xl" src={image} alt="Shoe" />
-        {/* <FiMousePointer
-          style={{
-            transform: "translateZ(75px)",
-          }}
-          className="mx-auto text-4xl"
-        /> */}
+
         <p
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center mt-8 text-white  w-full text-xl font-bold"
+          className={`text-center mt-8 text-white  w-full ${text.length>10?'text-lg':'text-xl'} font-bold`}
         >
           {text}
         </p>
