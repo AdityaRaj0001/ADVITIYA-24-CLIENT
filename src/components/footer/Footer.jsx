@@ -153,10 +153,9 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+            <div className="text-[#cd71f1] mt-8"><span>Designed by <a href="https://vermilliontech.in/" target="_blank" className="text-[#cd71f1] underline text-xl">VERMILLION TECH</a></span></div>
           </div>
-          {/* <div className="flex flex-col w-[100vw] h-[20vh]"></div>
-          <div className="text-bold text-sm w-[100vw] mt-4 h-[10vh]"> | In Collaboration with Vermillion TECH |</div>
-          <div className="text-bold text-sm w-[100vw] mt-4 h-[10vh]"> | ADVITIYA&apos;24| All rights reserved |</div> */}
+        
         </div>
       </div>
     </div>
