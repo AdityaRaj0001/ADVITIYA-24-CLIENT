@@ -23,7 +23,7 @@ const RegistrationProcess = () => {
 
               <div className="absolute top-0 right-0 left-0 bottom-0 lg:px-[45px] lg:py-[41px] p-5">
                 <h2 className="lg:mb-4 mb-2 lg:text-[25px] text-[22px] italic uppercase">
-                  From Schools Side:
+              Through School:
                 </h2>
 
                 <ul className="flex flex-col gap-3">
@@ -47,7 +47,7 @@ const RegistrationProcess = () => {
                      A total Fee of Rs.150 will be charged per student.
                     </span>
                   </li>
-                    <a href="https://forms.gle/aZMNnWg1FPxjVf278" target="_blank" className="underline text-md ml-4 uppercase text-gray-100 tracking-wider">Link</a>
+                    <a href="https://forms.gle/aZMNnWg1FPxjVf278" target="_blank" className="underline text-md ml-4 uppercase text-gray-100 tracking-wider">Link</a><span>&#40;Deadline: 13th Feb&apos;24&#41;</span>
                 </ul>
               </div>
             </div>
@@ -117,28 +117,28 @@ const RegistrationProcess = () => {
 
               <div className="absolute top-0 right-0 left-0 bottom-0 lg:px-[45px] lg:py-[41px] p-5">
                 <h2 className="lg:mb-4 mb-3 lg:text-[25px] text-[22px] italic uppercase">
-                  Individual Student:
+                  Individually:
                 </h2>
 
                 <ul className="flex flex-col gap-3">
                   <li className="flex gap-3 lg:text-base text-sm ">
                     <span>•</span>
-                    <span>Student can register for ISC from the registration link given below.
+                    <span>Students can register in <b>Groups of 3-5</b> for ISC from the registration link given below.
                     </span>
                   </li>
                   <li className="flex gap-3 lg:text-base text-sm ">
                     <span>•</span>
                     <span>
-                    Entry Pass will be provided on-spot at the main gate after successful verification. Please carry your entry pass and one ID along with you throughout the fest activities.
+                    Entry Pass will be provided on-spot at the registration desk after successful verification. Please carry your entry pass and one ID along with you throughout the fest activities.
                     </span>
                   </li>
                   <li className="flex gap-3 lg:text-base text-sm ">
                     <span>•</span>
                     <span>
-                     A total Fee of Rs.150 will be charged per student.
+                     A total Fee of Rs.150 will be charged per student
                     </span>
                   </li>
-                  <a href="https://forms.gle/xopvcxra9YnBig1h8" target="_blank" className="underline text-md ml-4 uppercase text-gray-100 tracking-wider">Link</a>
+                  <a href="https://forms.gle/HNSkUnfJvXkaScAd6" target="_blank" className="underline text-md ml-4 uppercase text-gray-100 tracking-wider">Link</a><span>&#40;Deadline: 13th Feb&apos;24&#41;</span>
                   {/* <li className="flex gap-3 lg:text-base text-sm">
                     <span>•</span>
                     <span>

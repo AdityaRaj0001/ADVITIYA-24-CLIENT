@@ -13,13 +13,13 @@ const OurVideos2 = () => {
           
         </div>
         <div className="relative flex items-start sm:items-center justify-center w-[100%] h-[30%] sm:h-[100%] ">
-          <p className="hidden sm:inline-block px-4  max-w-sm lg:max-w-lg text-white text-sm py-4 lg:text-lg ">Embark on a journey of innovation and discovery at our visionary Tech Fest on Feb 16, 17, and 18. Unleash the possibilities of cutting-edge technology, dive into immersive experiences, and join us in shaping the future.
+          <p className="hidden sm:inline-block px-4  max-w-sm lg:max-w-lg text-white text-sm py-4 lg:text-lg ">Embark on a journey of innovation and discovery at our visionary Tech Fest on   <span className="text-[#a464f7]"  > Feb 16, 17, and 18</span>. Unleash the possibilities of cutting-edge technology, dive into immersive experiences, and join us in shaping the future.
           
-          <a className="block mt-4 underline text-[#cd71f1] text-md" target="_blank" href="https://www.instagram.com/p/C2e45pgRqy0/">Click to view</a>
+          <a className="block mt-4 tracking-widest underline text-[#a464f7] text-md" target="_blank" href="https://www.instagram.com/p/C2e45pgRqy0/">Click to view</a>
 </p>
-          <p className="px-4 sm:hidden  max-w-sm lg:max-w-lg text-white text-sm py-4 lg:text-lg ">Explore innovation at our Tech Fest on Feb 16-18. Immerse in cutting-edge tech, shape the future with us.
+          <p className="px-4 sm:hidden  max-w-sm lg:max-w-lg text-white text-sm py-4 lg:text-lg ">Explore innovation at our Tech Fest on <span className="text-[#a871f1]"  >Feb 16, 17, and 18</span>. Immerse in cutting-edge tech, shape the future with us.
           
-          <a className="block mt-4 underline text-[#cd71f1] text-md" target="_blank" href="https://www.instagram.com/p/C2e45pgRqy0/">Click to view</a>
+          <a className="block mt-4 underline text-[#a464f7] text-md" target="_blank" href="https://www.instagram.com/p/C2e45pgRqy0/">Click to view</a>
 </p>
           <img className="absolute  pointer-events-none w-full max-w-sm lg:max-w-lg" src="./androidrect.svg"/>
         </div>
@@ -29,8 +29,8 @@ const OurVideos2 = () => {
           <iframe   src="https://www.youtube.com/embed/Fwn-ZAxCq4g?si=vQsd07LBv1Df6vFr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className="h-[100%] sm:w-[80%] "></iframe>
         </div>
         <div className="relative mb-12 flex items-start sm:items-center justify-center w-[100%] h-[30%] sm:h-[100%]">
-          <p className="block md:hidden  px-4 max-w-sm lg:max-w-lg text-white text-sm py-4 lg:text-lg ">Step into the captivating realm of innovation and excitement with our Tech Fest After Movie! Relive the unforgettable moments from our <span className="text-[#cd71f1]">previous campus extravaganza.</span></p>
-          <p className="hidden md:block px-4 max-w-sm lg:max-w-lg text-white text-sm py-4 lg:text-lg ">Step into the captivating realm of innovation and excitement with our Tech Fest After Movie! Relive the vibrant energy, groundbreaking tech showcases, and unforgettable moments from our <span className="text-[#cd71f1]">previous campus extravaganza.</span> </p>
+          <p className="block md:hidden  px-4 max-w-sm lg:max-w-lg text-white text-sm py-4 lg:text-lg ">Step into the captivating realm of innovation and excitement with our Tech Fest After Movie! Relive the unforgettable moments from our <span className="text-[#a464f7]">previous campus extravaganza.</span></p>
+          <p className="hidden md:block px-4 max-w-sm lg:max-w-lg text-white text-sm py-4 lg:text-lg ">Step into the captivating realm of innovation and excitement with our Tech Fest After Movie! Relive the vibrant energy, groundbreaking tech showcases, and unforgettable moments from our <span className="text-[#a464f7]">previous campus extravaganza.</span> </p>
           <img className="absolute w-full max-w-sm lg:max-w-lg" src="./androidrect.svg"/>
         </div>
       </div>

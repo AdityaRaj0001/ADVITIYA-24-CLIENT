@@ -8,8 +8,8 @@ import {
 } from "@/components/ui/accordion"
 const data = [
   {
-    Q: "Is it mandatory to attend olympiad for participating in events on 17th february?",
-    A: "No, It's not important to attend Olympiad.",
+    Q: "Is it mandatory to attend Quiz/Science and Art competitions on 17th february in order to attend the other campus events in the fest?",
+    A: "No, it is not mandatory it is only intended to add to your experience. You can enjoy other activities in the fest without participating in any competition.",
   },
   {
     Q: "How many students from a school can participate on ISC Day?",
@@ -18,15 +18,15 @@ const data = [
   },
   {
     Q: "If my school is not participating in the event, Can I still attend the event?",
-    A: "Yes a student can attend the event even if his/her school is not participating in the event.",
+    A: "Yes a student can attend the event even if his/her school is not participating in the event. You can participate by forming groups of 3 to 5 with your friends",
   },
-  {
-    Q: "Is olympiad free of cost to attend?",
-    A: "Yes Olympiad is free of cost. The Charges is just for registration to visit the campus.",
-  },
+  // {
+  //   Q: "Is olympiad free of cost to attend?",
+  //   A: "Yes Olympiad is free of cost. The Charges is just for registration to visit the campus.",
+  // },
   {
     Q: "How to register for the ISC?",
-    A: "Just fill the form along with the proof ",
+    A: "Go to the Registration section above. And choose from School-Side Registration or Indidual Registration. School-Side Registration form is only meant to be filled by the Schools",
   },
 ];
 
@@ -42,7 +42,7 @@ const FAQs = () => {
         return (
           <AccordionItem key={i} value={`item-${i}`} className="border-b-0 mb-4">
           <AccordionTrigger className="bg-gray-900 hover:no-underline h-24 lg:h-16  border-b-2 border-violet-500 rounded-lg px-2 text-sm  text-left">{obj.Q}</AccordionTrigger>
-          <AccordionContent className="bg-transparent px-4 py-4">
+          <AccordionContent className="bg-transparent px-4 py-4 tracking-widest">
             {obj.A}
           </AccordionContent>
         </AccordionItem>

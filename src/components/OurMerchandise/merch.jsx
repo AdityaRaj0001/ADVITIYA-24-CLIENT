@@ -137,11 +137,11 @@ const Merchandise = () => {
               <p className="lg:mt-8 p-2 text-sm lg:text-base">
               Elevate your style with ADVITIYA&apos;s exclusive merchandise – a fusion of innovation and sophistication, capturing the essence of IIT Ropar&apos;s dynamic tech fest.
               
-              <a className="block mt-4 underline text-[#cd71f1] text-md" target="_blank" href="https://forms.gle/4UHWXV5SRPHMAADaA">Click to open</a>
+              <a className="block mt-4 underline tracking-widest text-[#a464f7] text-md" target="_blank" href="https://forms.gle/4UHWXV5SRPHMAADaA">Click to open</a>
               </p>
             </div>
 
-            <div className="h-[400px] w-full text-center relative items-center justify-center z-10 hidden lg:flex">
+            <div className="h-[400px] w-full text-center relative bg-[#ffffff1e] items-center justify-center z-10 hidden lg:flex">
               <img
                 src='../FEST T SHIRT.jpeg'
                 alt="merchimage"

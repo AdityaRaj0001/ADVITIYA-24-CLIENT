@@ -203,7 +203,7 @@ const Data = [
   {
     Designation: "Media & Publicity Head",
     Name: "NIKHIL GARG",
-    Contact: "638010128",
+    Contact: "6378010128",
     Email: "2021CSB1114@iitrpr.ac.in",
   },
   {

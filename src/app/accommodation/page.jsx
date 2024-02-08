@@ -102,7 +102,7 @@ export default function Index() {
               <p className="text-white w-[95%] tracking-wider md:w-[80%] text-left px-2 md:px-0 md:text-xl">
                 ADVITIYA, IIT Ropar&apos;s Tech Fest, stands out with its inclusive
                 approach,{" "}
-                <span className="text-[#cd71f1]">
+                <span className="text-[#a464f7]">
                   providing free accommodation to all participants
                 </span>
                 . This commitment enhances collaboration, ensuring a spirited
@@ -162,7 +162,7 @@ export default function Index() {
                 <a
                   target="_blank"
                   href="https://docs.google.com/document/d/1PzHEwpkRARlftobbpiPAMsgvicrW7tnJPTXj4GSCj4A/edit?usp=sharing"
-                  className=" underline text-[#cd71f1] text-md"
+                  className=" underline text-[#a464f7] text-md"
                 >
                   Link
                 </a>

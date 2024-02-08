@@ -10,10 +10,10 @@ const ContactUs = () => {
       <Heading title="Contact Us" heading="Contact Us" />
 
       <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-[50px] place-content-center place-items-center gap-[30px] lg:mt-[78px] mt-[40px]">
+        <Card img={"./Shashank.jpg"} name={"Shashank"} mobile={7764833505}/>
         <Card img={"./akshit.jpeg"} name={"Akshit Singh"} mobile={8700625101
 }/>
         <Card img={"./Subham.jpg"} name={"Subham"} mobile={9350087395} />
-        <Card img={"./Shashank.jpg"} name={"Shashank"} mobile={7764833505}/>
         <Card img={"./alankrit.jpeg"} name={"Alankrit Kadian"} mobile={9915095220}/>
         <Card img={"./devanshu.jpeg"} name={"Devanshu Dhawan"} mobile={7087573382}/>
       </div>

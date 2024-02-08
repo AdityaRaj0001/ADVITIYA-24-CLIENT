@@ -26,11 +26,11 @@ const AboutUs = () => {
                 <span className=" opacity-90">
                   <span className="sm:hidden">
                     {" "}
-                    Advitya&apos;24 hosts ISC, an outreach for 6th to 12th-grade students. The event features an annual competition with Open Olympiad and Quiz & Science/Art phases on the theme India@2047.
+                    Advitya&apos;24 hosts ISC, an outreach for 6th to 12th-grade students. The event features an annual competition with Quiz & Science/Art competitions on the theme India@2047.
                   </span>
 
                   <span className="hidden sm:block">
-                  Advitya&apos;24 presents the First edition of ISC,i.e, INTER SCHOOL CONCLAVE, a school outreach program for 6th to 12th-grade students. It consists of an annual competition wherein students compete in two phases of the Open Olympiad and second phase consist of Quiz and Science and Art Competition on our theme India@2047 . Phase 1 of the Olympiad will be conducted in schools if the school is participating .On 17th February for the phase 2 students will be arriving on campus for theQuiz Competition, Campus tour,IAS/IPS and defence panel talks and Competition .
+                  Advitya&apos;24 presents the First edition of ISC i.e INTER SCHOOL CONCLAVE, a school outreach program for 6th to 12th-grade students. It consists of an annual competition wherein students compete in a Quiz and Science and Art Competition on our theme India@2047. On 17th February, students will be arriving on campus for the Quiz and Science and Art Competition, Campus tour, IAS/IPS and defence panel talks and Competition .
                   </span>
                 </span>{" "}
               </p>
@@ -61,7 +61,7 @@ const AboutUs = () => {
                     ISC aims to bring together the best young minds from all over the Punjab and Tricity under one roof and to expose the students to the technical culture of IIT Ropar. The main objective of which is developing and nurturing younger minds of the country at the grassroots level. It provides a platform for school kids to learn core experience and knowledge, exercise coordination abilities, to think outside the box while proposing solutions. It also give them a exposure that they need at this age.
                   </span>
                 </span>{" "}
-                <button className="underline lg:hidden"> Read More.</button>
+                {/* <button className="underline lg:hidden"> Read More.</button> */}
               </p>
             </div>
           </div>
