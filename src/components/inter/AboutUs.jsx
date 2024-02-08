@@ -30,7 +30,7 @@ const AboutUs = () => {
                   </span>
 
                   <span className="hidden sm:block">
-                  Advitya&apos;24 presents the First edition of ISC,i.e, INTER SCHOOL CONCLAVE, a school outreach program for 6th to 12th-grade students. It consists of an annual competition wherein students compete in a Quiz and Science and Art Competition on our theme India@2047. On 17th February, students will be arriving on campus for the Quiz and Science and Art Competition, Campus tour, IAS/IPS and defence panel talks and Competition .
+                  Advitya&apos;24 presents the First edition of ISC i.e INTER SCHOOL CONCLAVE, a school outreach program for 6th to 12th-grade students. It consists of an annual competition wherein students compete in a Quiz and Science and Art Competition on our theme India@2047. On 17th February, students will be arriving on campus for the Quiz and Science and Art Competition, Campus tour, IAS/IPS and defence panel talks and Competition .
                   </span>
                 </span>{" "}
               </p>

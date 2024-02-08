@@ -153,7 +153,7 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div className="text-[#cd71f1] mt-8"><span>Designed by <a href="https://vermilliontech.in/" target="_blank" className="text-[#cd71f1] underline text-xl">VERMILLION TECH</a></span></div>
+            <div className="text-[#a464f7] mt-8"><span>Designed by <a href="https://vermilliontech.in/" target="_blank" className="text-[#a464f7] underline text-xl">VERMILLION TECH</a></span></div>
           </div>
         
         </div>

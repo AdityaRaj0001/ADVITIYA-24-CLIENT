@@ -147,12 +147,12 @@ const Card12 = ({
                     <div>{children}</div>
                 ) : (
                     <>
-                    <p className='text-[#84828afd]   lg:text-[1.25rem] text-[0.925rem] not-italic font-[700] lg:leading-[2.125rem] leading-4'>For any registered student, they have access to the following things:</p>
+                    <p className='text-[#f8ededfd] tracking-widest  lg:text-[1.25rem] text-[0.925rem] not-italic font-[700] lg:leading-[2.125rem] leading-4'>For any registered student, they have access to the following things:</p>
                     <li>IAS/IPS Panel Talk</li>
                     <li>Defence Forces Panel Talk</li>
                     <li>Experience Zones</li>
                     <li>Robo-Show event</li>
-                    <p className='text-[#f8ededfd]   lg:text-[1.25rem] text-[0.925rem] not-italic font-[700] lg:leading-[2.125rem] leading-4'>We are charging Rs.150 per student which is solely dedicated to cover up the expenses related to food, logistics and hospitality. We do not intend any profit from the charges.</p>
+                    <p className='text-[#f8ededfd]   lg:text-[1rem] tracking-widest text-[0.925rem] not-italic font-[700] lg:leading-[2.125rem] leading-4'>We are charging Rs.150 per student which is solely dedicated to cover up the expenses related to food, logistics and hospitality. We do not intend any profit from the charges.</p>
                     </>
                     
                 )}
@@ -173,7 +173,7 @@ const Card1 = ({
                 {description.length === 0 ? (
                     <div>{children}</div>
                 ) : (
-                    <p className='text-[#84828afd] tracking-wider   lg:text-[1.25rem] text-[0.925rem] not-italic font-[700]  lg:leading-[2.125rem] leading-4'>{description}</p>
+                    <p className='text-[#b6b3c0fd] tracking-wider   lg:text-[1.25rem] text-[0.925rem] not-italic font-[700]  lg:leading-[2.125rem] leading-4'>{description}</p>
                 )}
             </div>
         </div>

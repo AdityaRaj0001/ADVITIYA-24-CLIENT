@@ -10,7 +10,7 @@ import Link from "next/link";
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 130px;
+  gap: 50px;
   padding: 20px;
   justify-content: center;
   place-items:center;
