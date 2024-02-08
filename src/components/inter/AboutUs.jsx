@@ -53,8 +53,7 @@ const AboutUs = () => {
                   <span className="lg:hidden">
                     ISC aims to bring together the best young minds from all
                     over the country under one roof and to expose the students
-                    to the technical culture of IIT Ropar. The main objective of
-                    which is developing and{" "}
+                    to the technical culture of IIT Ropar.
                   </span>
 
                   <span className="hidden lg:block">
