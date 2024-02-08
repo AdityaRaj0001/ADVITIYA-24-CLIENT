@@ -48,7 +48,7 @@ export const TeamDetails = [
   {
     Designation: "ISC Executive",
     Name: "Devanshu Dhawan",
-    Image: "./devanshudp.jpeg",
+    Image: "./devanshu.jpeg",
   },
   
   {
