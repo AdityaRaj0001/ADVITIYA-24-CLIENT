@@ -47,7 +47,7 @@ const RegistrationProcess = () => {
                      A total Fee of Rs.150 will be charged per student.
                     </span>
                   </li>
-                    <a href="https://forms.gle/aZMNnWg1FPxjVf278" target="_blank" className="underline text-md ml-4 uppercase text-gray-100 tracking-wider">Link</a><span>&#40;Deadline: 13th Feb'24&#41;</span>
+                    <a href="https://forms.gle/aZMNnWg1FPxjVf278" target="_blank" className="underline text-md ml-4 uppercase text-gray-100 tracking-wider">Link</a><span>&#40;Deadline: 13th Feb&apos;24&#41;</span>
                 </ul>
               </div>
             </div>
@@ -138,7 +138,7 @@ const RegistrationProcess = () => {
                      A total Fee of Rs.150 will be charged per student
                     </span>
                   </li>
-                  <a href="https://forms.gle/HNSkUnfJvXkaScAd6" target="_blank" className="underline text-md ml-4 uppercase text-gray-100 tracking-wider">Link</a><span>&#40;Deadline: 13th Feb'24&#41;</span>
+                  <a href="https://forms.gle/HNSkUnfJvXkaScAd6" target="_blank" className="underline text-md ml-4 uppercase text-gray-100 tracking-wider">Link</a><span>&#40;Deadline: 13th Feb&apos;24&#41;</span>
                   {/* <li className="flex gap-3 lg:text-base text-sm">
                     <span>•</span>
                     <span>
