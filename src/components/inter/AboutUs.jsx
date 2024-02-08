@@ -61,7 +61,7 @@ const AboutUs = () => {
                     ISC aims to bring together the best young minds from all over the Punjab and Tricity under one roof and to expose the students to the technical culture of IIT Ropar. The main objective of which is developing and nurturing younger minds of the country at the grassroots level. It provides a platform for school kids to learn core experience and knowledge, exercise coordination abilities, to think outside the box while proposing solutions. It also give them a exposure that they need at this age.
                   </span>
                 </span>{" "}
-                <button className="underline lg:hidden"> Read More.</button>
+                {/* <button className="underline lg:hidden"> Read More.</button> */}
               </p>
             </div>
           </div>
