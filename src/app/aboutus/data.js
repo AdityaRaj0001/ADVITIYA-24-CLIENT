@@ -141,7 +141,16 @@ export const TeamDetails = [
     Name: "Arpit Vats",
     Image: "./arpitvats.jpeg",
   },
-
+  {
+    Designation: "Hospitality Head",
+    Name: "Vivek Chadgal",
+    Image: "./Vivek.jpeg",
+  },
+  {
+    Designation: "Security Head",
+    Name: "Pranav Attri",
+    Image: "./Attri.jpeg",
+  },
   {
     Designation: "Executive",
     Name: "Arushi Goyal",
