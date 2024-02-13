@@ -39,16 +39,28 @@ const Data = [
     Email: "2021CHB1053@iitrpr.ac.in",
   },
   {
+    Designation: "Hospitality Head",
+    Name: "Vivek chadgal",
+    Contact: "8427793184",
+    Email: "2021EEB1222@iitrpr.ac.in",
+  },
+  {
     Designation: "Video Editing Head",
     Name: "ANUPAM KRISHNA",
     Contact: "8281931184",
     Email: "2021EEB1154@iitrpr.ac.in",
   },
   {
-    Designation: "Video Editing Head",
-    Name: "ASHISH RANA",
-    Contact: "7206079812",
-    Email: "2021CEB1013@iitrpr.ac.in",
+    Designation: "Workshop/Talks & Exhibitions Head",
+    Name: "SAKSHAM BANSAL",
+    Contact: "7082882902",
+    Email: "2021MCB1243@iitrpr.ac.in",
+  },
+  {
+    Designation: "Workshop/Talks & Exhibitions Head",
+    Name: "ANKUR AGGARWAL",
+    Contact: "9718916355",
+    Email: "2021MEB1268@iitrpr.ac.in",
   },
   {
     Designation: "Inter-School Conclave Head",
@@ -147,18 +159,6 @@ const Data = [
     Email: "2020CSB1108@iitrpr.ac.in",
   },
   {
-    Designation: "Workshop/Talks & Exhibitions Head",
-    Name: "SAKSHAM BANSAL",
-    Contact: "7082882902",
-    Email: "2021MCB1243@iitrpr.ac.in",
-  },
-  {
-    Designation: "Workshop/Talks & Exhibitions Head",
-    Name: "ANKUR AGGARWAL",
-    Contact: "9718916355",
-    Email: "2021MEB1268@iitrpr.ac.in",
-  },
-  {
     Designation: "Finance / Budget Head",
     Name: "HARSHIT GUPTA",
     Contact: "7007507732",
@@ -187,6 +187,12 @@ const Data = [
     Name: "ARPIT VATS",
     Contact: "8445008606",
     Email: "2021EEB1157@iitrpr.ac.in",
+  },
+  {
+    Designation: "Security Head",
+    Name: "Pranav Attri",
+    Contact: "9068801155",
+    Email: "2021CHB1050@iitrpr.ac.in",
   },
   {
     Designation: "Media & Publicity Head",
