@@ -3,12 +3,13 @@ const scheduleData = [
       "11-12 am": ["Maths Arena (R1)", "Chart the Course at Maths Arena: Where Quizzes Thrive, Treasures Await, and Mathematical Gambles Illuminate!"],
       "12-2 pm": ["Maths Arena (R2 + R3)", "Chart the Course at Maths Arena: Where Quizzes Thrive, Treasures Await, and Mathematical Gambles Illuminate!"],
       "12-2 pm II": ["Circuit Chase", "Unleash the Sparks, Navigate the Circuits: Circuit Chase - Where Wires Lead to Wonders!"],
-      "12-2 pm III": ["Code Hunt", "Crack codes, solve puzzles, and snatch victory!"],
+      // "12-2 pm III": ["Code Hunt", "Crack codes, solve puzzles, and snatch victory!"],
       "3-6 pm I": ["Full Throttle", "Fuel Your Fire: Full Throttle Living for the Fearless Trailblazer in You!"],
       "3-5 pm II": ["Sky Scrapper", "Rise to the Design Challenge: SKY SCRAPPER – Where Imagination Meets Structural Innovation"],
       "3-6 pm III": ["Cover Page", "Design Fusion: Blending Genres, Connecting Generations - Where Creativity Knows No Limits!"],
-      "5-8 pm": ["Treasure Hunt", "Embark on an adventure, discover hidden treasures, and unlock excitement - it's worth the hunt!"],
-      "8-11 pm": ["Jazz-Night", "Dance the night away, create unforgettable memories, and cherish the magic - it's a chance worth experiencing!"],
+      "4-7 pm": ["Treasure Hunt", "Embark on an adventure, discover hidden treasures, and unlock excitement - it's worth the hunt!"],
+      "7:30-9 pm": ["Jazz-Night", "Dance the night away, create unforgettable memories, and cherish the magic - it's a chance worth experiencing!"],
+      "9-11 pm": ["EDM/DJ Night","Experience electrifying beats and euphoric vibes at our EDM/DJ Night event, igniting the main stage with pulsating rhythms and unforgettable energy!"]
     },
     {
       "10-12 am": ["Inaugaration Ceremony", "To Kick-Start the Fest"],
