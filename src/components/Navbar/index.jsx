@@ -118,9 +118,9 @@ const Navbar = ({ order }) => {
           <Link id="btn" href="/schedule" className="z-10">
             <Button variant="ghost">Schedule</Button>
           </Link>
-          {/* <Link id="btn" href="/sponsors" className="z-10">
+          <Link id="btn" href="/sponsors" className="z-10">
 						<Button variant="ghost">Sponsors</Button>
-					</Link> */}
+					</Link>
           <Link id="btn" href="/accommodation">
             <Button variant="ghost">Accommodation</Button>
           </Link>
