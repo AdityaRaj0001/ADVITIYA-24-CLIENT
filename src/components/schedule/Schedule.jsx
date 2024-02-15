@@ -9,7 +9,7 @@ const ScheduleComponet = () => {
   const day2timings = Object.keys(scheduleData[1]);
   const day3timings = Object.keys(scheduleData[2]);
   return (
-    <div className={`w-[90%] mx-auto min-h-screen ${index==1?"h-auto lg:h-[240vh]":"h-[240vh] lg:h-[180vh]"} lg:pb-[91px] pt-[100px] text-white`}>
+    <div className={`w-[90%] mx-auto min-h-screen ${index==1?"h-auto lg:h-[240vh]":"h-auto lg:h-[180vh]"} lg:pb-[91px] pt-[100px] text-white`}>
       <div
         className="h-[3px] w-full relative lg:mb-5"
         style={{
