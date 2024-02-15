@@ -31,14 +31,14 @@ const FAQs = () => {
         <Marquee speed={80} className="h-2/5 marq1 overflow-y-hidden">
           {imagedata1.map((data,i)=>(
             <div key={i} className="image_wrapper mx-[30px] h-full ">
-            <img src={data} className="h-[300px] object-contain"></img>
+            <img src={data} className="h-[200px] lg:h-[300px] object-contain"></img>
           </div>
           ))}
         </Marquee>
         <Marquee direction="right" speed={80} className="h-2/5 marq1 mt-8 overflow-y-hidden">
         {imagedata2.map((data,i)=>(
             <div key={i} className="image_wrapper mx-[30px] h-full ">
-            <img src={data} className="h-[300px] object-contain"></img>
+            <img src={data} className="h-[200px] lg:h-[300px] object-contain"></img>
           </div>
           ))}
         </Marquee>
