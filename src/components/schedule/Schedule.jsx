@@ -9,7 +9,7 @@ const ScheduleComponet = () => {
   const day2timings = Object.keys(scheduleData[1]);
   const day3timings = Object.keys(scheduleData[2]);
   return (
-    <div className="w-[90%] mx-auto min-h-screen lg:py-[91px] pt-[100px] text-white">
+    <div className={`w-[90%] mx-auto min-h-screen ${index==1?"h-auto lg:h-[240vh]":"h-[240vh] lg:h-[180vh]"} lg:pb-[91px] pt-[100px] text-white`}>
       <div
         className="h-[3px] w-full relative lg:mb-5"
         style={{
@@ -117,8 +117,8 @@ const ScheduleComponet = () => {
                   </defs>
                 </svg>
 
-                <div className="absolute top-3  right-0 left-4">
-                  {data}
+                <div className="absolute top-3 text-[0.8rem]  right-0 left-4">
+                  {data.replace("III","").replace("II","").replace("I","")}
                 </div>
               </div>
 
@@ -126,13 +126,13 @@ const ScheduleComponet = () => {
                 <h2 className="text-2xl">
                   {scheduleData[0][data][0]}
                 </h2>
-                <p className="text-sm pt-3">
+                <p className="text-sm pt-3 tracking-widest">
                 {scheduleData[0][data][1]}
                 </p>
               </div>
             </div>
           </div>
-          ))}
+          ))}              
           {index===1 && day2timings.map((data,i)=>(
             <div key={i} className="w-full grid grid-cols-12 pb-[40px]">
             <div className="col-span-1 hidden lg:block">
@@ -177,8 +177,8 @@ const ScheduleComponet = () => {
                   </defs>
                 </svg>
 
-                <div className="absolute top-3  right-0 left-4">
-                  {data}
+                <div className="absolute top-3 text-[0.8rem]    right-0 left-4">
+                {data.replace("III","").replace("II","").replace("I","")}
                 </div>
               </div>
 
@@ -186,7 +186,7 @@ const ScheduleComponet = () => {
                 <h2 className="text-2xl">
                   {scheduleData[1][data][0]}
                 </h2>
-                <p className="text-sm pt-3">
+                <p className="text-sm pt-3 tracking-widest">
                 {scheduleData[1][data][1]}
                 </p>
               </div>
@@ -237,8 +237,8 @@ const ScheduleComponet = () => {
                   </defs>
                 </svg>
 
-                <div className="absolute top-3  right-0 left-4">
-                  {data}
+                <div className="absolute top-3 text-[0.8rem]  right-0 left-4">
+                {data.replace("III","").replace("II","").replace("I","")}
                 </div>
               </div>
 
@@ -246,7 +246,7 @@ const ScheduleComponet = () => {
                 <h2 className="text-2xl">
                   {scheduleData[2][data][0]}
                 </h2>
-                <p className="text-sm pt-3">
+                <p className="text-sm pt-3 tracking-widest">
                 {scheduleData[2][data][1]}
                 </p>
               </div>

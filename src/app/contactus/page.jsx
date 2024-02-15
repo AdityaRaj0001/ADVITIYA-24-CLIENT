@@ -195,6 +195,12 @@ const Data = [
     Email: "2021CHB1050@iitrpr.ac.in",
   },
   {
+    Designation: "Security Head",
+    Name: "Akash",
+    Contact: "95881 63518",
+    Email: "2021CHB1037@iitrpr.ac.in",
+  },
+  {
     Designation: "Media & Publicity Head",
     Name: "KARTIK",
     Contact: "7206936720",
