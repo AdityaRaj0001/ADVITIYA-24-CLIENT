@@ -11,6 +11,7 @@ export const imagedata1=[
 "./Techstory.jpeg",
 "./Icici.jpeg",
 "./Edustation.jpeg",
+"./jsw.jpeg",
 ]
 export const imagedata2=[
 "./Knowafest.jpeg",
