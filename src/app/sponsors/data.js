@@ -25,4 +25,5 @@ export const imagedata2=[
 "./Noticebard.jpeg",
 "./Rocketrees.jpeg",
 "./Algozenith.jpeg",
+"./Axenic.jpeg",
 ]
